@@ -56,12 +56,12 @@ export const Hero = () => {
       <div className="md:mx-10 md:px-10 flex flex-col justify-center md:justify-start w-full md:w-1/2 z-10 mt-40">
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4 uppercase header text-center md:text-start">
-            <span className="header sm:text-xl md:text-6xl">01</span>{" "}
-            <span className="header sm:text-xl md:text-6xl mx-5"> INTRO</span>
+            <span className="header sm:text-xl md:text-6xl lg:text-9xl">01</span>{" "}
+            <span className="header sm:text-xl md:text-6xl lg:text-9xl lg:mx-10"> INTRO</span>
           </h1>
-          <p className="text-lg mb-4 text-center md:text-start px-3 md:px-0">{typedText}</p>
+          <p className="md:text-lg lg:text-4xl mb-4 text-center md:text-start px-3 md:px-0">{typedText}</p>
           {showButton && (
-            <div className="buttonContainer mt-3 pt-3 flex md:justify-start md:items-start justify-center items-center">
+            <div className="buttonContainer mt-6 pt-6 flex md:justify-start md:items-start justify-center items-center">
               <PrimaryButton
                 text="Projects"
                 onClick={() => {
