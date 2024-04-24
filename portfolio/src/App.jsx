@@ -7,7 +7,7 @@ import { Projects } from './components/projects'
 
 function App() {
   return (
-    <div className='bg-cyberpunk-950'>
+    <div className='bg-black mx-auto'>
     <Navbar />
     <Hero />
     <Projects />

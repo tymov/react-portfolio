@@ -51,17 +51,17 @@ export const Hero = () => {
   };
 
   return (
-    <div className="bg-cyberpunk-950 text-white min-h-screen flex flex-col relative">
+    <div className="text-white min-h-screen flex flex-col relative">
       {/* Main content */}
-      <div className="mx-10 px-10 flex flex-col justify-center md:justify-start w-full md:w-1/2 z-10 mt-40">
+      <div className="md:mx-10 md:px-10 flex flex-col justify-center md:justify-start w-full md:w-1/2 z-10 mt-40">
         <div className="text-center md:text-left">
-          <h1 className="text-4xl font-bold mb-4 uppercase header">
-            <span className="header text-6xl">01</span>{" "}
-            <span className="header text-6xl mx-5"> INTRO</span>
+          <h1 className="text-4xl font-bold mb-4 uppercase header text-center md:text-start">
+            <span className="header sm:text-xl md:text-6xl">01</span>{" "}
+            <span className="header sm:text-xl md:text-6xl mx-5"> INTRO</span>
           </h1>
-          <p className="text-lg mb-4">{typedText}</p>
+          <p className="text-lg mb-4 text-center md:text-start px-3 md:px-0">{typedText}</p>
           {showButton && (
-            <div className="buttonContainer mt-3 pt-3">
+            <div className="buttonContainer mt-3 pt-3 flex md:justify-start md:items-start justify-center items-center">
               <PrimaryButton
                 text="Projects"
                 onClick={() => {
@@ -88,7 +88,7 @@ export const Hero = () => {
         <Bot />
       </div>
       {/* Bottom left Glitches component */}
-      <div className="absolute bottom-0 right-0 mb-32 mx-10 text-right">
+      <div className="absolute bottom-0 right-0 mb-32 mx-10 text-right z-10">
         <Glitches text="DATA CORRUPTED" textSize="0.8rem" color="white" rotation={0}/>
         <Glitches text="ERROR" textSize="0.8rem" color="gray" rotation={0}/>
       </div>

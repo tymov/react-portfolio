@@ -25,10 +25,10 @@ export const Projects = () => {
 
   return (
     <div
-      className="bg-violet-950 text-white min-h-screen flex flex-col pt-32 z-10"
+      className="bg-violet-950 text-white min-h-screen flex flex-col md:pt-20 pt-8 z-10"
       id="projects"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         <div
           className={`text-center md:text-left ${
             isTitleVisible ? "fade-in-right" : "invisible"
@@ -37,8 +37,8 @@ export const Projects = () => {
           <h1 className="text-4xl font-bold mb-4 uppercase header text-end">
             {" "}
             {/* Removed fade-in-right class */}
-            <span className="header text-6xl">02</span>{" "}
-            <span className="header text-6xl mx-5"> PROJECTS</span>
+            <span className="header sm:text-2xl md:text-6xl">02</span>{" "}
+            <span className="header sm:text-2xl md:text-6xl mx-5"> PROJECTS</span>
           </h1>
         </div>
         <div className="bottom-0 right-0 mb-20 mx-10 text-right">
