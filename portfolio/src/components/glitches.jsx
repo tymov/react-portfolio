@@ -1,5 +1,3 @@
-import React from "react";
-
 const Glitches = ({ text, textSize, color, rotation }) => {
   const style = {
     fontSize: textSize,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,12 +18,14 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="flex justify-between items-center h-16  text-white relative shadow-sm px-3 z-50"
+      className="sticky top-0 z-50 mb-32 flex justify-between items-center text-gray-800 dark:text-white py-4 px-3"
       role="navigation"
     >
-      <a href="/" className="pl-8">
-        <img src="/cb-logo(2).svg" alt="Logo" />
-      </a>
+      <div className="pl-8">
+        <a href="#" className="text-2xl font-bold">
+          Tymo Verhaegen
+        </a>
+      </div>
 
       <div
         className={`md:hidden ${
@@ -45,18 +47,25 @@ export const Navbar = () => {
             Home
           </a>
           <a
-            href="#about"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </a>
-          <a
             href="#projects"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("projects")}
           >
             Projects
+          </a>
+          <a
+            href="#internship"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("internship")}
+          >
+            Internship
+          </a>
+          <a
+            href="#about"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("about")}
+          >
+            About
           </a>
           <a
             href="#contact"
@@ -84,18 +93,25 @@ export const Navbar = () => {
           Home
         </a>
         <a
-          href="#about"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("about")}
-        >
-          About
-        </a>
-        <a
           href="#projects"
           className="p-4 text-lg"
           onClick={() => scrollToSection("projects")}
         >
           Projects
+        </a>
+        <a
+          href="#internship"
+          className="p-4 text-lg"
+          onClick={() => scrollToSection("internship")}
+        >
+          Internship
+        </a>
+        <a
+          href="#about"
+          className="p-4 text-lg"
+          onClick={() => scrollToSection("about")}
+        >
+          About
         </a>
         <a
           href="#contact"

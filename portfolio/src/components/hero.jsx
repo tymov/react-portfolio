@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Bot } from "./bot";
 import { PrimaryButton } from "./buttons/priButton";
 import SecondaryButton from "./buttons/secButton";
@@ -41,56 +41,58 @@ export const Hero = () => {
     }
   };
 
-  const handleButtonClick = (sectionId) => {
-    // Scroll to the specified section
-    handleScrollToSection(sectionId);
-
-    // Trigger animation of the spline component
-    // You need to implement this part based on how the spline component is animated
-    // For example, you can use CSS animations or JavaScript animation libraries
-  };
-
   return (
-    <div className="text-white min-h-screen flex flex-col relative">
-      {/* Main content */}
-      <div className="md:mx-10 md:px-10 flex flex-col justify-center md:justify-start w-full md:w-1/2 z-10 mt-40">
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl font-bold mb-4 uppercase header text-center md:text-start">
-            <span className="header sm:text-xl md:text-6xl lg:text-9xl">01</span>{" "}
-            <span className="header sm:text-xl md:text-6xl lg:text-9xl lg:mx-10"> INTRO</span>
-          </h1>
-          <p className="md:text-lg lg:text-4xl mb-4 text-center md:text-start px-3 md:px-0">{typedText}</p>
-          {showButton && (
-            <div className="buttonContainer mt-6 pt-6 flex md:justify-start md:items-start justify-center items-center">
-              <PrimaryButton
-                text="Projects"
-                onClick={() => {
-                  const projectsSection = document.getElementById("projects");
-                  if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              />
-              <SecondaryButton
-                text="Contact"
-                onClick={() => {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              />
-            </div>
-          )}
+    <div className="text-gray-800 dark:text-white pb-4 px-10 lg:mb-40">
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-1/2">
+          <div className="flex flex-col items-center lg:items-start">
+            <h1 className="text-4xl font-bold mb-4 uppercase header text-center md:text-start">
+              <span className="header text-5xl lg:text-6xl 2xl:text-7xl">
+                01
+              </span>
+              <span className="header text-5xl lg:text-6xl 2xl:text-7xl lg:mx-10">
+                INTRO
+              </span>
+            </h1>
+
+            <p className="md:text-lg 2xl:text-2xl mb-4 text-center md:text-start px-3 md:px-0">
+              {typedText}
+            </p>
+
+            {showButton && (
+              <div className="buttonContainer mt-4 pt-4 flex md:justify-start md:items-start justify-center items-center">
+                <PrimaryButton
+                  text="Projects"
+                  onClick={() => {
+                    const projectsSection = document.getElementById("projects");
+                    if (projectsSection) {
+                      projectsSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
+                <SecondaryButton
+                  text="Contact"
+                  onClick={() => {
+                    const contactSection = document.getElementById("contact");
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="hidden md:block w-1/2 absolute right-0 top-0">
-        <Bot />
-      </div>
-      {/* Bottom left Glitches component */}
-      <div className="absolute bottom-0 right-0 mb-32 mx-10 text-right z-10">
-        <Glitches text="DATA CORRUPTED" textSize="0.8rem" color="white" rotation={0}/>
-        <Glitches text="ERROR" textSize="0.8rem" color="gray" rotation={0}/>
+
+        <div className="w-full md:w-1/2">
+          <div className="hidden md:flex justify-center">
+            <img
+              src="/Tymo-removebg-preview.png"
+              alt="Tymo"
+              className="max-w-full max-h-full rounded-xl scale-150"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

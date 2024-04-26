@@ -1,19 +1,38 @@
-import React from "react";
-
 export const About = () => {
   return (
-    <div className="bg-cyberpunk-900 text-white min-h-screen flex flex-col justify-center items-center z-10" id="about">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">About Me</h1>
-        <p className="text-lg mb-8">
-          Hi there! I'm Tymo Verhaegen, a passionate application developer and AI enthusiast based in Belgium. I love building innovative solutions and exploring the latest technologies.
-        </p>
-        <p className="text-lg mb-8">
-          With a background in both application development and AI, I bring a unique perspective to my projects. Whether it's creating intuitive user interfaces or implementing machine learning algorithms, I'm always up for a challenge.
-        </p>
-        <p className="text-lg mb-8">
-          When I'm not coding, you can find me exploring new video games, experimenting in the kitchen, or planning my next travel adventure. Feel free to reach out if you'd like to collaborate on a project or just chat about technology and gaming!
-        </p>
+    <div className=" text-gray-800 dark:text-white pb-4 px-10" id="about">
+      <h1 className="text-4xl font-bold mb-4 uppercase header text-start pb-10">
+        <span className="header text-4xl md:text-5xl">04</span>
+        <span className="header text-4xl md:text-5xl mx-5"> ABOUT ME</span>
+      </h1>
+
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-1/2 lg:p-8">
+          <div className="flex items-center justify-center">
+            <img
+              src="https://avatars.githubusercontent.com/u/48637173?v=4"
+              alt="Tymo Verhaegen"
+              className="rounded-full h-64 w-64 mx-auto md:mx-0"
+            />
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/2">
+          <div className="flex justify-center items-center">
+            <p className="text-lg mb-8">
+              Hi there! I'm Tymo Verhaegen, a passionate application developer
+              and design enthusiast based in Belgium.
+              <br></br><br></br>
+              With a background in application development and an interest in design, I bring
+              a unique perspective to my projects. Whether it's creating
+              intuitive user interfaces or implementing the best possible user experience, I'm always up for a challenge.
+              <br></br><br></br>
+              When I'm not coding, you can find me producing music, playing games, 
+              experimenting in the kitchen, or planning my next travel
+              adventure.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

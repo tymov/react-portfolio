@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Glitches from "./glitches";
 
 export const Projects = () => {
@@ -25,15 +25,11 @@ export const Projects = () => {
 
   return (
     <div
-      className="bg-violet-950 text-white min-h-screen flex flex-col md:pt-20 pt-8 z-10"
+      className="text-gray-800 dark:text-white min-h-screen flex flex-col md:pt-10 pt-8 z-10 "
       id="projects"
     >
       <div className="container mx-auto md:px-4">
-        <div
-          className={`text-center md:text-left ${
-            isTitleVisible ? "fade-in-right" : "invisible"
-          }`}
-        >
+        <div>
           <h1 className="text-4xl font-bold mb-4 uppercase header text-end">
             {" "}
             {/* Removed fade-in-right class */}
@@ -41,14 +37,14 @@ export const Projects = () => {
             <span className="header sm:text-2xl md:text-6xl mx-5"> PROJECTS</span>
           </h1>
         </div>
-        <div className="bottom-0 right-0 mb-20 mx-10 text-right">
+        <div className="bottom-0 right-0 mb-10 mx-10 text-right fade-in-right">
           <Glitches
-            text="C:\Users\YourName\Documents\Projects\App"
+            text="C:\Users\Tymo\Documents\Projects\App"
             textSize="0.5rem"
-            color="white"
+            color="gray"
             rotation={0}
           />
-          <Glitches text="CODE ." textSize="0.4rem" color="gray" rotation={0} />
+          <Glitches text="projects.jsx" textSize="0.4rem" color="gray" rotation={0} />
         </div>
         <div className="flex flex-wrap justify-center mt-10">
           {" "}
