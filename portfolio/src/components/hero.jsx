@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
-import { Bot } from "./bot";
 import { PrimaryButton } from "./buttons/priButton";
 import SecondaryButton from "./buttons/secButton";
-import Glitches from "./glitches";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
-  const [typedText, setTypedText] = useState("");
+  const { t } = useTranslation();
+
   const [finalText, setFinalText] = useState(
     "Welcome to my portfolio. I'm Tymo Verhaegen, a dedicated professional in Application Development, with a particular emphasis on Front-End Development and UI/UX Design. Feel free to delve into my showcased projects below."
   );
+
+  const [typedText, setTypedText] = useState("");
   const [index, setIndex] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
@@ -47,12 +49,8 @@ export const Hero = () => {
         <div className="w-full md:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <h1 className="text-4xl font-bold mb-4 uppercase header text-center md:text-start">
-              <span className="header text-5xl lg:text-6xl 2xl:text-7xl">
-                01
-              </span>
-              <span className="header text-5xl lg:text-6xl 2xl:text-7xl lg:mx-10">
-                INTRO
-              </span>
+              <span className="header text-4xl lg:text-6xl">01</span>
+              <span className="header text-4xl lg:text-6xl mx-5">INTRO</span>
             </h1>
 
             <p className="md:text-lg 2xl:text-2xl mb-4 text-center md:text-start px-3 md:px-0">

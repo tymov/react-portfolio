@@ -1,5 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/futura-pt");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +9,7 @@ html {
 }
 
 * {
-  font-family: "Futura PT", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -238,4 +237,23 @@ div:after {
   62% {
     transform: translate(-22px, 5px) skew(21deg);
   }
+}
+
+.image-carousel {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
 }

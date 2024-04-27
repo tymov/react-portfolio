@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
+        slate: {
+          925: "#090F21",
+        },
         vulcan: {
           50: "#f0f3ff",
           100: "#dfe5ff",

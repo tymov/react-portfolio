@@ -54,11 +54,11 @@ export const Navbar = () => {
             Projects
           </a>
           <a
-            href="#internship"
+            href="#experience"
             className="block p-4 text-lg"
-            onClick={() => scrollToSection("internship")}
+            onClick={() => scrollToSection("experience")}
           >
-            Internship
+            Experience
           </a>
           <a
             href="#about"
@@ -100,11 +100,11 @@ export const Navbar = () => {
           Projects
         </a>
         <a
-          href="#internship"
+          href="#experience"
           className="p-4 text-lg"
-          onClick={() => scrollToSection("internship")}
+          onClick={() => scrollToSection("experience")}
         >
-          Internship
+          Experience
         </a>
         <a
           href="#about"

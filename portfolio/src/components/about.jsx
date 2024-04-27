@@ -1,10 +1,15 @@
 export const About = () => {
   return (
-    <div className=" text-gray-800 dark:text-white pb-4 px-10" id="about">
-      <h1 className="text-4xl font-bold mb-4 uppercase header text-start pb-10">
-        <span className="header text-4xl md:text-5xl">04</span>
-        <span className="header text-4xl md:text-5xl mx-5"> ABOUT ME</span>
-      </h1>
+    <div
+      className="text-gray-800 dark:text-white flex flex-col md:pt-10 pt-8 z-10"
+      id="about"
+    >
+      <div className="text-gray-800 dark:text-white pb-16 px-10 pt-10 ">
+        <h1 className="text-4xl font-bold uppercase header text-sta">
+          <span className="header text-4xl md:text-5xl">05</span>
+          <span className="header text-4xl md:text-5xl mx-5"> ABOUT ME</span>
+        </h1>
+      </div>
 
       <div className="flex flex-wrap">
         <div className="w-full md:w-1/2 lg:p-8">
@@ -22,13 +27,16 @@ export const About = () => {
             <p className="text-lg mb-8">
               Hi there! I'm Tymo Verhaegen, a passionate application developer
               and design enthusiast based in Belgium.
-              <br></br><br></br>
-              With a background in application development and an interest in design, I bring
-              a unique perspective to my projects. Whether it's creating
-              intuitive user interfaces or implementing the best possible user experience, I'm always up for a challenge.
-              <br></br><br></br>
-              When I'm not coding, you can find me producing music, playing games, 
-              experimenting in the kitchen, or planning my next travel
+              <br></br>
+              <br></br>
+              With a background in application development and an interest in
+              design, I bring a unique perspective to my projects. Whether it's
+              creating intuitive user interfaces or implementing the best
+              possible user experience, I'm always up for a challenge.
+              <br></br>
+              <br></br>
+              When I'm not coding, you can find me producing music, playing
+              games, experimenting in the kitchen, or planning my next travel
               adventure.
             </p>
           </div>
