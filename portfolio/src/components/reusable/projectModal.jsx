@@ -20,7 +20,6 @@ const Modal = ({ project, closeModal }) => {
     const image = new Image();
     image.src = project.images[currentImageIndex];
     image.onload = () => {
-      const imageWidth = image.width;
       const imageHeight = image.height;
       const maxHeight = Math.max(descriptionHeight, imageHeight);
       setModalHeight(maxHeight);
@@ -39,27 +38,21 @@ const Modal = ({ project, closeModal }) => {
     );
   };
 
-  const [showFullDescription, setShowFullDescription] = useState(false);
-
-  const toggleDescription = () => {
-    setShowFullDescription(!showFullDescription);
-  };
-
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900  bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10 overflow-y-auto"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
       <motion.div
-        className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl w-full h-full relative flex flex-col lg:flex-row"
+        className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl w-full h-52 lg:h-full h-50 relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.3, delay: 0.2 }}
         style={{ height: modalHeight }}
       >
-        <div className="w-full lg:w-4/12 p-8" id="description">
+        <div className="w-full md:w-4/4 lg:w-4/12 p-8" id="description">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
             <span>{project.title}</span>
             <span className="flex items-center text-xl">
@@ -73,16 +66,23 @@ const Modal = ({ project, closeModal }) => {
             {project.date}
           </p>
 
-          <div className="mb-8 h-full max-h-full">
-            <div className="overflow-y-auto h-full">
-              <p className="text-gray-800 dark:text-white text-lg">
+          <div
+            className="mb-8 h-full overflow-y-auto max-h-[700px] md:max-h-[500px] sm:max-h-[300px] direction-rtl"
+            style={{
+              scrollbarWidth: "thin",
+              scrollbarColor: "rgba(71, 85, 105, 0.5) rgba(51, 65, 85, 0.2)",
+              direction: "rtl", // Set scrollbar direction to right-to-left
+            }}
+          >
+            <div style={{ direction: "ltr" }}>
+              <p className="text-gray-800 dark:text-white text-lg mx-4">
                 {project.description}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-6/12 p-8 relative hidden lg:flex justify-center items-center bg-slate-900">
+        <div className="w-full hidden lg:w-6/12 p-8 relative lg:flex justify-center items-center bg-slate-900">
           {/* Check if there are images */}
           {project.images.length > 0 ? (
             <>
@@ -129,7 +129,7 @@ const Modal = ({ project, closeModal }) => {
           )}
         </div>
 
-        <div className="w-full lg:w-2/12 p-8 py-2 justify-center items-center bg-slate-800 lg:py-16 mx-auto px-5">
+        <div className="w-full hidden md:w-0/4 lg:block lg:w-2/12 p-8 py-2 justify-center items-center bg-slate-800 lg:py-16 mx-auto px-5">
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4 lg:my-0 lg:mb-2">
             Technologies Used
           </h3>

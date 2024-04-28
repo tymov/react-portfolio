@@ -74,9 +74,9 @@ const Modal = ({ experience, closeModal }) => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 p-8 bg-slate-800 py-2">
-          <div className="mb-8 ">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4">
+        <div className="w-full lg:w-1/4 p-8 bg-slate-800">
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
               Technologies Used
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
@@ -92,11 +92,11 @@ const Modal = ({ experience, closeModal }) => {
             </div>
           </div>
 
-          <div className="my-8 mt-10 hidden lg:flex">
+          <div className="my-8 mt-10 md:hidden lg:block">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4 md:mt-8">
               {" "}
               {/* Adjusted margin for md screens */}
-              Soft Skills
+              Softskills Learned
             </h3>
             {/* Display softskills as a list */}
             <ul>
