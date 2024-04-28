@@ -19,7 +19,7 @@ export const Skills = () => {
       className="text-gray-800 dark:text-white pb-24 px-10 pt-10"
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.99, delay: 0.5 }}
     >
       <div className="flex items-center justify-between mb-4 pb-10">
         <motion.h1
@@ -34,7 +34,7 @@ export const Skills = () => {
       </div>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 items-center justify-center gap-4"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.66 }}
@@ -51,9 +51,6 @@ export const Skills = () => {
         </div>
         <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
           <SiBootstrap className="text-5xl text-purple-500" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <FaNodeJs className="text-5xl text-green-400" />
         </div>
 
         {/* Backend */}

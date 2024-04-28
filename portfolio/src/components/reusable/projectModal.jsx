@@ -4,6 +4,7 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaYoutube,
+  FaGit,
 } from "react-icons/fa";
 import { TiGroup } from "react-icons/ti";
 import { getIconForTechnology } from "../../constants/icons";
@@ -38,9 +39,15 @@ const Modal = ({ project, closeModal }) => {
     );
   };
 
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900  bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
@@ -62,9 +69,10 @@ const Modal = ({ project, closeModal }) => {
               </span>
             </span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-3">
             {project.date}
           </p>
+
           <div className="mb-8 h-full max-h-full">
             <div className="overflow-y-auto h-full">
               <p className="text-gray-800 dark:text-white text-lg">
@@ -74,7 +82,7 @@ const Modal = ({ project, closeModal }) => {
           </div>
         </div>
 
-        <div className="w-full lg:w-6/12 p-8 relative hidden lg:flex justify-center items-center bg-slate-800">
+        <div className="w-full lg:w-6/12 p-8 relative hidden lg:flex justify-center items-center bg-slate-900">
           {/* Check if there are images */}
           {project.images.length > 0 ? (
             <>
@@ -83,13 +91,13 @@ const Modal = ({ project, closeModal }) => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-900 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                    className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
                   >
                     <FaChevronLeft className="text-3xl" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-900 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                    className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
                   >
                     <FaChevronRight className="text-3xl" />
                   </button>
@@ -109,7 +117,7 @@ const Modal = ({ project, closeModal }) => {
                   transition={{ duration: 0.65 }}
                 />
                 {/* Display the number of images */}
-                <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-slate-900 px-2 py-1 rounded-md  dark:text-gray-200">
+                <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
                   {`${currentImageIndex + 1}/${project.images.length}`}
                 </p>
               </div>
@@ -121,15 +129,16 @@ const Modal = ({ project, closeModal }) => {
           )}
         </div>
 
-        <div className="w-full lg:w-2/12 justify-center items-center bg-slate-800 lg:py-16 mx-auto px-5">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-            Technologies Used:
+        <div className="w-full lg:w-2/12 p-8 py-2 justify-center items-center bg-slate-800 lg:py-16 mx-auto px-5">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4 lg:my-0 lg:mb-2">
+            Technologies Used
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
             {project.technologies.map((technology, index) => (
               <span
                 key={index}
                 className="text-gray-600 dark:text-gray-300 text-3xl"
+                title={technology}
               >
                 {getIconForTechnology(technology)}
               </span>
@@ -152,6 +161,50 @@ const Modal = ({ project, closeModal }) => {
               </a>
             </div>
           )}
+
+          {project.githubLink && (
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                Source Code
+              </h3>
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+              >
+                <span className="text-gray-800 dark:text-white text-4xl">
+                  <FaGit />
+                </span>
+              </a>
+            </div>
+          )}
+
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
+              Role
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
+              {project.role}
+            </p>
+          </div>
+
+          <div className="my-8 mt-10">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4">
+              Soft Skills
+            </h3>
+            {/* Display softskills as a list */}
+            <ul>
+              {project.softskills.map((skill, index) => (
+                <li
+                  key={index}
+                  className="text-gray-600 dark:text-gray-300 text-xl"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <motion.button
           onClick={closeModal}

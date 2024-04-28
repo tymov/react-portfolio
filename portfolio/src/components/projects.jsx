@@ -28,13 +28,12 @@ export const Projects = () => {
 
   return (
     <div
-      className="text-gray-800 dark:text-white flex flex-col pb-24 px-10 pt-10"
-      id="projects"
+      className="text-gray-800 dark:text-white pb-24 px-10 pt-10"
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.99, delay: 0.5 }}
     >
-      <div className="text-gray-800 dark:text-white pb-16 px-5 pt-10 ">
+      <div className="flex items-center justify-between mb-4 pb-10">
         <motion.h1
           className="text-4xl font-bold uppercase header text-start"
           initial={{ x: 100, opacity: 0 }}

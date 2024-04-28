@@ -24,7 +24,7 @@ export const Experience = () => {
       id="experience"
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}
-      transition={{ duration: 0.5, delay: 0 }}
+      transition={{ duration: 0.99, delay: 0 }}
     >
       <h1 className="text-4xl font-bold uppercase header text-start mb-10">
         <span className="header text-4xl md:text-5xl">02</span>{" "}
@@ -38,7 +38,7 @@ export const Experience = () => {
             className="mb-8 flex flex-wrap justify-center pb-8 relative"
           >
             {/* Date */}
-            <div className="w-full lg:w-1/6 flex justify-center items-start relative lg:items-center">
+            <div className="w-full lg:w-1/6 flex items-start relative">
               <p className="text-xl uppercase sm:mb-5 sm:pb-5">
                 {experience.date}
               </p>
@@ -46,8 +46,8 @@ export const Experience = () => {
 
             {/* Timeline */}
             <div className="w-full lg:w-1/6 lg:flex justify-center items-start relative hidden lg:items-center">
-              <div className="w-0.5 bg-gray-300 dark:bg-slate-800 absolute top-0 left-1/2 transform -translate-x-1/2 h-full"></div>
-              <div className="w-4 h-4 bg-gray-300 dark:bg-slate-800 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+              <div className="w-0.5 bg-gray-300 border-2 dark:bg-slate-925 border-slate-800 absolute top-0 left-1/2 transform -translate-x-1/2 h-full"></div>
+              <div className="w-4 h-4 bg-gray-300 border-2 dark:bg-slate-925 border-slate-800 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
             </div>
 
             {/* Content */}
@@ -62,13 +62,6 @@ export const Experience = () => {
               <p className="text-lg mt-2 mb-4 pb-3 pt-2">
                 {experience.description}
               </p>
-              {/* Check if there's a comment */}
-              {experience.comment && (
-                <div>
-                  <p>{experience.comment}</p>
-                  <br />
-                </div>
-              )}
 
               {/* Button to open modal */}
               <button

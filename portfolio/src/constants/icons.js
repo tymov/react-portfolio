@@ -21,7 +21,8 @@ import {
   SiFramer,
   SiLeaflet,
 } from "react-icons/si";
-import { FaJava, FaNodeJs } from "react-icons/fa";
+import { FaJava, FaNodeJs, FaNpm } from "react-icons/fa";
+import { PiGitlabLogoLight } from "react-icons/pi";
 import { DiScrum, DiHtml5, DiCss3, DiMysql } from "react-icons/di";
 import { IoLogoJavascript, IoLogoPython, IoLogoIonic } from "react-icons/io";
 import { TbAugmentedReality } from "react-icons/tb";
@@ -44,6 +45,7 @@ export const getIconForTechnology = (technology) => {
     SCRUM: "text-cyan-500",
     JavaScript: "text-yellow-500",
     Git: "text-red-500",
+    Gitlab: "text-orange-500",
     PostgreSQL: "text-blue-500",
     Docker: "text-blue-500",
     Trello: "text-blue-500",
@@ -59,6 +61,7 @@ export const getIconForTechnology = (technology) => {
     Jira: "text-sky-600",
     Framer: "text-violet-600",
     Leaflet: "text-green-400",
+    NPM: "text-red-500",
   };
 
   const colorClass = iconColors[technology];
@@ -103,6 +106,10 @@ export const getIconForTechnology = (technology) => {
       );
     case "Git":
       return <SiGit className={`${colorClass} ${commonIconClasses}`} />;
+    case "Gitlab":
+      return (
+        <PiGitlabLogoLight className={`${colorClass} ${commonIconClasses}`} />
+      );
     case "PostgreSQL":
       return <SiPostgresql className={`${colorClass} ${commonIconClasses}`} />;
     case "Docker":
@@ -137,6 +144,8 @@ export const getIconForTechnology = (technology) => {
       return <SiFramer className={`${colorClass} ${commonIconClasses}`} />;
     case "Leaflet":
       return <SiLeaflet className={`${colorClass} ${commonIconClasses}`} />;
+    case "NPM":
+      return <FaNpm className={`${colorClass} ${commonIconClasses}`} />;
     default:
       return null;
   }

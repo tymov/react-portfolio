@@ -6,7 +6,7 @@ import { getIconForTechnology } from "../../constants/icons";
 const Modal = ({ experience, closeModal }) => {
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
@@ -22,11 +22,11 @@ const Modal = ({ experience, closeModal }) => {
             <h3 className="mb-2 font-semibold text-2xl">{experience.title}</h3>
             <p className="text-lg text-vulcan-100 font-semibold mb-6 flex items-center">
               <span className="flex">
-                <span className="text-gray-700 dark:text-gray-300">
+                <span className="text-gray-700 dark:text-gray-300 mr-3">
                   {experience.company}
                 </span>{" "}
                 -{" "}
-                <span className="text-gray-700 dark:text-gray-300">
+                <span className="text-gray-700 dark:text-gray-300 ml-3">
                   {experience.location}
                 </span>{" "}
               </span>
@@ -51,7 +51,7 @@ const Modal = ({ experience, closeModal }) => {
             {experience.files && experience.files.length > 0 && (
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                  Files:
+                  Files
                 </h3>
                 <div className="flex flex-wrap gap-4 mx-5">
                   {experience.files.map((file, index) => (
@@ -60,10 +60,11 @@ const Modal = ({ experience, closeModal }) => {
                       href={file.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-lg text-blue-500 dark:text-blue-400 hover:underline flex items-center"
+                      className="text-lg text-gray-800 dark:text-white hover:underline flex items-center"
                       download // Add download attribute for better UX
                     >
-                      <FaDownload className="mr-2" /> {/* Download icon */}
+                      <FaDownload className="mr-2 text-vulcan-300" />{" "}
+                      {/* Download icon */}
                       <span>{file.name}</span> {/* File name */}
                     </a>
                   ))}
@@ -73,12 +74,13 @@ const Modal = ({ experience, closeModal }) => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 p-8 bg-slate-800">
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-              Technologies Used:
+        <div className="w-full lg:w-1/4 p-8 bg-slate-800 py-2">
+          <div className="mb-8 ">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4">
+              Technologies Used
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
+              {/* Display technologies */}
               {experience.technologies.map((technology, index) => (
                 <span
                   key={index}
@@ -89,7 +91,27 @@ const Modal = ({ experience, closeModal }) => {
               ))}
             </div>
           </div>
+
+          <div className="my-8 mt-10 hidden lg:flex">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4 md:mt-8">
+              {" "}
+              {/* Adjusted margin for md screens */}
+              Soft Skills
+            </h3>
+            {/* Display softskills as a list */}
+            <ul>
+              {experience.softskills.map((skill, index) => (
+                <li
+                  key={index}
+                  className="text-gray-600 dark:text-gray-300 text-xl"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+
         <motion.button
           onClick={closeModal}
           aria-label="Close modal"
