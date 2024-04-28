@@ -30,7 +30,7 @@ export const Navbar = () => {
       <div
         className={`md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-0 right-0 w-56 bg-cyberpunk-950 h-full z-50 transition-transform duration-300 ease-in-out`}
+        } fixed top-0 right-0 w-56 bg-vulcan-900 h-full z-50 transition-transform duration-300 ease-in-out`}
       >
         <div className="flex flex-col h-full">
           <button onClick={toggleMenu} className="p-4 ml-auto">
@@ -47,18 +47,18 @@ export const Navbar = () => {
             Home
           </a>
           <a
-            href="#projects"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("projects")}
-          >
-            Projects
-          </a>
-          <a
             href="#experience"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("experience")}
           >
             Experience
+          </a>
+          <a
+            href="#projects"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("projects")}
+          >
+            Projects
           </a>
           <a
             href="#about"
@@ -93,19 +93,20 @@ export const Navbar = () => {
           Home
         </a>
         <a
-          href="#projects"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("projects")}
-        >
-          Projects
-        </a>
-        <a
           href="#experience"
           className="p-4 text-lg"
           onClick={() => scrollToSection("experience")}
         >
           Experience
         </a>
+        <a
+          href="#projects"
+          className="p-4 text-lg"
+          onClick={() => scrollToSection("projects")}
+        >
+          Projects
+        </a>
+
         <a
           href="#about"
           className="p-4 text-lg"

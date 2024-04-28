@@ -20,6 +20,7 @@ export const EXPERIENCES = [
       "PostgreSQL",
       "Figma",
     ],
+    files: [],
     comment: "",
   },
   {
@@ -41,6 +42,12 @@ export const EXPERIENCES = [
       "TailwindCSS",
       "Git",
       "Trello",
+    ],
+    files: [
+      {
+        name: "Bachelor Thesis (.pdf)",
+        url: "https://example.com",
+      },
     ],
     comment:
       "Seen I've spent three years studying and learning new things here, there are a lot of technologies I've worked with. But these are the ones I've worked with the most and that I think are the most important ones for my future. In the section 'Projects' you can see some of the projects I've worked on during my studies.",

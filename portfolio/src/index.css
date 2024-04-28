@@ -137,35 +137,6 @@ div:after {
   }
 }
 
-/* Keyframes */
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.5s ease-in-out forwards;
-}
-
-.fade-in-right {
-  animation: fadeInRight 1s ease;
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .glitch-container {
   position: relative;
   display: inline-block;
