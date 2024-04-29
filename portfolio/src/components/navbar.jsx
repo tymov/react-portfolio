@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="sticky top-0 z-50 mb-32 flex justify-between items-center text-gray-800 dark:text-white py-4 px-3"
+      className="sticky top-0 z-50 flex justify-between items-center text-gray-800 dark:text-white py-4 px-3"
       role="navigation"
     >
       <div className="pl-8">

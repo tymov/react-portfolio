@@ -4,7 +4,10 @@ import { Link } from "react-router-dom"; // Import Link if you're using React Ro
 const SecondaryButton = ({ text, onClick }) => {
   return (
     <Link>
-      <button className="btnSecondary text-md 2xl:text-xl" onClick={onClick}>
+      <button
+        className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800"
+        onClick={onClick}
+      >
         {text}
       </button>
     </Link>

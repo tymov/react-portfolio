@@ -32,6 +32,7 @@ export const Projects = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}
       transition={{ duration: 0.99, delay: 0.5 }}
+      id="projects"
     >
       <div className="flex items-center justify-between mb-4 pb-10">
         <motion.h1

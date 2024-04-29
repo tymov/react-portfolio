@@ -9,13 +9,13 @@ const Modal = ({ experience, closeModal }) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
+      transition={{ duration: 0.63, delay: 0.1 }}
     >
       <motion.div
         className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
+        transition={{ duration: 0.1, delay: 0 }}
       >
         <div className="w-full lg:w-3/4 p-8 relative bg-slate-700">
           <div>

@@ -1,19 +1,20 @@
-import { RiReactjsLine, RiAngularjsLine } from "react-icons/ri";
-import {
-  SiDjango,
-  SiMysql,
-  SiMongodb,
-  SiTailwindcss,
-  SiBootstrap,
-  SiFigma,
-  SiUml,
-} from "react-icons/si";
-import { FaJava, FaNodeJs } from "react-icons/fa";
-import { DiScrum } from "react-icons/di";
-import React from "react";
+import { useState } from "react";
+import { SKILLS } from "../constants/skills";
+import { getIconForTechnology } from "../constants/icons";
 import { motion } from "framer-motion";
+import Modal from "./reusable/skillModal";
 
 export const Skills = () => {
+  const [selectedSkill, setSelectedSkill] = useState(null);
+
+  const handleSkillClick = (skill) => {
+    setSelectedSkill(skill);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedSkill(null);
+  };
+
   return (
     <div
       className="text-gray-800 dark:text-white pb-24 px-10 pt-10"
@@ -39,45 +40,26 @@ export const Skills = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.66 }}
       >
-        {/* Frontend */}
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <RiReactjsLine className="text-5xl text-cyan-400" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <RiAngularjsLine className="text-5xl text-red-600" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiTailwindcss className="text-5xl text-blue-400" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiBootstrap className="text-5xl text-purple-500" />
-        </div>
-
-        {/* Backend */}
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiDjango className="text-5xl text-green-600" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiMysql className="text-5xl text-blue-300" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiMongodb className="text-5xl text-green-600" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <FaJava className="text-5xl text-orange-500" />
-        </div>
-
-        {/* Tools */}
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiFigma className="text-5xl text-purple-400" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <SiUml className="text-5xl text-yellow-500" />
-        </div>
-        <div className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center">
-          <DiScrum className="text-5xl text-cyan-500" />
-        </div>
+        {SKILLS.map((skill, index) => (
+          <motion.div
+            key={index}
+            className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center cursor-pointer"
+            onClick={() => handleSkillClick(skill)}
+          >
+            <span className="!text-5xl scale-165 py-2">
+              {getIconForTechnology(skill.name)}
+            </span>
+          </motion.div>
+        ))}
       </motion.div>
+
+      {/* Render modal if a skill is selected */}
+      {selectedSkill && (
+        <Modal
+          skill={selectedSkill}
+          closeModal={handleCloseModal}
+        />
+      )}
     </div>
   );
 };

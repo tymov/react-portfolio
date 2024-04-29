@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 const Modal = ({ project, closeModal }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [modalHeight, setModalHeight] = useState("auto");
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [showExtraInfo, setShowExtraInfo] = useState(false);
 
   useEffect(() => {
     const descriptionHeight =
@@ -38,19 +40,33 @@ const Modal = ({ project, closeModal }) => {
     );
   };
 
+  const toggleDescription = () => {
+    setIsDescriptionExpanded(!isDescriptionExpanded);
+  };
+
+  const toggleExtraInfo = () => {
+    setShowExtraInfo(!showExtraInfo);
+  };
+
+  const getDescription = () => {
+    return isDescriptionExpanded
+      ? project.description
+      : project.description.slice(0, 300) + "...";
+  };
+
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-24 py-10 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-5 overflow-y-auto"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
+      transition={{ duration: 0.3, delay: 0.1 }}
     >
       <motion.div
-        className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl w-full h-52 lg:h-full h-50 relative flex flex-col lg:flex-row"
+        className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
-        style={{ height: modalHeight }}
+        transition={{ duration: 0.1, delay: 0 }}
+        style={{ maxHeight: "90vh" }}
       >
         <div className="w-full md:w-4/4 lg:w-4/12 p-8" id="description">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
@@ -65,9 +81,8 @@ const Modal = ({ project, closeModal }) => {
           <p className="text-gray-600 dark:text-gray-300 text-lg mb-3">
             {project.date}
           </p>
-
           <div
-            className="mb-8 h-full overflow-y-auto max-h-[700px] md:max-h-[500px] sm:max-h-[300px] direction-rtl"
+            className="mb-8 h-full overflow-y-auto lg:max-h-[1400px] md:max-h-[1000px] sm:max-h-[475px] direction-rtl"
             style={{
               scrollbarWidth: "thin",
               scrollbarColor: "rgba(71, 85, 105, 0.5) rgba(51, 65, 85, 0.2)",
@@ -75,14 +90,26 @@ const Modal = ({ project, closeModal }) => {
             }}
           >
             <div style={{ direction: "ltr" }}>
-              <p className="text-gray-800 dark:text-white text-lg mx-4">
-                {project.description}
+              <p className="text-gray-800 dark:text-white text-lg lg:mt-3 ml-3 ">
+                {getDescription()}
               </p>
+              {project.description.length > 150 && (
+                <button
+                  onClick={toggleDescription}
+                  className="text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-5 lg:pb-20 px-5 sm:mb-4"
+                >
+                  {isDescriptionExpanded ? "Read less" : "Read more"}
+                </button>
+              )}
             </div>
-          </div>
+          </div>{" "}
         </div>
 
-        <div className="w-full hidden lg:w-6/12 p-8 relative lg:flex justify-center items-center bg-slate-900">
+        <div
+          className={`w-full ${
+            showExtraInfo ? "lg:w-6/12" : "lg:w-8/12"
+          } lg:w-6/12 hidden p-8 relative lg:flex justify-center items-center bg-slate-900`}
+        >
           {/* Check if there are images */}
           {project.images.length > 0 ? (
             <>
@@ -121,6 +148,17 @@ const Modal = ({ project, closeModal }) => {
                   {`${currentImageIndex + 1}/${project.images.length}`}
                 </p>
               </div>
+
+              {/* Button to toggle extra info */}
+              <motion.button
+                onClick={toggleExtraInfo}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.65 }}
+                className="absolute bottom-4 right-4 text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-2 px-4"
+              >
+                {showExtraInfo ? "Hide extra info" : "Show extra info"}
+              </motion.button>
             </>
           ) : (
             <p className="text-white text-3xl bg-slate-900 py-3 px-4 rounded-md">
@@ -129,7 +167,19 @@ const Modal = ({ project, closeModal }) => {
           )}
         </div>
 
-        <div className="w-full hidden md:w-0/4 lg:block lg:w-2/12 p-8 py-2 justify-center items-center bg-slate-800 lg:py-16 mx-auto px-5">
+        <motion.div
+          className={`w-full ${
+            showExtraInfo ? "lg:w-2/12" : "lg:hidden"
+          } lg:block hidden py-2 justify-center items-center bg-slate-800 lg:py-16 overflow-y-auto p-4 pr-3`}
+          style={{
+            scrollbarWidth: "thin",
+            scrollbarColor: "rgba(71, 85, 105, 0.5) rgba(51, 65, 85, 0.2)",
+            direction: "ltr", // Set scrollbar direction to left-to-right
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.65 }}
+        >
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4 lg:my-0 lg:mb-2">
             Technologies Used
           </h3>
@@ -205,7 +255,8 @@ const Modal = ({ project, closeModal }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
+
         <motion.button
           onClick={closeModal}
           aria-label="Close modal"

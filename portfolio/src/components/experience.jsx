@@ -20,7 +20,7 @@ export const Experience = () => {
 
   return (
     <motion.div
-      className="text-gray-800 dark:text-white pb-10 px-10 pt-10 relative"
+      className="text-gray-800 dark:text-white pb-10 pt-10 px-10 relative"
       id="experience"
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}

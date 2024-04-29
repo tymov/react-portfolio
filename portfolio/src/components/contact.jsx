@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 
-export const About = () => {
+export const Contact = () => {
   return (
     <motion.div
       className="text-gray-800 dark:text-white pb-10 px-10 pt-10 relative"
-      id="about"
+      id="contact"
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 0 }}
       transition={{ duration: 0.99, delay: 0 }}
     >
       <h1 className="text-4xl font-bold uppercase header text-start mb-10">
-        <span className="header text-4xl md:text-5xl">05</span>{" "}
-        <span className="header text-4xl md:text-5xl mx-5">ABOUT ME</span>
+        <span className="header text-4xl md:text-5xl">06</span>{" "}
+        <span className="header text-4xl md:text-5xl mx-5">CONTACT</span>
       </h1>
 
       <div className="flex flex-wrap">

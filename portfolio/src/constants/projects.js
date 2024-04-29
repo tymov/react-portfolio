@@ -10,6 +10,10 @@ import Pokedex from "../assets/Flutter/Pokedex.png";
 import Index from "../assets/Flutter/Index.png";
 import AR from "../assets/Flutter/AR.png";
 import PokeInfo from "../assets/Flutter/PokeInfo.png";
+import Dashboard from "../assets/Project 4.0/Dashboard.png"
+import AccountManage from "../assets/Project 4.0/Account dashboard.png"
+import UploadImage from "../assets/Project 4.0/Afbeelding uploaden.png"
+import CreateField from "../assets/Project 4.0/Veld create.png"
 
 export const PROJECTS = [
   {
@@ -69,7 +73,7 @@ export const PROJECTS = [
     role: "Full-Stack Developer",
     groupSize: 6,
     description:
-      "I had the privilege to collaborate with VITO (Vlaamse Instituut voor Technologisch Onderzoek), the Flemish Institute for Technological Research, on a transformative multidisciplinary project during my academic journey. Partnering with VITO, our project spanned across multiple branches of IT, including Cloud & Cybersecurity (CCS), Artificial Intelligence (AI), and Application Development (APP).\n\nTogether, my group, consisting of 3 APP students, 2 CCS students and an AI student, and I embarked on a mission to develop a comprehensive solution addressing environmental challenges through advanced technology.\n\nOur primary objective was to create a web application and mobile app capable of detecting an invasive weed species known as yellownutsedge. This endeavor required the seamless integration of expertise from diverse fields, fostering an environment of innovation and collaboration. In our group project, I mainly handled front-end development responsibilities, driving the creation of user interfaces. I also pitched in on back-end tasks when needed. This hands-on experience allowed me to gain insight into both front-end and back-end processes, enhancing my skills for future projects in software development. Engaging in this project provided me with invaluable insights and practical experience, particularly in areas I had previously explored but never at this scale. It was a remarkable learning opportunity that not only enriched my academic journey but also prepared me for the challenges and opportunities in my future career endeavors.",
+      "I had the privilege to collaborate with VITO (Vlaamse Instituut voor Technologisch Onderzoek), the Flemish Institute for Technological Research, on a transformative multidisciplinary project during my academic journey. Partnering with VITO, our project spanned across multiple branches of IT, including Cloud & Cybersecurity (CCS), Artificial Intelligence (AI), and Application Development (APP).\n\nTogether, my group, consisting of 3 APP students, 2 CCS students and an AI student, and I embarked on a mission to develop a comprehensive solution addressing environmental challenges through advanced technology.\n\nOur primary objective was to create a web application and mobile app capable of detecting an invasive weed species known as yellownutsedge. This endeavor required the seamless integration of expertise from diverse fields, fostering an environment of innovation and collaboration. In our group project, I mainly handled front-end development responsibilities, driving the creation of user interfaces. I also pitched in on back-end tasks when needed. This hands-on experience allowed me to gain insight into both front-end and back-end processes, enhancing my skills for future projects in software development. Engaging in this project provided me with invaluable insights and practical experience, particularly in areas I had previously explored but never at this scale. I'm not at liberty to share a lot of content about this project, like a demo or images that contain private information, I am allowed to show dummy/fake data to show the general feel of the project. It was a remarkable learning opportunity that not only enriched my academic journey but also prepared me for the challenges and opportunities in my future career endeavors.",
     technologies: [
       "Angular",
       "TypeScript",
@@ -86,7 +90,7 @@ export const PROJECTS = [
     ],
     githubLink: "",
     liveDemoLink: "",
-    images: [],
+    images: [Dashboard, AccountManage, UploadImage, CreateField],
     softskills: [
       "Teamwork",
       "Communication",
