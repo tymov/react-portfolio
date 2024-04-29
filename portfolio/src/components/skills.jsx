@@ -14,7 +14,6 @@ export const Skills = () => {
   const handleCloseModal = () => {
     setSelectedSkill(null);
   };
-
   return (
     <div
       className="text-gray-800 dark:text-white pb-24 px-10 pt-10"

@@ -16,7 +16,7 @@ const SkillProgressBar = ({ level }) => {
 
       {/* Skill level name above the right percentage */}
       <div
-        className="absolute top-0 left-0 -mt-4 text-xs text-gray-700 dark:text-gray-300"
+        className="absolute top-0 left-0 -mt-6 text-sm text-gray-700 dark:text-gray-300"
         style={getMarkerPosition()}
       >
         {level.name}

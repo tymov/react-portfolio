@@ -19,7 +19,7 @@ const Modal = ({ experience, closeModal }) => {
       >
         <div className="w-full lg:w-3/4 p-8 relative bg-slate-700">
           <div>
-            <h3 className="mb-2 font-semibold text-2xl">{experience.title}</h3>
+            <h3 className="mb-2 font-semibold text-3xl">{experience.title}</h3>
             <p className="text-lg text-vulcan-100 font-semibold mb-6 flex items-center">
               <span className="flex">
                 <span className="text-gray-700 dark:text-gray-300 mr-3">
@@ -38,7 +38,7 @@ const Modal = ({ experience, closeModal }) => {
 
             {experience.comment && (
               <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-2">Comment:</h4>
+                <h4 className="text-lg font-semibold mb-2">Comment</h4>
                 <p className="text-base text-gray-800 dark:text-white">
                   {experience.comment}
                 </p>
@@ -74,7 +74,7 @@ const Modal = ({ experience, closeModal }) => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 p-8 bg-slate-800">
+        <div className="w-full lg:w-1/4 p-8 bg-slate-800 hidden lg:block">
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
               Technologies Used

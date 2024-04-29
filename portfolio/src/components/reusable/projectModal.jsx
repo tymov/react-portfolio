@@ -169,7 +169,7 @@ const Modal = ({ project, closeModal }) => {
 
         <motion.div
           className={`w-full ${
-            showExtraInfo ? "lg:w-2/12" : "lg:hidden"
+            showExtraInfo ? "lg:w-3/12" : "lg:hidden"
           } lg:block hidden py-2 justify-center items-center bg-slate-800 lg:py-16 overflow-y-auto p-4 pr-3`}
           style={{
             scrollbarWidth: "thin",

@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaTimes, FaDownload } from "react-icons/fa";
+import {
+  FaTimes,
+  FaDownload,
+  FaEye,
+  FaChevronLeft,
+  FaChevronRight,
+  FaBatteryEmpty,
+} from "react-icons/fa";
 import { getIconForTechnology } from "../../constants/icons";
 import SkillProgressBar from "./progressbar";
 
@@ -20,7 +27,7 @@ const Modal = ({ skill, closeModal }) => {
       >
         <div className="w-full lg:w-3/4 p-8 relative bg-slate-700">
           <div>
-            <h3 className="mb-2 font-semibold text-2xl flex items-center">
+            <h3 className="mb-2 font-semibold text-3xl flex items-center">
               <span className="mr-2">{getIconForTechnology(skill.name)}</span>
 
               <span className="ml-2">{skill.name}</span>
@@ -37,31 +44,28 @@ const Modal = ({ skill, closeModal }) => {
             <SkillProgressBar level={skill.level} />
           </div>
 
-          <div className="mt-8">
-            {/* Files */}
-            {skill.projects && skill.projects.length > 0 && (
+          <div className="mt-8 hidden lg:block">
+            {/* Projects */}
+            {skill.projects && skill.projects.length > 0 ? (
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
                   Projects
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {skill.projects.map((project, index) => (
                       <div
                         key={index}
                         className="relative flex flex-col rounded-xl border-2 dark:border-slate-800 dark:bg-slate-800 border-gray-300 bg-clip-border text-gray-800 dark:text-white shadow-md"
                       >
-                        <div className="p-6 flex items-center">
-                          <span className="text-4xl mr-4">{getIconForTechnology(project.technology)}</span>
+                        <div className="p-4 flex items-center">
+                          <span className="text-xl mr-4">
+                            {getIconForTechnology(project.technology)}
+                          </span>
                           <div>
-                            <h5 className="my-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                            <h5 className="my-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                               {project.title}
                             </h5>
-                            <p className="text-md text-blue-gray-500">
-                              {project.date}
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -69,6 +73,10 @@ const Modal = ({ skill, closeModal }) => {
                   </div>
                 </div>
               </div>
+            ) : (
+              <p className="text-gray-600 dark:text-gray-300 mt-3">
+                No projects available.
+              </p>
             )}
           </div>
         </div>
@@ -103,8 +111,8 @@ const Modal = ({ skill, closeModal }) => {
                         rel="noreferrer"
                         className="flex items-center text-vulcan-300 hover:underline"
                       >
-                        <FaDownload className="mr-1" />
-                        <span className="text-white">Download Certificate</span>
+                        <FaEye className="mr-1" />
+                        <span className="text-white">View Certificate</span>
                       </a>
                     )}
                   </div>
