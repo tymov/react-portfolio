@@ -18,7 +18,7 @@ export const About = () => {
         <div className="w-full md:w-1/2 lg:p-8">
           <div className="flex items-center justify-center">
             <img
-              src="https://avatars.githubusercontent.com/u/48637173?v=4"
+              src="/about.png"
               alt="Tymo Verhaegen"
               className="rounded-full h-64 w-64 mx-auto md:mx-0"
             />
