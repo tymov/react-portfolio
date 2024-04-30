@@ -22,6 +22,12 @@ import ManageForms from "../assets/Laravel/manageForms.jpeg";
 import ManageTimeslots from "../assets/Laravel/manageTimeslots.jpeg";
 import ManageUsers from "../assets/Laravel/manageUsers.jpeg";
 import seeBookings from "../assets/Laravel/seeBookings.jpeg";
+import Login from "../assets/Grocery Tracker/Login.png";
+import GroceryList from "../assets/Grocery Tracker/GroceryList.png";
+import MacroTracker from "../assets/Grocery Tracker/MacroTracker.png";
+import RecipeList from "../assets/Grocery Tracker/RecipeList.png";
+import AddItem from "../assets/Grocery Tracker/AddItem.png";
+import Recipe from "../assets/Grocery Tracker/Recipe.png";
 
 export const PROJECTS = [
   {
@@ -87,7 +93,7 @@ export const PROJECTS = [
     technologies: ["Django", "Bootstrap", "Python", "JavaScript", "Git"],
     githubLink: "https://github.com/tymov/grocery-tracker",
     liveDemoLink: "",
-    images: [],
+    images: [Login, GroceryList, MacroTracker, RecipeList, AddItem, Recipe],
     softskills: [],
     status: "Finished",
     type: "Personal Project",
