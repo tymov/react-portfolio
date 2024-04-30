@@ -98,17 +98,17 @@ const Modal = ({ experience, closeModal }) => {
               {/* Adjusted margin for md screens */}
               Softskills Learned
             </h3>
-            {/* Display softskills as a list */}
-            <ul>
-              {experience.softskills.map((skill, index) => (
-                <li
+            {/* Display softskills as a as a row of pills */}
+            <div className="flex flex-wrap gap-2">
+              {experience.softskills.map((softskill, index) => (
+                <span
                   key={index}
-                  className="text-gray-600 dark:text-gray-300 text-xl"
+                  className="px-4 py-2 bg-slate-900 text-white dark:text-white rounded-full text-sm"
                 >
-                  {skill}
-                </li>
+                  {softskill}
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 

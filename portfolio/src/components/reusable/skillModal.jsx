@@ -83,9 +83,9 @@ const Modal = ({ skill, closeModal }) => {
 
         <div className="w-full lg:w-1/4 p-8 bg-slate-800">
           <div className="mb-8">
-            {skill.certifications.length > 0 ? (
+            {skill.certifications.length > 0 || skill.courses.length > 0 ? (
               <div className="pt-2">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4">
                   Certifications
                 </h3>
                 {/* Display certifications */}
@@ -111,7 +111,7 @@ const Modal = ({ skill, closeModal }) => {
                         rel="noreferrer"
                         className="flex items-center text-vulcan-300 hover:underline"
                       >
-                        <FaEye className="mr-1" />
+                        <FaEye className="mr-3" />
                         <span className="text-white">View Certificate</span>
                       </a>
                     )}

@@ -10,10 +10,18 @@ import Pokedex from "../assets/Flutter/Pokedex.png";
 import Index from "../assets/Flutter/Index.png";
 import AR from "../assets/Flutter/AR.png";
 import PokeInfo from "../assets/Flutter/PokeInfo.png";
-import Dashboard from "../assets/Project 4.0/Dashboard.png"
-import AccountManage from "../assets/Project 4.0/Account dashboard.png"
-import UploadImage from "../assets/Project 4.0/Afbeelding uploaden.png"
-import CreateField from "../assets/Project 4.0/Veld create.png"
+import Dashboard from "../assets/Project 4.0/Dashboard.png";
+import AccountManage from "../assets/Project 4.0/Account dashboard.png";
+import UploadImage from "../assets/Project 4.0/Afbeelding uploaden.png";
+import CreateField from "../assets/Project 4.0/Veld create.png";
+import LaravelIndex from "../assets/Laravel/index.jpeg";
+import ManageAnnouncements from "../assets/Laravel/manageAnnouncements.jpeg";
+import ManageBookings from "../assets/Laravel/manageBookings.jpeg";
+import ManageFiles from "../assets/Laravel/manageFiles.jpeg";
+import ManageForms from "../assets/Laravel/manageForms.jpeg";
+import ManageTimeslots from "../assets/Laravel/manageTimeslots.jpeg";
+import ManageUsers from "../assets/Laravel/manageUsers.jpeg";
+import seeBookings from "../assets/Laravel/seeBookings.jpeg";
 
 export const PROJECTS = [
   {
@@ -36,7 +44,8 @@ export const PROJECTS = [
     liveDemoLink: "https://tymo-portfolio.vercel.app",
     images: [],
     softskills: [],
-    status: "Finished",
+    status: "Unfinished",
+    type: "Personal Project",
   },
   {
     icon: <SiDjango className="text-green-500" />,
@@ -65,6 +74,23 @@ export const PROJECTS = [
       "Independence",
     ],
     status: "Unfinished",
+    type: "Internship",
+  },
+  {
+    icon: <SiDjango className="text-green-500" />,
+    title: "Grocery Tracker",
+    date: "February 2023 - Present",
+    role: "Full-Stack Developer",
+    groupSize: 1,
+    description:
+      "The Grocery Tracker project helps users manage their household groceries efficiently. It provides a digital inventory system for users to keep track of pantry items, fridge contents, and other essentials. By logging purchases and consumption, users can reduce waste, plan meals effectively, and simplify shopping trips.",
+    technologies: ["Django", "Bootstrap", "Python", "JavaScript", "Git"],
+    githubLink: "https://github.com/tymov/grocery-tracker",
+    liveDemoLink: "",
+    images: [],
+    softskills: [],
+    status: "Finished",
+    type: "Personal Project",
   },
   {
     icon: <RiAngularjsLine className="text-red-500" />,
@@ -100,6 +126,7 @@ export const PROJECTS = [
       "Standup Meetings",
     ],
     status: "Finished",
+    type: "College Project",
   },
   {
     icon: <RiAngularjsLine className="text-red-500" />,
@@ -122,6 +149,7 @@ export const PROJECTS = [
     images: [LandingPageImage, RecommendationsImage, TripsImage, InfoImage],
     softskills: ["Teamwork", "Communication", "Deadline Management"],
     status: "Finished",
+    type: "College Project",
   },
   {
     icon: <SiFlutter className="text-blue-500" />,
@@ -137,6 +165,7 @@ export const PROJECTS = [
     images: [Index, Pokedex, PokeInfo, AR],
     softskills: ["Teamwork", "Communication", "Problem-solving"],
     status: "Finished",
+    type: "College Project",
   },
   {
     icon: <SiLaravel className="text-red-500" />,
@@ -150,11 +179,14 @@ export const PROJECTS = [
     githubLink: "",
     liveDemoLink: "https://ddpc.projectphp-503.com/",
     images: [
-      "https://media.licdn.com/dms/image/D4E2DAQHYgCT5RkGCcw/profile-treasury-image-shrink_800_800/0/1709929008222?e=1714834800&v=beta&t=NqJOJG7sNO41DMax0VNsivWRDrq_isZTQePnU1qZstI",
-      "https://media.licdn.com/dms/image/D4E2DAQFymzSc2RX-6g/profile-treasury-image-shrink_800_800/0/1709929164808?e=1714834800&v=beta&t=hTatGxQl22CU3J0xPai3gwKzdz1WZvlLgRFsjWDTBLo",
-      "https://media.licdn.com/dms/image/D4E2DAQGcTSuVDJ2DRw/profile-treasury-image-shrink_800_800/0/1709929196371?e=1714834800&v=beta&t=0dhk35xOTkwOSyw_kFo59aPXUmMIYHpNQMadBXe2x5s",
-      "https://media.licdn.com/dms/image/D4E2DAQGZY9pkZ3t7OQ/profile-treasury-image-shrink_800_800/0/1709929213699?e=1714834800&v=beta&t=uOq3dbks8BDAjqHE1bNJPIOkULDjx8fo11w7LdlSJ8I",
-      "https://media.licdn.com/dms/image/D4E2DAQE8sECcn14DIg/profile-treasury-image-shrink_800_800/0/1709929240552?e=1714834800&v=beta&t=8fbh05c4q_u4ST4MCjipJ05gcKf9_RtMhU-Ffj2nnMo",
+      LaravelIndex,
+      ManageAnnouncements,
+      ManageBookings,
+      ManageFiles,
+      ManageForms,
+      ManageTimeslots,
+      ManageUsers,
+      seeBookings,
     ],
     softskills: [
       "Teamwork",
@@ -164,6 +196,7 @@ export const PROJECTS = [
       "Conflict Resolution",
     ],
     status: "Finished",
+    type: "College Project",
   },
 ];
 

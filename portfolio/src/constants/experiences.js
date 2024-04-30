@@ -52,10 +52,10 @@ export const EXPERIENCES = [
       "NPM",
     ],
     files: [
-      {
-        name: "Bachelor Thesis (.pdf)",
-        url: "https://example.com",
-      },
+      // {
+      //   name: "Bachelor Thesis (.pdf)",
+      //   url: "https://example.com",
+      // },
     ],
     softskills: [
       "Teamwork",

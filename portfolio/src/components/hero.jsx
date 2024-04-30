@@ -8,7 +8,12 @@ export const Hero = () => {
   return (
     <section className="dark:bg-gray-slate dark:text-white mb-24">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-3xl lg:text-left"
+        >
           <h1 className="text-4xl lg:block hidden font-bold uppercase header text-start mb-10">
             <span className="header text-4xl md:text-5xl">01</span>{" "}
             <span className="header text-4xl md:text-5xl mx-5">INTRO</span>
@@ -30,24 +35,29 @@ export const Hero = () => {
                 }
               }}
             />
-             <SecondaryButton
-                text="Contact"
-                onClick={() => {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              />
+            <SecondaryButton
+              text="Contact"
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </div>
-        </div>
-        <div className="md:flex  items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          className="hidden lg:flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+        >
           <img
             src="/Tymo-removebg-preview.png"
             alt=""
             className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

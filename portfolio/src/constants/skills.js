@@ -35,6 +35,14 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [
+      {
+        title: "The Ultimate React Course 2024: React, Redux & More",
+        organization: "Udemy",
+        url: "https://www.udemy.com/course/the-ultimate-react-course/",
+        status: "Incomplete",
+      },
+    ],
   },
   {
     name: "Angular",
@@ -62,6 +70,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "TailwindCSS",
@@ -101,6 +110,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "Bootstrap",
@@ -119,6 +129,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "Django",
@@ -145,6 +156,14 @@ export const SKILLS = [
       },
     ],
     education: [],
+    courses: [
+      {
+        title: "Django Masterclass : Build 9 Real World Django Projects",
+        organization: "Udemy",
+        url: "https://www.udemy.com/course/django-course/",
+        status: "Completed",
+      },
+    ],
   },
   {
     name: "Laravel",
@@ -157,7 +176,7 @@ export const SKILLS = [
     relatedTechnologies: [],
     projects: [
       {
-        title: "Laravel Project", 
+        title: "Laravel Project",
         technology: "Laravel",
       },
     ],
@@ -168,6 +187,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "MySQL",
@@ -186,6 +206,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "MongoDB",
@@ -198,7 +219,7 @@ export const SKILLS = [
     relatedTechnologies: [],
     projects: [
       {
-        title: "Angular Project", 
+        title: "Angular Project",
         technology: "Angular",
       },
     ],
@@ -209,6 +230,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "Java",
@@ -232,6 +254,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "Figma",
@@ -254,6 +277,14 @@ export const SKILLS = [
     ],
     certifications: [],
     education: [],
+    courses: [
+      {
+        title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+        organization: "Udemy",
+        url: "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/",
+        status: "Incomplete",
+      },
+    ],
   },
   {
     name: "UML",
@@ -289,6 +320,7 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
   {
     name: "SCRUM",
@@ -320,5 +352,6 @@ export const SKILLS = [
         organization: "Thomas More University of Applied Sciences",
       },
     ],
+    courses: [],
   },
 ];

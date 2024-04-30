@@ -9,6 +9,7 @@ import {
 import { TiGroup } from "react-icons/ti";
 import { getIconForTechnology } from "../../constants/icons";
 import { motion } from "framer-motion";
+import { SiGit } from "react-icons/si";
 
 const Modal = ({ project, closeModal }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -56,7 +57,7 @@ const Modal = ({ project, closeModal }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-5 overflow-y-auto"
+      className="fixed inset-0 z-40 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-6 overflow-y-auto"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.3, delay: 0.1 }}
@@ -68,7 +69,7 @@ const Modal = ({ project, closeModal }) => {
         transition={{ duration: 0.1, delay: 0 }}
         style={{ maxHeight: "90vh" }}
       >
-        <div className="w-full md:w-4/4 lg:w-4/12 p-8" id="description">
+        <div className="w-full md:w-4/4 lg:w-4/12 p-8 z-40" id="description">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
             <span>{project.title}</span>
             <span className="flex items-center text-xl">
@@ -107,8 +108,8 @@ const Modal = ({ project, closeModal }) => {
 
         <div
           className={`w-full ${
-            showExtraInfo ? "lg:w-6/12" : "lg:w-8/12"
-          } lg:w-6/12 hidden p-8 relative lg:flex justify-center items-center bg-slate-900`}
+            showExtraInfo ? "lg:w-11/12 z-40" : "lg:w-12/12 z-40"
+          } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-slate-900`}
         >
           {/* Check if there are images */}
           {project.images.length > 0 ? (
@@ -118,21 +119,20 @@ const Modal = ({ project, closeModal }) => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                    className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
                   >
                     <FaChevronLeft className="text-3xl" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                    className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
                   >
                     <FaChevronRight className="text-3xl" />
                   </button>
                 </>
               )}
-
               {/* Container for image and count */}
-              <div className="relative">
+              <div className={`relative ${project.aspectRatio >= 1 ? "" : ""}`}>
                 {/* Display the image */}
                 <motion.img
                   key={currentImageIndex}
@@ -155,9 +155,26 @@ const Modal = ({ project, closeModal }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.65 }}
-                className="absolute bottom-4 right-4 text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-2 px-4"
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
-                {showExtraInfo ? "Hide extra info" : "Show extra info"}
+                {showExtraInfo ? (
+                  <div className="flex items-center z-[60]">
+                    <span className="text-lg mr-1">Hide Extra Info</span>
+                    <span className="text-lg opacity-1 hover:animate-pulse">
+                      {" "}
+                      {/* Animate-ping class */}
+                      <FaChevronRight />
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center z-[60]">
+                    <span className="text-lg ml-1">
+                      <FaChevronLeft className="opacity-1 hover:animate-pulse" />{" "}
+                      {/* Animate-ping class */}
+                    </span>
+                    <span className="text-lg ml-1">Show Extra Info</span>
+                  </div>
+                )}
               </motion.button>
             </>
           ) : (
@@ -167,9 +184,10 @@ const Modal = ({ project, closeModal }) => {
           )}
         </div>
 
+        {/* Extra info */}
         <motion.div
           className={`${
-            showExtraInfo ? "lg:w-3/12" : "lg:hidden"
+            showExtraInfo ? "z-50" : "lg:hidden"
           } w-full lg:w-1/4 p-8 bg-slate-800 hidden lg:block`}
           style={{
             scrollbarWidth: "thin",
@@ -205,12 +223,21 @@ const Modal = ({ project, closeModal }) => {
                 rel="noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
               >
-                <span className="text-red-500 text-4xl">
+                <span className="text-red-500 text-3xl">
                   <FaYoutube />
                 </span>
               </a>
             </div>
           )}
+
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
+              Type
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
+              {project.type}
+            </p>
+          </div>
 
           {project.githubLink && (
             <div className="mt-8">
@@ -223,8 +250,8 @@ const Modal = ({ project, closeModal }) => {
                 rel="noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
               >
-                <span className="text-gray-800 dark:text-white text-4xl">
-                  <FaGit />
+                <span className="text-gray-800 dark:text-red-500 text-3xl">
+                  <SiGit />
                 </span>
               </a>
             </div>
@@ -239,22 +266,24 @@ const Modal = ({ project, closeModal }) => {
             </p>
           </div>
 
-          <div className="my-8 mt-10">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4">
-              Soft Skills
-            </h3>
-            {/* Display softskills as a list */}
-            <ul>
-              {project.softskills.map((skill, index) => (
-                <li
-                  key={index}
-                  className="text-gray-600 dark:text-gray-300 text-xl"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.softskills.length > 0 && (
+            <div className="my-8 mt-10">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4">
+                Soft Skills
+              </h3>
+              {/* Display softskills as a list */}
+              <div className="flex flex-wrap gap-2">
+                {project.softskills.map((softskill, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-slate-900 text-white dark:text-white rounded-full text-sm"
+                  >
+                    {softskill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </motion.div>
 
         <motion.button
@@ -262,7 +291,7 @@ const Modal = ({ project, closeModal }) => {
           aria-label="Close modal"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-300 transition-colors rounded-full hover:text-gray-800 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600"
+          className="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-300 transition-colors rounded-full hover:text-gray-800 dark:hover:text-white z-[60]"
         >
           <FaTimes />
         </motion.button>
