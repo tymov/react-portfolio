@@ -168,9 +168,9 @@ const Modal = ({ project, closeModal }) => {
         </div>
 
         <motion.div
-          className={`w-full ${
+          className={`${
             showExtraInfo ? "lg:w-3/12" : "lg:hidden"
-          } lg:block hidden py-2 justify-center items-center bg-slate-800 lg:py-16 overflow-y-auto p-4 pr-3`}
+          } w-full lg:w-1/4 p-8 bg-slate-800 hidden lg:block`}
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "rgba(71, 85, 105, 0.5) rgba(51, 65, 85, 0.2)",
@@ -180,7 +180,7 @@ const Modal = ({ project, closeModal }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.65 }}
         >
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4 lg:my-0 lg:mb-2">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
             Technologies Used
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
