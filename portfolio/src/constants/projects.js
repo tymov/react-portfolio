@@ -39,18 +39,40 @@ export const PROJECTS = [
     description:
       "My personal portfolio website, showcasing my projects and skills.",
     technologies: [
-      "React",
-      "TailwindCSS",
-      "Vercel",
-      "JavaScript",
-      "Framer",
-      "Git",
+      {
+        name: "React",
+        developmentTime: "75",
+      },
+      {
+        name: "TailwindCSS",
+        developmentTime: "75",
+      },
+      {
+        name: "Vercel",
+        developmentTime: "10",
+      },
+      {
+        name: "JavaScript",
+        developmentTime: "20",
+      },
+      {
+        name: "ChartJS",
+        developmentTime: "10",
+      },
+      {
+        name: "Framer",
+        developmentTime: "15",
+      },
+      {
+        name: "Git",
+        developmentTime: "20",
+      },
     ],
     githubLink: "",
     liveDemoLink: "https://tymo-portfolio.vercel.app",
     images: [],
     softskills: [],
-    status: "Unfinished",
+    status: "Finished",
     type: "Personal Project",
   },
   {
@@ -61,14 +83,38 @@ export const PROJECTS = [
     groupSize: 3,
     description: "A bookingtool website",
     technologies: [
-      "Django",
-      "TailwindCSS",
-      "JavaScript",
-      "Docker",
-      "PostgreSQL",
-      "Figma",
-      "UML",
-      "Git",
+      {
+        name: "Django",
+        developmentTime: "70",
+      },
+      {
+        name: "TailwindCSS",
+        developmentTime: "65",
+      },
+      {
+        name: "JavaScript",
+        developmentTime: "10",
+      },
+      {
+        name: "Docker",
+        developmentTime: "10",
+      },
+      {
+        name: "PostgreSQL",
+        developmentTime: "15",
+      },
+      {
+        name: "Figma",
+        developmentTime: "100",
+      },
+      {
+        name: "UML",
+        developmentTime: "15",
+      },
+      {
+        name: "Git",
+        developmentTime: "20",
+      },
     ],
     githubLink: "",
     liveDemoLink: "",
@@ -90,7 +136,28 @@ export const PROJECTS = [
     groupSize: 1,
     description:
       "The Grocery Tracker project helps users manage their household groceries efficiently. It provides a digital inventory system for users to keep track of pantry items, fridge contents, and other essentials. By logging purchases and consumption, users can reduce waste, plan meals effectively, and simplify shopping trips.",
-    technologies: ["Django", "Bootstrap", "Python", "JavaScript", "Git"],
+    technologies: [
+      {
+        name: "Django",
+        developmentTime: "100",
+      },
+      {
+        name: "Bootstrap",
+        developmentTime: "100",
+      },
+      {
+        name: "Python",
+        developmentTime: "100",
+      },
+      {
+        name: "JavaScript",
+        developmentTime: "100",
+      },
+      {
+        name: "Git",
+        developmentTime: "100",
+      },
+    ],
     githubLink: "https://github.com/tymov/grocery-tracker",
     liveDemoLink: "",
     images: [Login, GroceryList, MacroTracker, RecipeList, AddItem, Recipe],
@@ -107,18 +174,62 @@ export const PROJECTS = [
     description:
       "I had the privilege to collaborate with VITO (Vlaamse Instituut voor Technologisch Onderzoek), the Flemish Institute for Technological Research, on a transformative multidisciplinary project during my academic journey. Partnering with VITO, our project spanned across multiple branches of IT, including Cloud & Cybersecurity (CCS), Artificial Intelligence (AI), and Application Development (APP).\n\nTogether, my group, consisting of 3 APP students, 2 CCS students and an AI student, and I embarked on a mission to develop a comprehensive solution addressing environmental challenges through advanced technology.\n\nOur primary objective was to create a web application and mobile app capable of detecting an invasive weed species known as yellownutsedge. This endeavor required the seamless integration of expertise from diverse fields, fostering an environment of innovation and collaboration. In our group project, I mainly handled front-end development responsibilities, driving the creation of user interfaces. I also pitched in on back-end tasks when needed. This hands-on experience allowed me to gain insight into both front-end and back-end processes, enhancing my skills for future projects in software development. Engaging in this project provided me with invaluable insights and practical experience, particularly in areas I had previously explored but never at this scale. I'm not at liberty to share a lot of content about this project, like a demo or images that contain private information, I am allowed to show dummy/fake data to show the general feel of the project. It was a remarkable learning opportunity that not only enriched my academic journey but also prepared me for the challenges and opportunities in my future career endeavors.",
     technologies: [
-      "Angular",
-      "TypeScript",
-      "Ionic",
-      "TailwindCSS",
-      "Leaflet",
-      "Java",
-      "Python",
-      "UML",
-      "SCRUM",
-      "Gitlab",
-      "Figma",
-      "Trello",
+      {
+        name: "Angular",
+        developmentTime: "70",
+      },
+      {
+        name: "TypeScript",
+        developmentTime: "55",
+      },
+      {
+        name: "Ionic",
+        developmentTime: "10",
+      },
+      {
+        name: "TailwindCSS",
+        developmentTime: "60",
+      },
+      {
+        name: "Leaflet",
+        developmentTime: "50",
+      },
+      {
+        name: "Java",
+        developmentTime: "30",
+      },
+      {
+        name: "Python",
+        developmentTime: "10",
+      },
+      {
+        name: "Docker",
+        developmentTime: null,
+      },
+      {
+        name: "UML",
+        developmentTime: "10",
+      },
+      {
+        name: "SCRUM",
+        developmentTime: "10",
+      },
+      {
+        name: "Gitlab",
+        developmentTime: "5",
+      },
+      {
+        name: "Figma",
+        developmentTime: "50",
+      },
+      {
+        name: "Trello",
+        developmentTime: null,
+      },
+      {
+        name: "AWS",
+        developmentTime: null,
+      }
     ],
     githubLink: "",
     liveDemoLink: "",
@@ -143,12 +254,30 @@ export const PROJECTS = [
     description:
       "During my coursework in Angular, I embarked on a captivating project to develop an application tailored for planning multi-day trips with ease and user-friendliness in mind. It was an enriching experience that allowed me to delve into the intricacies of Angular while creating a practical solution for travel enthusiasts.\n\nThe application featured a variety of trip options, including hiking vacations, hotel stays, blended experiences, and more, catering to diverse preferences. One of the highlights was implementing a privacy feature where trips were initially set to private, ensuring the creator's exclusive access. However, users had the flexibility to make their trips public, fostering a collaborative platform for sharing inspiration and ideas. While the project had its challenges, particularly as my first Angular endeavor, I embraced the learning curve and am proud of the result. It was a testament to my adaptability and determination to overcome obstacles in pursuit of delivering impactful solutions.",
     technologies: [
-      "Angular",
-      "TypeScript",
-      "TailwindCSS",
-      "MongoDB",
-      "Git",
-      "UML",
+      {
+        name: "Angular",
+        developmentTime: "50",
+      },
+      {
+        name: "TypeScript",
+        developmentTime: "30",
+      },
+      {
+        name: "TailwindCSS",
+        developmentTime: "20",
+      },
+      {
+        name: "MongoDB",
+        developmentTime: "10",
+      },
+      {
+        name: "Git",
+        developmentTime: "10",
+      },
+      {
+        name: "UML",
+        developmentTime: "5",
+      },
     ],
     githubLink: "",
     liveDemoLink: "",
@@ -165,7 +294,24 @@ export const PROJECTS = [
     groupSize: 2,
     description:
       "During my Flutter course, I created a project with a fellow student focusing on Pokemon, developing a comprehensive database covering Gen 1 Pokemon, berries, and items. We enhanced the user experience by integrating Wikitude AR functionalities, allowing users to visualize Pokemon in their surroundings.\n\nIt was a fun journey in Flutter development, regardless of the setbacks we faced with Wikitude AR",
-    technologies: ["Flutter", "Augmented Reality", "Dart", "Git"],
+    technologies: [
+      {
+        name: "Flutter",
+        developmentTime: "50",
+      },
+      {
+        name: "Augmented Reality",
+        developmentTime: "5",
+      },
+      {
+        name: "Dart",
+        developmentTime: "40",
+      },
+      {
+        name: "Git",
+        developmentTime: "10",
+      },
+    ],
     githubLink: "",
     liveDemoLink: "https://www.youtube.com/watch?v=NGJm7VPcysI",
     images: [Index, Pokedex, PokeInfo, AR],
@@ -181,7 +327,32 @@ export const PROJECTS = [
     groupSize: 3,
     description:
       "As part of our PHP course, we developed a practical web application for our college to streamline job application trainings. The project aimed to simplify the process for both administrators and students.\n\nOur application allowed college administrators to efficiently manage job application trainings, including scheduling sessions and managing subscriptions. For students, we created an intuitive platform where they could easily browse available trainings and subscribe with just a few clicks.\n\nDespite facing internal challenges, our team persevered to deliver a robust web application for managing job application trainings within our college. While navigating through these hurdles, we remained focused on fulfilling the requirements set forth by our client.",
-    technologies: ["Laravel", "TailwindCSS", "Git", "UML", "Jira"],
+    technologies: [
+      {
+        name: "Laravel",
+        developmentTime: "70",
+      },
+      {
+        name: "TailwindCSS",
+        developmentTime: "60",
+      },
+      {
+        name: "Git",
+        developmentTime: "10",
+      },
+      {
+        name: "UML",
+        developmentTime: "50",
+      },
+      {
+        name: "Jira",
+        developmentTime: "15",
+      },
+      {
+        name: "SCRUM",
+        developmentTime: "15",
+      }
+    ],
     githubLink: "",
     liveDemoLink: "https://ddpc.projectphp-503.com/",
     images: [
@@ -204,10 +375,14 @@ export const PROJECTS = [
     status: "Finished",
     type: "College Project",
   },
+  
 ];
 
 PROJECTS.sort((a, b) => {
   const dateA = new Date(a.date);
   const dateB = new Date(b.date);
   return dateA - dateB;
-});
+}).map((project) => ({
+  ...project,
+  technologies: project.technologies.sort((a, b) => b.developmentTime - a.developmentTime),
+}));

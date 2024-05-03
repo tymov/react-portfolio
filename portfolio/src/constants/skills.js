@@ -275,7 +275,15 @@ export const SKILLS = [
         technology: "Django",
       },
     ],
-    certifications: [],
+    certifications: [
+      {
+        title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+        credential: "",
+        date: "In Progress",
+        organization: "Udemy",
+        url: "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery",
+      }
+    ],
     education: [],
     courses: [
       {

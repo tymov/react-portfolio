@@ -52,7 +52,7 @@ const Modal = ({ skill, closeModal }) => {
                   Projects
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {skill.projects.map((project, index) => (
                       <div
                         key={index}
@@ -83,48 +83,52 @@ const Modal = ({ skill, closeModal }) => {
 
         <div className="w-full lg:w-1/4 p-8 bg-slate-800">
           <div className="mb-8">
-            {skill.certifications.length > 0 || skill.courses.length > 0 ? (
+            {(skill.certifications.length > 0 ||
+              skill.courses.length > 0 ||
+              skill.education.length > 0) && (
               <div className="pt-2">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4">
-                  Certifications
-                </h3>
-                {/* Display certifications */}
-                {skill.certifications.map((certificate, index) => (
-                  <div key={index}>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {certificate.title}
+                {skill.certifications.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-4">
+                      Certifications
                     </h3>
-                    <p className="text-md text-vulcan-100 font-semibold mb-3 mt-3 flex items-center">
-                      <span className="flex">
-                        <span className="text-gray-700 dark:text-gray-300">
+                    {/* Display certifications */}
+                    {skill.certifications.map((certificate, index) => (
+                      <div key={index}>
+                        <h3 className="text-md text-vulcan-100 font-semibold mb-3 mt-3 flex items-center">
+                          <span className="flex">
+                            <span className="text-gray-700 dark:text-gray-300">
+                              {certificate.title}
+                            </span>{" "}
+                          </span>
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
                           {certificate.organization}
-                        </span>{" "}
-                      </span>
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      {certificate.date}
-                    </p>
-                    {certificate.url && (
-                      <a
-                        href={certificate.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center text-vulcan-300 hover:underline"
-                      >
-                        <FaEye className="mr-3" />
-                        <span className="text-white">View Certificate</span>
-                      </a>
-                    )}
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-300 mb-2">
+                          {certificate.date}
+                        </p>
+                        {certificate.url && (
+                          <a
+                            href={certificate.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center text-vulcan-300 hover:underline"
+                          >
+                            <FaEye className="mr-3" />
+                            <span className="text-white">View Certificate</span>
+                          </a>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            ) : (
-              <div className="pt-2">
-                {skill.education.length > 0 ? (
-                  <>
+                )}
+                {skill.education.length > 0 && (
+                  <div>
                     <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
                       Education
                     </h3>
+                    {/* Display education */}
                     <p className="text-md text-vulcan-100 font-semibold mb-3 mt-3 flex items-center">
                       <span className="flex">
                         <span className="text-gray-700 dark:text-gray-300">
@@ -135,14 +139,60 @@ const Modal = ({ skill, closeModal }) => {
                     <p className="text-gray-700 dark:text-gray-300 mb-2">
                       {skill.education[0].organization}
                     </p>
-                  </>
-                ) : (
-                  <p className="text-lg text-gray-700 dark:text-gray-300">
-                    No certifications or education information available.
-                  </p>
+                  </div>
+                )}
+                {skill.courses.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
+                      Courses
+                    </h3>
+                    {/* Display courses */}
+                    {skill.courses.map((course, index) => (
+                      <div key={index}>
+                        <h3 className="text-md text-vulcan-100 font-semibold mb-3 mt-3 flex items-center">
+                          <span className="flex">
+                            <span className="text-gray-700 dark:text-gray-300">
+                              {course.title}
+                            </span>{" "}
+                          </span>
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                          <span className="flex">
+                            <span className="text-gray-700 dark:text-gray-300">
+                              {course.organization}
+                            </span>{" "}
+                          </span>
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-300 mb-2">
+                          {course.date}
+                        </p>
+                        {course.url && (
+                          <a
+                            href={course.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center text-vulcan-300 hover:underline"
+                          >
+                            <FaEye className="mr-3" />
+                            <span className="text-white">View Course</span>
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
             )}
+            {skill.certifications.length === 0 &&
+              skill.courses.length === 0 &&
+              skill.education.length === 0 && (
+                <div className="pt-2">
+                  <p className="text-lg text-gray-700 dark:text-gray-300">
+                    No certifications, courses, or education information
+                    available.
+                  </p>
+                </div>
+              )}
           </div>
         </div>
 
@@ -151,7 +201,7 @@ const Modal = ({ skill, closeModal }) => {
           aria-label="Close modal"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-300 transition-colors rounded-full hover:text-gray-800 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600"
+          className="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-300 transition-colors rounded-full hover:text-gray-800 dark:hover:text-white"
         >
           <FaTimes />
         </motion.button>

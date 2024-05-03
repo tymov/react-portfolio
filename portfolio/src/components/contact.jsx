@@ -1,8 +1,31 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaSoundcloud } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useState } from "react";
+import ContactForm from "../contactForm";
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log(formData);
+    // You can perform further actions such as sending the form data to a server
+  };
+
   return (
     <motion.div
       className="text-gray-800 dark:text-white pb-10 px-10 pt-10 relative"
@@ -18,51 +41,7 @@ export const Contact = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-800 dark:text-white">
         <div>
-          <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block mb-3 text-md">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-800 dark:border-slate-600 dark:bg-slate-900"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block mb-3 text-md">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-800 dark:border-slate-600 dark:bg-slate-900"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block mb-3 text-md">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Your Message"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-800 dark:border-slate-600 dark:bg-slate-900"
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-8 py-3 text-lg font-semibold rounded dark:bg-vulcan-600 dark:text-white"
-            >
-              Send Message
-            </button>
-          </form>
+            <ContactForm />
         </div>
         <div>
           <h2 className="text-2xl font-bold mb-4">Contact Information</h2>

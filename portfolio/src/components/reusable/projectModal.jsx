@@ -10,6 +10,7 @@ import { TiGroup } from "react-icons/ti";
 import { getIconForTechnology } from "../../constants/icons";
 import { motion } from "framer-motion";
 import { SiGit } from "react-icons/si";
+import Graph from "./graph";
 
 const Modal = ({ project, closeModal }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -63,13 +64,13 @@ const Modal = ({ project, closeModal }) => {
       transition={{ duration: 0.3, delay: 0.1 }}
     >
       <motion.div
-        className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
+        className="bg-white  rounded-lg dark:bg-slate-800 overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.1, delay: 0 }}
         style={{ maxHeight: "90vh" }}
       >
-        <div className="w-full md:w-4/4 lg:w-4/12 p-8 z-40" id="description">
+        <div className="w-full md:w-4/4 lg:w-4/12 p-8 z-40 dark:bg-slate-700" id="description">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
             <span>{project.title}</span>
             <span className="flex items-center text-xl">
@@ -97,7 +98,7 @@ const Modal = ({ project, closeModal }) => {
               {project.description.length > 150 && (
                 <button
                   onClick={toggleDescription}
-                  className="text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-5 lg:pb-20 px-5 sm:mb-4"
+                  className="text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-6 lg:pb-24 px-5 sm:mb-4"
                 >
                   {isDescriptionExpanded ? "Read less" : "Read more"}
                 </button>
@@ -114,48 +115,58 @@ const Modal = ({ project, closeModal }) => {
           {/* Check if there are images */}
           {project.images.length > 0 ? (
             <>
-              {/* Image carousel buttons */}
-              {project.images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
-                  >
-                    <FaChevronLeft className="text-3xl" />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
-                  >
-                    <FaChevronRight className="text-3xl" />
-                  </button>
-                </>
-              )}
               {/* Container for image and count */}
               <div className={`relative ${project.aspectRatio >= 1 ? "" : ""}`}>
-                {/* Display the image */}
-                <motion.img
-                  key={currentImageIndex}
-                  src={project.images[currentImageIndex]}
-                  alt={project.title}
-                  className="rounded-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.65 }}
-                />
-                {/* Display the number of images */}
-                <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
-                  {`${currentImageIndex + 1}/${project.images.length}`}
-                </p>
+                {/* Display the image or graph */}
+                {showExtraInfo ? (
+                  <div className="w-full h-full flex items-center justify-center">
+                    {/* Render your graph component here */}
+                    <Graph project={project} />
+                  </div>
+                ) : (
+                  <>
+                    {/* Display the image */}
+                    <motion.img
+                      key={currentImageIndex}
+                      src={project.images[currentImageIndex]}
+                      alt={project.title}
+                      className="rounded-lg"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.65 }}
+                    />
+                    {/* Display the number of images */}
+                    <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
+                      {`${currentImageIndex + 1}/${project.images.length}`}
+                    </p>
+                    {/* Arrows */}
+                    {project.images.length > 1 && !showExtraInfo && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                        >
+                          <FaChevronLeft className="text-3xl" />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                        >
+                          <FaChevronRight className="text-3xl" />
+                        </button>
+                      </>
+                    )}
+                  </>
+                )}
               </div>
 
               {/* Button to toggle extra info */}
               <motion.button
                 onClick={toggleExtraInfo}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.65 }}
-                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 0.2, delay: 0 }}
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none !bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
@@ -178,9 +189,38 @@ const Modal = ({ project, closeModal }) => {
               </motion.button>
             </>
           ) : (
-            <p className="text-white text-3xl bg-slate-900 py-3 px-4 rounded-md">
-              No images for this project.
-            </p>
+            <>
+              <p className="text-white text-3xl bg-slate-900 py-3 px-4 rounded-md">
+                No images for this project.
+              </p>
+
+              <motion.button
+                onClick={toggleExtraInfo}
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 0.2, delay: 0 }}
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none !bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              >
+                {showExtraInfo ? (
+                  <div className="flex items-center z-[60]">
+                    <span className="text-lg mr-1">Hide Extra Info</span>
+                    <span className="text-lg opacity-1 hover:animate-pulse">
+                      {" "}
+                      {/* Animate-ping class */}
+                      <FaChevronRight />
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center z-[60]">
+                    <span className="text-lg ml-1">
+                      <FaChevronLeft className="opacity-1 hover:animate-pulse" />{" "}
+                      {/* Animate-ping class */}
+                    </span>
+                    <span className="text-lg ml-1">Show Extra Info</span>
+                  </div>
+                )}
+              </motion.button>
+            </>
           )}
         </div>
 
@@ -188,15 +228,16 @@ const Modal = ({ project, closeModal }) => {
         <motion.div
           className={`${
             showExtraInfo ? "z-50" : "lg:hidden"
-          } w-full lg:w-1/4 p-8 bg-slate-800 hidden lg:block`}
+          } w-full lg:w-1/4 p-8 !bg-slate-800 hidden lg:block`}
           style={{
+            overflowY: "auto", // Enable vertical scrolling
             scrollbarWidth: "thin",
             scrollbarColor: "rgba(71, 85, 105, 0.5) rgba(51, 65, 85, 0.2)",
             direction: "ltr", // Set scrollbar direction to left-to-right
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.65 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.05, delay: 0 }}
         >
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
             Technologies Used
@@ -206,9 +247,9 @@ const Modal = ({ project, closeModal }) => {
               <span
                 key={index}
                 className="text-gray-600 dark:text-gray-300 text-3xl"
-                title={technology}
+                title={technology.name}
               >
-                {getIconForTechnology(technology)}
+                {getIconForTechnology(technology.name)}
               </span>
             ))}
           </div>
