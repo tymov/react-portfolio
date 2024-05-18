@@ -28,8 +28,8 @@ export const About = () => {
         <div className="w-full md:w-1/2">
           <div className="flex justify-center items-center">
             <p className="text-lg mb-8">
-              Hi there! I'm Tymo Verhaegen, an application developer
-              and design enthusiast based in Belgium.
+              Hi there! I'm Tymo Verhaegen, an application developer and design
+              enthusiast based in Belgium.
               <br></br>
               <br></br>
               With a background in application development and an interest in

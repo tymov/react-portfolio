@@ -224,12 +224,12 @@ export const PROJECTS = [
       },
       {
         name: "Trello",
-        developmentTime: null,
+        developmentTime: "5",
       },
       {
         name: "AWS",
         developmentTime: null,
-      }
+      },
     ],
     githubLink: "",
     liveDemoLink: "",
@@ -351,7 +351,7 @@ export const PROJECTS = [
       {
         name: "SCRUM",
         developmentTime: "15",
-      }
+      },
     ],
     githubLink: "",
     liveDemoLink: "https://ddpc.projectphp-503.com/",
@@ -375,7 +375,6 @@ export const PROJECTS = [
     status: "Finished",
     type: "College Project",
   },
-  
 ];
 
 PROJECTS.sort((a, b) => {
@@ -384,5 +383,7 @@ PROJECTS.sort((a, b) => {
   return dateA - dateB;
 }).map((project) => ({
   ...project,
-  technologies: project.technologies.sort((a, b) => b.developmentTime - a.developmentTime),
+  technologies: project.technologies.sort(
+    (a, b) => b.developmentTime - a.developmentTime
+  ),
 }));

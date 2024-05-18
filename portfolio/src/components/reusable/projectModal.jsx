@@ -70,7 +70,10 @@ const Modal = ({ project, closeModal }) => {
         transition={{ duration: 0.1, delay: 0 }}
         style={{ maxHeight: "90vh" }}
       >
-        <div className="w-full md:w-4/4 lg:w-4/12 p-8 z-40 dark:bg-slate-700" id="description">
+        <div
+          className="w-full md:w-4/4 lg:w-4/12 p-8 z-40 dark:bg-slate-700"
+          id="description"
+        >
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
             <span>{project.title}</span>
             <span className="flex items-center text-xl">
@@ -237,7 +240,7 @@ const Modal = ({ project, closeModal }) => {
           }}
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.05, delay: 0 }}
+          transition={{ duration: 0.225, delay: 0 }}
         >
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
             Technologies Used
