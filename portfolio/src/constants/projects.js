@@ -28,6 +28,15 @@ import MacroTracker from "../assets/Grocery Tracker/MacroTracker.png";
 import RecipeList from "../assets/Grocery Tracker/RecipeList.png";
 import AddItem from "../assets/Grocery Tracker/AddItem.png";
 import Recipe from "../assets/Grocery Tracker/Recipe.png";
+import StageLogin from "../assets/Stage/login.png";
+import StageAgenda from "../assets/Stage/agenda.png";
+import StageEmployees from "../assets/Stage/employees.png";
+import StagePackages from "../assets/Stage/packages.png";
+import StagePromotions from "../assets/Stage/promotions.png";
+import StageResources from "../assets/Stage/resources.png";
+import StageServices from "../assets/Stage/services.png";
+import StageStats from "../assets/Stage/stats.png";
+import StageUsers from "../assets/Stage/users.png";
 
 export const PROJECTS = [
   {
@@ -72,7 +81,7 @@ export const PROJECTS = [
     liveDemoLink: "https://tymo-portfolio.vercel.app",
     images: [],
     softskills: [],
-    status: "Finished",
+    status: "Unfinished",
     type: "Personal Project",
   },
   {
@@ -81,7 +90,8 @@ export const PROJECTS = [
     date: "March 2024 - May 2024",
     role: "Full-Stack Developer",
     groupSize: 3,
-    description: "A bookingtool website",
+    description:
+      "For my internship at LHS by Spot, a small development company, we developed a complex booking tool and modular management system with a wide range of functionalities. The central aspect of the web application is the booking system, which enables customers to easily make appointments, reservations, or bookings based on availability. The system includes features for managing company resources such as rooms, equipment, and personnel, allowing for the tracking of availability and the assignment of resources and staff. Integration with a calendar is offered, allowing both customers and employees to view, modify, and keep track of appointments easily. The system also includes features for managing services and packages, enabling customers to choose the best options for their needs. A secure payment system is implemented to facilitate online payments for bookings, saving time and allowing for prepayments. The system maintains a database of customer information, including personal details, booking history, and preferences. It provides functionality for managing offers, promotions, and discounts applicable to customer bookings. Customers receive automatic email notifications when they make a booking or when there are changes to their bookings. Employees can view statistics such as the number of bookings and users, and access detailed histories of all customers and their booking records. The system also performs automated tasks and processes, such as optimizing the calendar and bookings. This project showcases our ability to develop a comprehensive and user-friendly web application tailored to meet the complex needs of a modern booking and resource management system. Our teamwork and prior experience allowed us to deliver a robust and efficient solution.",
     technologies: [
       {
         name: "Django",
@@ -105,7 +115,7 @@ export const PROJECTS = [
       },
       {
         name: "Figma",
-        developmentTime: "100",
+        developmentTime: "30",
       },
       {
         name: "UML",
@@ -118,14 +128,24 @@ export const PROJECTS = [
     ],
     githubLink: "",
     liveDemoLink: "",
-    images: [],
+    images: [
+      StageLogin,
+      StageAgenda,
+      StageEmployees,
+      StagePackages,
+      StagePromotions,
+      StageResources,
+      StageServices,
+      StageStats,
+      StageUsers,
+    ],
     softskills: [
       "Teamwork",
       "Professional Communication",
       "Problem-solving",
       "Independence",
     ],
-    status: "Unfinished",
+    status: "Finished",
     type: "Internship",
   },
   {

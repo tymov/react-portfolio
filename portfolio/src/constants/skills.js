@@ -121,7 +121,12 @@ export const SKILLS = [
     description:
       "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
     relatedTechnologies: [],
-    projects: [],
+    projects: [
+      {
+        title: "Grocery Tracker",
+        technology: "Django",
+      },
+    ],
     certifications: [],
     education: [
       {
@@ -143,6 +148,10 @@ export const SKILLS = [
     projects: [
       {
         title: "Bookingtool",
+        technology: "Django",
+      },
+      {
+        title: "Grocery Tracker",
         technology: "Django",
       },
     ],
@@ -282,7 +291,7 @@ export const SKILLS = [
         date: "In Progress",
         organization: "Udemy",
         url: "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery",
-      }
+      },
     ],
     education: [],
     courses: [
