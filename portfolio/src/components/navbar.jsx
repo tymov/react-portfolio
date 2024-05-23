@@ -1,8 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+import { LanguageSelector } from "./reusable/languageSelector"; // Import the LanguageSelector component
 
 export const Navbar = () => {
+  const { t } = useTranslation("navbar");
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -44,36 +48,37 @@ export const Navbar = () => {
             className="block p-4 text-lg"
             onClick={() => scrollToSection("home")}
           >
-            Home
+            <span className="whitespace-nowrap">{t('navbar.home')}</span>
           </a>
           <a
             href="#experience"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("experience")}
           >
-            Experience
+            <span className="whitespace-nowrap">{t('navbar.experience')}</span>
           </a>
           <a
             href="#projects"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("projects")}
           >
-            Projects
+            <span className="whitespace-nowrap">{t('navbar.projects')}</span>
           </a>
           <a
             href="#about"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("about")}
           >
-            About
+            <span className="whitespace-nowrap">{t('navbar.about')}</span>
           </a>
           <a
             href="#contact"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("contact")}
           >
-            Contact
+            <span className="whitespace-nowrap">{t('navbar.contact')}</span>
           </a>
+          <LanguageSelector /> {/* Add the LanguageSelector to the mobile menu */}
         </div>
       </div>
       <div className="md:hidden">
@@ -84,27 +89,27 @@ export const Navbar = () => {
           />
         </button>
       </div>
-      <div className="hidden md:flex space-x-4 text-lg">
+      <div className="hidden md:flex space-x-4 text-lg items-center">
         <a
           href="#"
           className="p-4 text-lg"
           onClick={() => scrollToSection("home")}
         >
-          Home
+          <span className="whitespace-nowrap">{t('navbar.home')}</span>
         </a>
         <a
           href="#experience"
           className="p-4 text-lg"
           onClick={() => scrollToSection("experience")}
         >
-          Experience
+          <span className="whitespace-nowrap">{t('navbar.experience')}</span>
         </a>
         <a
           href="#projects"
           className="p-4 text-lg"
           onClick={() => scrollToSection("projects")}
         >
-          Projects
+          <span className="whitespace-nowrap">{t('navbar.projects')}</span>
         </a>
 
         <a
@@ -112,15 +117,16 @@ export const Navbar = () => {
           className="p-4 text-lg"
           onClick={() => scrollToSection("about")}
         >
-          About
+          <span className="whitespace-nowrap">{t('navbar.about')}</span>
         </a>
         <a
           href="#contact"
           className="p-4 text-lg"
           onClick={() => scrollToSection("contact")}
         >
-          Contact
+          <span className="whitespace-nowrap">{t('navbar.contact')}</span>
         </a>
+        <LanguageSelector /> {/* Add the LanguageSelector to the desktop menu */}
       </div>
     </nav>
   );

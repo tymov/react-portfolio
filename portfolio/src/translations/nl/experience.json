@@ -1,0 +1,30 @@
+{
+  "experience": {
+    "title": "Ervaring",
+    "details": "Details",
+    "technologiesUsed": "Gebruikte technologieën",
+    "softskills": "Soft skills",
+    "files": "Bestanden",
+    "lhs": {
+      "title": "Web Developer Stagiair",
+      "company": "LHS by Spot Group",
+      "location": "Putte, België",
+      "date": "Feb 2024 - Mei 2024",
+      "description": "Bij LHS heb ik het grootste deel van mijn tijd besteed aan het werken aan een boekingstool die ze op de markt wilden brengen. Ik richtte me op het maken van het front-end gedeelte van de tool met behulp van Django en Tailwind. Kortom, ik zorgde ervoor dat het er goed uitzag en gemakkelijk te gebruiken was. Ik hielp ook met de back-end waar nodig. Mijn stage bij LHS leerde me veel over het bouwen van webapplicaties, omgaan met klantverzoeken en zelfstandig dingen gedaan krijgen. Het gaf me ook de kans om te werken aan professionele communicatie en gaf me inzicht in de verschillen tussen schoolprojecten en bedrijfsprojecten. Ik ben blij dat ik de kans heb gekregen om bij LHS te werken en ik kijk uit naar mijn volgende kans!",
+      "technologies": ["Django", "HTML", "CSS", "JavaScript", "TailwindCSS", "Git", "Trello", "Docker", "PostgreSQL", "Figma"],
+      "softskills": ["Teamwork", "Communicatie", "Probleemoplossing", "Tijdbeheer", "Nauwkeurigheid"],
+      "files": ["../../assets/files/internship/Plan van Aanpak - Tymo Verhaegen.pdf"],
+      "comment": ""
+    },
+    "thomasMore": {
+      "title": "Bachelor Toegepaste Informatica",
+      "company": "Thomas More Hogeschool",
+      "location": "Geel, België",
+      "date": "Sep 2021 - Heden",
+      "description": "Ik studeerde Toegepaste Informatica aan de Thomas More Hogeschool. Tijdens mijn studie heb ik veel geleerd over softwareontwikkeling, databases, netwerken en nog veel meer. Ik heb ook geleerd hoe ik in een team moet werken en hoe ik moet omgaan met projectdeadlines. Ik heb een geweldige tijd gehad bij Thomas More en ik kijk uit naar mijn volgende kans!",
+      "technologies": ["HTML", "CSS", "React", "Angular", "Laravel", "TailwindCSS", "Flutter", "Java", "SQL", "Git", "Trello", "NPM"],
+      "softskills": ["Teamwork", "Communicatie", "Probleemoplossing", "Conflictoplossing"],
+      "comment": "Omdat ik hier drie jaar heb gestudeerd en nieuwe dingen heb geleerd, heb ik met veel technologieën gewerkt. Maar dit zijn de technologieën waar ik het meest mee heb gewerkt en die ik het belangrijkst vind voor mijn toekomst. In de sectie 'Projecten' kun je enkele van de projecten zien waar ik tijdens mijn studie aan heb gewerkt."
+    }
+  }
+}

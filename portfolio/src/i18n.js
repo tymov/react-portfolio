@@ -1,45 +1,55 @@
-import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import HttpApi from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-const i18nInstance = i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
+// Import translation files
+import common_en from './translations/en/common.json';
+import common_es from './translations/es/common.json';
+import common_nl from './translations/nl/common.json';
+import hero_en from './translations/en/hero.json';
+import hero_es from './translations/es/hero.json';
+import hero_nl from './translations/nl/hero.json';
+import experience_en from './translations/en/experience.json';
+import experience_es from './translations/es/experience.json';
+import experience_nl from './translations/nl/experience.json';
+
+i18n
+  .use(HttpApi) // load translations using http -> see /public/locales
+  .use(LanguageDetector) // detect user language
+  .use(initReactI18next) // pass the i18n instance to react-i18next.
   .init({
-    fallbackLng: "en",
     resources: {
       en: {
-        translation: {
-          greeting:
-            "Welcome to my portfolio. I'm Tymo Verhaegen, a dedicated professional in Application Development, with a particular emphasis on Front-End Development and UI/UX Design. Feel free to delve into my showcased projects below.",
-        },
-      },
-      nl: {
-        translation: {
-          greeting:
-            "Welkom op mijn portfolio website. Ik ben Tymo Verhaegen, een toegewijde professional in applicatieontwikkeling, met een bijzondere nadruk op front-end ontwikkeling en UI/UX-design. Bekijk gerust mijn hieronder gepresenteerde projecten.",
-        },
-      },
-      fr: {
-        translation: {
-          greeting:
-            "Bienvenue sur mon portfolio. Je suis Tymo Verhaegen, un professionnel dévoué dans le développement d'applications, avec un accent particulier sur le développement front-end et la conception UI/UX. N'hésitez pas à plonger dans mes projets présentés ci-dessous.",
-        },
+        common: common_en,
+        navbar: navbar_en,
+        hero: hero_en,
+        experience: experience_en
       },
       es: {
-        translation: {
-          greeting:
-            "Bienvenido a mi portafolio. Soy Tymo Verhaegen, un profesional dedicado en el desarrollo de aplicaciones, con un énfasis particular en el desarrollo front-end y el diseño UI/UX. Siéntase libre de sumergirse en mis proyectos presentados a continuación.",
-        },
+        common: common_es,  
+        navbar: navbar_es,
+        hero: hero_es,
+        experience: experience_es
       },
+      nl: {
+        common: common_nl,
+        navbar: navbar_nl,
+        hero: hero_nl,
+        experience: experience_nl
+      }
     },
+    lng: 'en',
+    fallbackLng: 'en',
+    debug: true,
+    ns: ['common', 'navbar', 'hero', 'experience'],
+    defaultNS: 'common',
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, // not needed for react as it escapes by default
+    },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
 
-export const changeLanguage = (lng) => {
-  i18nInstance.changeLanguage(lng);
-};
-
-export default i18nInstance;
+export default i18n;

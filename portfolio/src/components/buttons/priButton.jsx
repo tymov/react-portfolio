@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const PrimaryButton = ({ text, onClick }) => {
   return (
     <Link>
-      <button className="px-8 py-3 text-lg font-semibold rounded dark:bg-vulcan-600 dark:text-gray-50" onClick={onClick}>
+      <button className="px-8 py-3 text-lg font-semibold border rounded bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-75 hover:border-blue-600 border-blue-500 uppercase" onClick={onClick}>
         {text}
       </button>
     </Link>

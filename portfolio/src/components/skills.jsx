@@ -43,7 +43,7 @@ export const Skills = () => {
         {SKILLS.map((skill, index) => (
           <motion.div
             key={index}
-            className="rounded-2xl p-4 border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center cursor-pointer"
+            className="rounded-2xl p-4 border-2 border-gray-300 hover:bg-gray-100 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center cursor-pointer"
             onClick={() => handleSkillClick(skill)}
           >
             <span className="!text-5xl scale-165 py-2">

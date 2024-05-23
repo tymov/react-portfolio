@@ -25,7 +25,7 @@ const Modal = ({ skill, closeModal }) => {
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.1, delay: 0 }}
       >
-        <div className="w-full lg:w-3/4 p-8 relative bg-slate-700">
+        <div className="w-full lg:w-3/4 p-8 relative bg-white dark:bg-slate-700">
           <div>
             <h3 className="mb-2 font-semibold text-3xl flex items-center">
               <span className="mr-2">{getIconForTechnology(skill.name)}</span>
@@ -81,7 +81,7 @@ const Modal = ({ skill, closeModal }) => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 p-8 bg-slate-800">
+        <div className="w-full lg:w-1/4 p-8 bg-gray-100 dark:bg-slate-800">
           <div className="mb-8">
             {(skill.certifications.length > 0 ||
               skill.courses.length > 0 ||

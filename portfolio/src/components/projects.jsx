@@ -55,7 +55,7 @@ export const Projects = () => {
         {sortedProjects.map((project, index) => (
           <div
             key={index}
-            className="relative flex flex-col rounded-xl border-2 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors border-gray-300 bg-clip-border text-gray-800 dark:text-white shadow-md"
+            className="relative flex flex-col rounded-xl border-2 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 bg-gray-50 hover:bg-gray-100 hover:scale-105 transition-colors border-gray-300 bg-clip-border text-gray-800 dark:text-white shadow-md"
           >
             <button
               onClick={() => {
@@ -79,7 +79,7 @@ export const Projects = () => {
               </div>
 
               <div className="p-6 pt-0">
-                <div className="flex select-none items-center gap-2 rounded-lg py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <div className="flex select-none items-center gap-2 rounded-lg py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase dark:text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                   {project.status === "Finished" ? (
                     <>
                       <span className="text-md">Check out the project</span>

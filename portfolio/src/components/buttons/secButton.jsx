@@ -5,7 +5,7 @@ const SecondaryButton = ({ text, onClick }) => {
   return (
     <Link>
       <button
-        className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800"
+        className="px-8 py-3 text-lg font-semibold border rounded border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-75 uppercase"
         onClick={onClick}
       >
         {text}

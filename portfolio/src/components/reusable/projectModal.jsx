@@ -64,7 +64,7 @@ const Modal = ({ project, closeModal }) => {
       transition={{ duration: 0.3, delay: 0.1 }}
     >
       <motion.div
-        className="bg-white  rounded-lg dark:bg-slate-800 overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
+        className="bg-white rounded-lg dark:bg-slate-800 overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.1, delay: 0 }}
@@ -76,9 +76,9 @@ const Modal = ({ project, closeModal }) => {
         >
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
             <span>{project.title}</span>
-            <span className="flex items-center text-xl">
+            <span className="flex items-center text-xl text-blue-600 dark:text-white">
               <TiGroup className="mr-2" />
-              <span className="text-gray-800 dark:text-white">
+              <span className="">
                 {project.groupSize}
               </span>
             </span>
@@ -113,7 +113,7 @@ const Modal = ({ project, closeModal }) => {
         <div
           className={`w-full ${
             showExtraInfo ? "lg:w-11/12 z-40" : "lg:w-12/12 z-40"
-          } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-slate-900`}
+          } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-gray-100 dark:bg-slate-900`}
         >
           {/* Check if there are images */}
           {project.images.length > 0 ? (
@@ -139,7 +139,7 @@ const Modal = ({ project, closeModal }) => {
                       transition={{ duration: 0.65 }}
                     />
                     {/* Display the number of images */}
-                    <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
+                    <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
                       {`${currentImageIndex + 1}/${project.images.length}`}
                     </p>
                     {/* Arrows */}
@@ -169,7 +169,7 @@ const Modal = ({ project, closeModal }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.2, delay: 0 }}
-                className="flex absolute bottom-0 right-0 p-4 m-4 select-none !bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-blue-500 hover:bg-blue-600 dark:!bg-slate-900 dark:hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
@@ -202,7 +202,7 @@ const Modal = ({ project, closeModal }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.2, delay: 0 }}
-                className="flex absolute bottom-0 right-0 p-4 m-4 select-none !bg-slate-900 hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-blue-500 hover:bg-blue-600 dark:!bg-slate-900 dark:hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
@@ -231,7 +231,7 @@ const Modal = ({ project, closeModal }) => {
         <motion.div
           className={`${
             showExtraInfo ? "z-50" : "lg:hidden"
-          } w-full lg:w-1/4 p-8 !bg-slate-800 hidden lg:block`}
+          } w-full lg:w-1/4 p-8  bg-white dark:!bg-slate-800 hidden lg:block`}
           style={{
             overflowY: "auto", // Enable vertical scrolling
             scrollbarWidth: "thin",
@@ -320,7 +320,7 @@ const Modal = ({ project, closeModal }) => {
                 {project.softskills.map((softskill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-slate-900 text-white dark:text-white rounded-full text-sm"
+                    className="px-4 py-2 bg-blue-500 dark:bg-slate-900 text-white rounded-full text-md"
                   >
                     {softskill}
                   </span>

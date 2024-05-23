@@ -1,0 +1,11 @@
+{
+    "language-selector": {
+      "label": "Selecteer taal:",
+      "languages": {
+        "en": "Engels",
+        "es": "Spaans",
+        "nl": "Nederlands"
+      }
+    }
+  }
+  

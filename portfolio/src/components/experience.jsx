@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { EXPERIENCES } from "../constants/experiences";
-import { getIconForTechnology } from "../constants/icons";
 import { motion } from "framer-motion";
 import Modal from "./reusable/experienceModal";
 import { FaChevronRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export const Experience = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExperience, setSelectedExperience] = useState(null);
+
+  const { t } = useTranslation(["experience", "experiences"]);
 
   const openModal = (experience) => {
     setSelectedExperience(experience);
@@ -28,7 +30,7 @@ export const Experience = () => {
     >
       <h1 className="text-4xl font-bold uppercase header text-start mb-10">
         <span className="header text-4xl md:text-5xl">02</span>{" "}
-        <span className="header text-4xl md:text-5xl mx-5">EXPERIENCE</span>
+        <span className="header text-4xl md:text-5xl mx-5">{t('experience.title')}</span>
       </h1>
 
       <div>
@@ -40,27 +42,27 @@ export const Experience = () => {
             {/* Date */}
             <div className="w-full lg:w-1/6 flex items-start relative">
               <p className="text-xl uppercase sm:mb-5 sm:pb-5">
-                {experience.date}
+                {t(`experience.${experience.key}.date`)}
               </p>
             </div>
 
             {/* Timeline */}
             <div className="w-full lg:w-1/6 lg:flex justify-center items-start relative hidden lg:items-center">
-              <div className="w-0.5 bg-gray-300 border-2 dark:bg-slate-925 border-slate-800 absolute top-0 left-1/2 transform -translate-x-1/2 h-full"></div>
-              <div className="w-4 h-4 bg-gray-300 border-2 dark:bg-slate-925 border-slate-800 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+              <div className="w-0.5 bg-white dark:bg-slate-925 border-2 border-blue-800 absolute top-0 left-1/2 transform -translate-x-1/2 h-full"></div>
+              <div className="w-4 h-4 bg-white dark:bg-slate-925 border-2 border-blue-800 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
             </div>
 
             {/* Content */}
             <div className="w-full lg:w-4/6 relative">
               <h3 className="mb-2 font-semibold text-2xl">
-                {experience.title}
+                {t(`experience.${experience.key}.title`)}
               </h3>
-              <span className="text-lg text-vulcan-100 font-semibold mb-2 pb-2">
+              <span className="text-lg text-blue-400 dark:text-gray-100 font-semibold mb-2 pb-2">
                 {" - "}
-                {experience.company}{" "}
+                {t(`experience.${experience.key}.company`)}{" "}
               </span>
               <p className="text-lg mt-2 mb-4 pb-3 pt-2">
-                {experience.description}
+                {t(`experience.${experience.key}.description`)}
               </p>
 
               {/* Button to open modal */}
@@ -68,15 +70,15 @@ export const Experience = () => {
                 onClick={() => {
                   openModal(experience);
                 }}
-                className="!font-medium !text-blue-gray-900 !transition-colors hover:!text-white"
+                className=""
               >
                 <div>
-                  <div className="flex select-none hover:bg-slate-800 hover:bg-opacity-40 items-center gap-2 rounded-lg py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    <span className="text-lg">Details</span>
+                  <button className="flex select-none bg-blue-500 hover:bg-blue-600 items-center gap-2 rounded-lg px-4 py-3 utext-md text-center align-middle font-sans font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                    <span className="text-lg">{t('experience:details')}</span>
                     <span className="text-lg">
                       <FaChevronRight />
                     </span>
-                  </div>
+                  </button>
                 </div>
               </button>
             </div>
