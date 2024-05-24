@@ -1,14 +1,10 @@
 {
-  "hero": {
-    "title": "Introduction",
-    "subtitle": " Welcome to my portfolio. I'm Tymo Verhaegen, a dedicated professional in Application Development, with a particular emphasis on Front-End Development and UI/UX Design. Feel free to delve into my showcased projects below.",
-    "projects": "Projects",
-    "contact": "Contact"
-  },
-  "experience": {
-    "title": "Experience",
-    "subtitle": "I have a strong background in Front-End Development and UI/UX Design. I have worked on a variety of projects, ranging from small websites to large-scale applications. I am always eager to learn new technologies and improve my skills.",
-    "skills": "Skills",
-    "projects": "Projects"
+  "language-selector": {
+    "label": "Select language:",
+    "languages": {
+      "en": "English",
+      "es": "Spanish",
+      "nl": "Dutch"
+    }
   }
 }

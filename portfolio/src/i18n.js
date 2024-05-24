@@ -13,6 +13,9 @@ import hero_nl from './translations/nl/hero.json';
 import experience_en from './translations/en/experience.json';
 import experience_es from './translations/es/experience.json';
 import experience_nl from './translations/nl/experience.json';
+import skill_en from './translations/en/skill.json';
+import skill_es from './translations/es/skill.json';
+import skill_nl from './translations/nl/skill.json';
 
 i18n
   .use(HttpApi) // load translations using http -> see /public/locales
@@ -24,25 +27,28 @@ i18n
         common: common_en,
         navbar: navbar_en,
         hero: hero_en,
-        experience: experience_en
+        experience: experience_en,
+        skill: skill_en
       },
       es: {
         common: common_es,  
         navbar: navbar_es,
         hero: hero_es,
-        experience: experience_es
+        experience: experience_es,
+        skill: skill_es
       },
       nl: {
         common: common_nl,
         navbar: navbar_nl,
         hero: hero_nl,
-        experience: experience_nl
+        experience: experience_nl, 
+        skill: skill_nl
       }
     },
     lng: 'en',
     fallbackLng: 'en',
     debug: true,
-    ns: ['common', 'navbar', 'hero', 'experience'],
+    ns: ['common', 'navbar', 'hero', 'experience', 'skill'],
     defaultNS: 'common',
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

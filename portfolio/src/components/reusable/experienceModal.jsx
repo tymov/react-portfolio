@@ -64,7 +64,7 @@ const Modal = ({ experience, closeModal }) => {
                   {t("experience.files")}
                 </h3>
                 <div className="flex flex-wrap gap-4 mx-5">
-                  {files.map((file, index) => (
+                {files.map((file, index) => (
                     <a
                       key={index}
                       href={file}

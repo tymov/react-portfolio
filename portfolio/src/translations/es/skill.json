@@ -1,0 +1,352 @@
+{
+  "skill": {
+    "title": "Habilidades",
+    "details": "Detalles",
+    "technologiesUsed": "Tecnologías usadas",
+    "softskills": "Habilidades blandas",
+    "education": "Educación",
+    "certifications": "Certificaciones",
+    "courses": "Cursos",
+    "projects": "Proyectos",
+    "noProjects": "No hay proyectos para mostrar.",
+    "noCertifications": "No hay certificaciones para mostrar.",
+    "noEducation": "No hay educación para mostrar.",
+    "noCertificationsCoursesEducation": "No hay certificaciones, cursos o educación para mostrar.",
+    "viewCertificate": "Ver certificado",
+    "viewCourse": "Ver curso",
+    "React": {
+      "level": {
+        "name": "Competente",
+        "percentage": 45
+      },
+      "description": "React es una biblioteca de JavaScript para construir interfaces de usuario. Es mantenida por Facebook y una comunidad de desarrolladores individuales y empresas.",
+      "relatedTechnologies": ["Redux", "Next.js", "Webpack", "Babel"],
+      "projects": [
+        {
+          "title": "Portafolio",
+          "technology": "React"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": [
+        {
+          "title": "El curso definitivo de React 2024: React, Redux y más",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/the-ultimate-react-course/",
+          "status": "Incompleto"
+        }
+      ]
+    },
+    "Angular": {
+      "level": {
+        "name": "Avanzado",
+        "percentage": 60
+      },
+      "description": "Angular es una plataforma y framework para construir aplicaciones cliente de una sola página usando HTML y TypeScript.",
+      "relatedTechnologies": ["RxJS", "NgRx", "Angular Material"],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Proyecto Angular",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "TailwindCSS": {
+      "level": {
+        "name": "Avanzado",
+        "percentage": 70
+      },
+      "description": "Tailwind CSS es un framework CSS orientado a utilidades para construir diseños personalizados rápidamente.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Portafolio",
+          "technology": "React"
+        },
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        },
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Proyecto Angular",
+          "technology": "Angular"
+        },
+        {
+          "title": "Proyecto Laravel",
+          "technology": "Laravel"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "Bootstrap": {
+      "level": {
+        "name": "Avanzado",
+        "percentage": 70
+      },
+      "description": "Bootstrap es un framework CSS gratuito y de código abierto dirigido al desarrollo front-end, responsive y móvil primero.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Rastreador de comestibles",
+          "technology": "Django"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "Django": {
+      "level": {
+        "name": "Competente",
+        "percentage": 55
+      },
+      "description": "Django es un framework web de Python de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático.",
+      "relatedTechnologies": ["Django REST framework"],
+      "projects": [
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        },
+        {
+          "title": "Rastreador de comestibles",
+          "technology": "Django"
+        }
+      ],
+      "certifications": [
+        {
+          "title": "Masterclass de Django",
+          "credential": "UC-484e53c7-1250-4ec8-a897-334649c95001",
+          "date": "Febrero 2024",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/certificate/UC-484e53c7-1250-4ec8-a897-334649c95001/"
+        }
+      ],
+      "education": [],
+      "courses": [
+        {
+          "title": "Masterclass de Django: Construye 9 Proyectos Django del Mundo Real",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/django-course/",
+          "status": "Completo"
+        }
+      ]
+    },
+    "Laravel": {
+      "level": {
+        "name": "Competente",
+        "percentage": 50
+      },
+      "description": "Laravel es un framework web de PHP gratuito y de código abierto, creado por Taylor Otwell y destinado al desarrollo de aplicaciones web siguiendo el patrón arquitectónico modelo-vista-controlador.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Proyecto Laravel",
+          "technology": "Laravel"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "MySQL": {
+      "level": {
+        "name": "Competente",
+        "percentage": 55
+      },
+      "description": "MySQL es un sistema de gestión de bases de datos relacional de código abierto.",
+      "relatedTechnologies": [],
+      "projects": [],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "MongoDB": {
+      "level": {
+        "name": "Intermedio",
+        "percentage": 35
+      },
+      "description": "MongoDB es un programa de base de datos orientado a documentos multiplataforma de código fuente disponible.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Proyecto Angular",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "Java": {
+      "level": {
+        "name": "Competente",
+        "percentage": 50
+      },
+      "description": "Java es un lenguaje de programación orientado a objetos y basado en clases que está diseñado para tener las menores dependencias de implementación posibles.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "Figma": {
+      "level": {
+        "name": "Intermedio",
+        "percentage": 40
+      },
+      "description": "Figma es un editor de gráficos vectoriales y herramienta de prototipado que es principalmente basada en la web.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        }
+      ],
+      "certifications": [
+        {
+          "title": "Diseñador Web y Móvil Completo: UI/UX, Figma, +más",
+          "credential": "",
+          "date": "En Progreso",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery"
+        }
+      ],
+      "education": [],
+      "courses": [
+        {
+          "title": "Diseñador Web y Móvil Completo: UI/UX, Figma, +más",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/",
+          "status": "Incompleto"
+        }
+      ]
+    },
+    "UML": {
+      "level": {
+        "name": "Intermedio",
+        "percentage": 40
+      },
+      "description": "UML es un lenguaje de modelado general estandarizado en el campo de la ingeniería de software.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        },
+        {
+          "title": "Proyecto Angular",
+          "technology": "Angular"
+        },
+        {
+          "title": "Proyecto Laravel",
+          "technology": "Laravel"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    },
+    "SCRUM": {
+      "level": {
+        "name": "Competente",
+        "percentage": 55
+      },
+      "description": "Scrum es un marco dentro del cual las personas pueden abordar problemas complejos y adaptativos, mientras entregan productiva y creativamente productos de alto valor.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        },
+        {
+          "title": "Proyecto Laravel",
+          "technology": "Laravel"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": []
+    }
+  }
+}

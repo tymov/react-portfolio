@@ -3,18 +3,23 @@ import { SKILLS } from "../constants/skills";
 import { getIconForTechnology } from "../constants/icons";
 import { motion } from "framer-motion";
 import Modal from "./reusable/skillModal";
+import { useTranslation } from "react-i18next";
 
 export const Skills = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
 
-  const handleSkillClick = (skill) => {
-    setSelectedSkill(skill);
+  const { t } = useTranslation(["skill", "skills"]);
+
+  const openModal = (experience) => {
+    setSelectedSkill(experience);
+    setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setSelectedSkill(null);
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
-  
+
   return (
     <div
       className="text-gray-800 dark:text-white pb-24 px-10 pt-10"
@@ -30,7 +35,9 @@ export const Skills = () => {
           transition={{ duration: 0.5, delay: 0.33 }}
         >
           <span className="header text-4xl md:text-5xl">03</span>{" "}
-          <span className="header text-4xl md:text-5xl mx-5">SKILLS</span>
+          <span className="header text-4xl md:text-5xl mx-5">
+            {t("skill.title")}
+          </span>
         </motion.h1>
       </div>
 
@@ -44,21 +51,21 @@ export const Skills = () => {
           <motion.div
             key={index}
             className="rounded-2xl p-4 border-2 border-gray-300 hover:bg-gray-100 dark:border-slate-800 dark:bg-slate-925 hover:dark:bg-slate-900 hover:scale-105 transition-colors flex justify-center items-center cursor-pointer"
-            onClick={() => handleSkillClick(skill)}
+            onClick={() => {
+                  openModal(skill);
+                }}
           >
             <span className="!text-5xl scale-165 py-2">
-              {getIconForTechnology(skill.name)}
+              {getIconForTechnology(skill.key)}{" "}
+              {/* Corrected to use skill.key */}
             </span>
           </motion.div>
         ))}
       </motion.div>
 
       {/* Render modal if a skill is selected */}
-      {selectedSkill && (
-        <Modal
-          skill={selectedSkill}
-          closeModal={handleCloseModal}
-        />
+      {isModalOpen && (
+        <Modal skill={selectedSkill} closeModal={closeModal} />
       )}
     </div>
   );

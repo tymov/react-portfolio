@@ -21,6 +21,7 @@ import {
   SiFramer,
   SiLeaflet,
   SiAmazonaws,
+  SiI18Next,
 } from "react-icons/si";
 import { FaJava, FaNodeJs, FaNpm } from "react-icons/fa";
 import { PiGitlabLogoLight } from "react-icons/pi";
@@ -65,6 +66,7 @@ export const getIconForTechnology = (technology) => {
     NPM: "text-red-500",
     AWS: "text-yellow-500",
     ChartJS: "text-[#FFB1C1]",
+    i18n: "text-cyan-500",
   };
 
   const colorClass = iconColors[technology];
@@ -153,6 +155,8 @@ export const getIconForTechnology = (technology) => {
       return <SiAmazonaws className={`${colorClass} ${commonIconClasses}`} />;
     case "ChartJS":
       return <RiDonutChartFill className={`${colorClass} ${commonIconClasses}`} />;
+    case "i18n": 
+      return <SiI18Next className={`${colorClass} ${commonIconClasses}`} />;
     default:
       return null;
   }

@@ -24,7 +24,7 @@
       "description": "I studied Applied Computer Science at Thomas More University of Applied Sciences. During my studies, I learned a lot about software development, databases, networking, and much more. I also learned how to work in a team and how to deal with project deadlines. I had a great time at Thomas More and I am looking forward to my next opportunity!",
       "technologies": ["HTML", "CSS", "React", "Angular", "Laravel", "TailwindCSS", "Flutter", "Java", "SQL", "Git", "Trello", "NPM"],
       "softskills": ["Teamwork", "Communication", "Problem-solving", "Conflict resolution"],
-      "files": ["thomas-more-certificate.pdf"],
+      "files": [],
       "comment": "Since I've spent three years studying and learning new things here, there are a lot of technologies I've worked with. But these are the ones I've worked with the most and that I think are the most important ones for my future. In the section 'Projects' you can see some of the projects I've worked on during my studies."
     }
   }

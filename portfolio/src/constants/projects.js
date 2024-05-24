@@ -69,6 +69,10 @@ export const PROJECTS = [
         developmentTime: "10",
       },
       {
+        name: "i18n",
+        developmentTime: "5",
+      },
+      {
         name: "Framer",
         developmentTime: "15",
       },
@@ -106,6 +110,10 @@ export const PROJECTS = [
         developmentTime: "10",
       },
       {
+        name: "i18n",
+        developmentTime: "5",
+      },
+      {
         name: "Docker",
         developmentTime: "10",
       },
@@ -141,7 +149,7 @@ export const PROJECTS = [
     ],
     softskills: [
       "Teamwork",
-      "Professional Communication",
+      "Communication",
       "Problem-solving",
       "Independence",
     ],
@@ -259,7 +267,7 @@ export const PROJECTS = [
       "Communication",
       "Problem-solving",
       "Time management",
-      "Retrospective Meetings",
+      "Retrospectives",
       "Standup Meetings",
     ],
     status: "Finished",

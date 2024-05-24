@@ -74,7 +74,7 @@ export const Experience = () => {
               >
                 <div>
                   <button className="flex select-none bg-blue-500 hover:bg-blue-600 items-center gap-2 rounded-lg px-4 py-3 utext-md text-center align-middle font-sans font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    <span className="text-lg">{t('experience:details')}</span>
+                    <span className="text-lg">{t('experience.details')}</span>
                     <span className="text-lg">
                       <FaChevronRight />
                     </span>
