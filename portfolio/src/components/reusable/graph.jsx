@@ -9,21 +9,32 @@ import {
 } from "chart.js";
 import { motion } from "framer-motion";
 import "chartjs-plugin-datalabels"; // Import datalabels plugin
+import { useTranslation } from "react-i18next";
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 export default function Graph({ project }) {
-  // Filter out technologies with development time of 0
-  const filteredTechnologies = project.technologies.filter(
-    (tech) => tech.developmentTime !== 0
-  );
+  const { t } = useTranslation(["project", "projects"]);
 
+  // Filter out technologies with development time of 0
+  const technologies = t(`project.${project.key}.technologies`, {
+    returnObjects: true,
+  });
+
+  let filteredTechnologies = [];
+  if (Array.isArray(technologies)) {
+    filteredTechnologies = technologies.filter(
+      (tech) => tech.developmentTime !== 0
+    );
+  }
   // Prepare chart data with filtered technologies
   const chartLabels = [];
   const chartDataValues = [];
   filteredTechnologies.forEach((tech) => {
-    chartLabels.push(tech.name);
-    chartDataValues.push(tech.developmentTime);
+    if (tech && tech.name) {
+      chartLabels.push(tech.name);
+      chartDataValues.push(tech.developmentTime);
+    }
   });
 
   const colors = [

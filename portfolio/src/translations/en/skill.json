@@ -250,6 +250,44 @@
       ],
       "courses": []
     },
+    "Docker": {
+      "level": {
+        "name": "Beginner",
+        "percentage": 20
+      },
+      "description": "Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Bookingstool",
+          "technology": "Django"
+        },
+        {
+          "title": "Industry 4.0",
+          "technology": "Angular"
+        },
+        {
+          "title": "Angular Project",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Bachelor of Applied Computer Science",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": [
+        {
+          "title": "Docker Mastery: with Kubernetes +Swarm from a Docker Captain",
+          "credential": "",
+          "date": "In Progress",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/docker-mastery/"
+        }
+      ]
+    },
     "Figma": {
       "level": {
         "name": "Intermediate",

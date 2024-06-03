@@ -2,7 +2,9 @@
   "navbar": {
     "home": "Home",
     "experience": "Ervaring",
-    "projects": "Projecten",
+    "projects": "Realisaties",
+    "internship": "Stage",
+    "skills": "Vaardigheden",
     "about": "Over mij",
     "contact": "Contact"
   }

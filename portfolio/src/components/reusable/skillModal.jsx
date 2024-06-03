@@ -42,8 +42,7 @@ const Modal = ({ skill, closeModal }) => {
               {t(`skill.${skill.key}.description`)}
             </p>
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-              {t(`skill.level`)}{" "}
-              {/* Access the 'name' property */}
+              {t(`skill.level`)} {/* Access the 'name' property */}
             </h3>
             <SkillProgressBar level={level} />
             {/* Pass only the percentage */}

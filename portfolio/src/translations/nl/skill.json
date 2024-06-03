@@ -250,6 +250,36 @@
       ],
       "courses": []
     },
+    "Docker": {
+      "level": {
+        "name": "Beginner",
+        "percentage": 20
+      },
+      "description": "Docker is een open-source platform voor het bouwen, delen en draaien van applicaties.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industrie 4.0",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Bachelor in Toegepaste Informatica",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": [
+        {
+          "title": "Docker Mastery: The Complete Toolset From a Docker Captain",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/docker-mastery/",
+          "date": "Lopend",
+          "credential": ""
+        }
+      ]
+    },
     "Figma": {
       "level": {
         "name": "Tussenliggend",

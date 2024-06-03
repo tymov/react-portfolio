@@ -13,7 +13,7 @@
       "description": "Bij LHS heb ik het grootste deel van mijn tijd besteed aan het werken aan een boekingstool die ze op de markt wilden brengen. Ik richtte me op het maken van het front-end gedeelte van de tool met behulp van Django en Tailwind. Kortom, ik zorgde ervoor dat het er goed uitzag en gemakkelijk te gebruiken was. Ik hielp ook met de back-end waar nodig. Mijn stage bij LHS leerde me veel over het bouwen van webapplicaties, omgaan met klantverzoeken en zelfstandig dingen gedaan krijgen. Het gaf me ook de kans om te werken aan professionele communicatie en gaf me inzicht in de verschillen tussen schoolprojecten en bedrijfsprojecten. Ik ben blij dat ik de kans heb gekregen om bij LHS te werken en ik kijk uit naar mijn volgende kans!",
       "technologies": ["Django", "HTML", "CSS", "JavaScript", "TailwindCSS", "Git", "Trello", "Docker", "PostgreSQL", "Figma"],
       "softskills": ["Teamwork", "Communicatie", "Probleemoplossing", "Tijdbeheer", "Nauwkeurigheid"],
-      "files": ["../../assets/files/internship/Plan van Aanpak - Tymo Verhaegen.pdf"],
+      "files": ["/assets/files/internship/Plan van Aanpak - Tymo Verhaegen.pdf", "/assets/files/internship/Realisatie document - Tymo Verhaegen.pdf"],
       "comment": ""
     },
     "thomasMore": {

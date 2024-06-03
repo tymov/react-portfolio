@@ -2,7 +2,9 @@
   "navbar": {
     "home": "Home",
     "experience": "Experiencia",
-    "projects": "Proyectos",
+    "projects": "Realizaciones",
+    "internship": "Prácticas",
+    "skills": "Habilidades",
     "about": "Acerca de",
     "contact": "Contacto"
   }

@@ -4,6 +4,7 @@
     "details": "Detalles",
     "technologiesUsed": "Tecnologías usadas",
     "softskills": "Habilidades blandas",
+    "level": "Nivel",
     "education": "Educación",
     "certifications": "Certificaciones",
     "courses": "Cursos",
@@ -247,6 +248,36 @@
         }
       ],
       "courses": []
+    },
+    "Docker": {
+      "level": {
+        "name": "Principiante",
+        "percentage": 20
+      },
+      "description": "Docker es un conjunto de productos de plataforma como servicio que utilizan virtualización a nivel de sistema operativo para entregar software en paquetes llamados contenedores.",
+      "relatedTechnologies": [],
+      "projects": [
+        {
+          "title": "Industria 4.0",
+          "technology": "Angular"
+        }
+      ],
+      "certifications": [],
+      "education": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
+          "organization": "Thomas More University of Applied Sciences"
+        }
+      ],
+      "courses": [
+        {
+          "title": "Docker Mastery: The Complete Toolset From a Docker Captain",
+          "organization": "Udemy",
+          "url": "https://www.udemy.com/course/docker-mastery/",
+          "date": "En Progreso",
+          "credential": ""
+        }
+      ]
     },
     "Figma": {
       "level": {

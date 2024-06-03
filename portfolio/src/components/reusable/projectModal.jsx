@@ -11,34 +11,56 @@ import { getIconForTechnology } from "../../constants/icons";
 import { motion } from "framer-motion";
 import { SiGit } from "react-icons/si";
 import Graph from "./graph";
+import { useTranslation } from "react-i18next";
 
 const Modal = ({ project, closeModal }) => {
+  const { t } = useTranslation(["project", "projects"]);
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [modalHeight, setModalHeight] = useState("auto");
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const [showExtraInfo, setShowExtraInfo] = useState(false);
 
+  const technologies = t(`project.${project.key}.technologies`, {
+    returnObjects: true,
+  });
+  const softskills = t(`project.${project.key}.softskills`, {
+    returnObjects: true,
+  });
+  const images = t(`project.${project.key}.images`, {
+    returnObjects: true,
+  });
+
+  const description = t(`project.${project.key}.description`, {
+    returnObjects: true,
+  });
+
   useEffect(() => {
+    if (!Array.isArray(images)) {
+      console.error("Images is not an array:", images);
+      return; // Exit early if images is not an array
+    }
+
     const descriptionHeight =
-      document.getElementById("description").offsetHeight;
+      document.getElementById("description")?.offsetHeight || 0;
     const image = new Image();
-    image.src = project.images[currentImageIndex];
+    image.src = images[currentImageIndex];
     image.onload = () => {
       const imageHeight = image.height;
       const maxHeight = Math.max(descriptionHeight, imageHeight);
       setModalHeight(maxHeight);
     };
-  }, [project, currentImageIndex]);
+  }, [project, currentImageIndex, images]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
@@ -52,8 +74,8 @@ const Modal = ({ project, closeModal }) => {
 
   const getDescription = () => {
     return isDescriptionExpanded
-      ? project.description
-      : project.description.slice(0, 300) + "...";
+      ? description
+      : description.slice(0, 300) + "...";
   };
 
   return (
@@ -75,16 +97,14 @@ const Modal = ({ project, closeModal }) => {
           id="description"
         >
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
-            <span>{project.title}</span>
+            <span>{t(`project.${project.key}.title`)}</span>
             <span className="flex items-center text-xl text-blue-600 dark:text-white">
               <TiGroup className="mr-2" />
-              <span className="">
-                {project.groupSize}
-              </span>
+              <span className="">{t(`project.${project.key}.groupSize`)}</span>
             </span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg mb-3">
-            {project.date}
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-3 capitalize">
+            {t(`project.${project.key}.date`)}
           </p>
           <div
             className="mb-8 h-full overflow-y-auto lg:max-h-[1400px] md:max-h-[1000px] sm:max-h-[475px] direction-rtl"
@@ -98,12 +118,14 @@ const Modal = ({ project, closeModal }) => {
               <p className="text-gray-800 dark:text-white text-lg lg:mt-3 ml-3 ">
                 {getDescription()}
               </p>
-              {project.description.length > 150 && (
+              {description.length > 150 && (
                 <button
                   onClick={toggleDescription}
                   className="text-blue-600 dark:text-blue-300 font-semibold hover:underline focus:outline-none py-6 lg:pb-24 px-5 sm:mb-4"
                 >
-                  {isDescriptionExpanded ? "Read less" : "Read more"}
+                  {isDescriptionExpanded
+                    ? t(`project.readLess`)
+                    : t(`project.readMore`)}
                 </button>
               )}
             </div>
@@ -116,7 +138,7 @@ const Modal = ({ project, closeModal }) => {
           } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-gray-100 dark:bg-slate-900`}
         >
           {/* Check if there are images */}
-          {project.images.length > 0 ? (
+          {images.length > 0 ? (
             <>
               {/* Container for image and count */}
               <div className={`relative ${project.aspectRatio >= 1 ? "" : ""}`}>
@@ -131,8 +153,8 @@ const Modal = ({ project, closeModal }) => {
                     {/* Display the image */}
                     <motion.img
                       key={currentImageIndex}
-                      src={project.images[currentImageIndex]}
-                      alt={project.title}
+                      src={images[currentImageIndex]}
+                      alt={t(`project.${project.key}.title`)}
                       className="rounded-lg"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -140,10 +162,10 @@ const Modal = ({ project, closeModal }) => {
                     />
                     {/* Display the number of images */}
                     <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
-                      {`${currentImageIndex + 1}/${project.images.length}`}
+                      {`${currentImageIndex + 1}/${images.length}`}
                     </p>
                     {/* Arrows */}
-                    {project.images.length > 1 && !showExtraInfo && (
+                    {images.length > 1 && !showExtraInfo && (
                       <>
                         <button
                           onClick={prevImage}
@@ -173,7 +195,9 @@ const Modal = ({ project, closeModal }) => {
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
-                    <span className="text-lg mr-1">Hide Extra Info</span>
+                    <span className="text-lg mr-1">
+                      {t(`project.showLess`)}
+                    </span>
                     <span className="text-lg opacity-1 hover:animate-pulse">
                       {" "}
                       {/* Animate-ping class */}
@@ -186,7 +210,9 @@ const Modal = ({ project, closeModal }) => {
                       <FaChevronLeft className="opacity-1 hover:animate-pulse" />{" "}
                       {/* Animate-ping class */}
                     </span>
-                    <span className="text-lg ml-1">Show Extra Info</span>
+                    <span className="text-lg ml-1">
+                      {t(`project.showMore`)}
+                    </span>
                   </div>
                 )}
               </motion.button>
@@ -194,7 +220,7 @@ const Modal = ({ project, closeModal }) => {
           ) : (
             <>
               <p className="text-white text-3xl bg-slate-900 py-3 px-4 rounded-md">
-                No images for this project.
+                {t(`project.noImages`)}
               </p>
 
               <motion.button
@@ -206,7 +232,9 @@ const Modal = ({ project, closeModal }) => {
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
-                    <span className="text-lg mr-1">Hide Extra Info</span>
+                    <span className="text-lg mr-1">
+                      {t(`project.showLess`)}
+                    </span>
                     <span className="text-lg opacity-1 hover:animate-pulse">
                       {" "}
                       {/* Animate-ping class */}
@@ -219,7 +247,9 @@ const Modal = ({ project, closeModal }) => {
                       <FaChevronLeft className="opacity-1 hover:animate-pulse" />{" "}
                       {/* Animate-ping class */}
                     </span>
-                    <span className="text-lg ml-1">Show Extra Info</span>
+                    <span className="text-lg ml-1">
+                      {t(`project.showMore`)}
+                    </span>
                   </div>
                 )}
               </motion.button>
@@ -243,10 +273,10 @@ const Modal = ({ project, closeModal }) => {
           transition={{ duration: 0.225, delay: 0 }}
         >
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
-            Technologies Used
+            {t(`project.technologiesUsed`)}
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
-            {project.technologies.map((technology, index) => (
+            {technologies.map((technology, index) => (
               <span
                 key={index}
                 className="text-gray-600 dark:text-gray-300 text-3xl"
@@ -256,13 +286,13 @@ const Modal = ({ project, closeModal }) => {
               </span>
             ))}
           </div>
-          {project.liveDemoLink && (
+          {t(`project.${project.key}.liveDemoLink`) && (
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                Watch Demo
+                {t(`project.demo`)}
               </h3>
               <a
-                href={project.liveDemoLink}
+                href={t(`project.${project.key}.liveDemoLink`)}
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
@@ -276,20 +306,20 @@ const Modal = ({ project, closeModal }) => {
 
           <div>
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
-              Type
+              {t(`project.type`)}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
-              {project.type}
+              {t(`project.${project.key}.type`)}
             </p>
           </div>
 
-          {project.githubLink && (
+          {t(`project.${project.key}.githubLink`) && (
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                Source Code
+                {t(`project.sourceCode`)}
               </h3>
               <a
-                href={project.githubLink}
+                href={t(`project.${project.key}.githubLink`)}
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
@@ -303,21 +333,21 @@ const Modal = ({ project, closeModal }) => {
 
           <div>
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
-              Role
+              {t(`project.role`)}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
-              {project.role}
+              {t(`project.${project.key}.role`)}
             </p>
           </div>
 
-          {project.softskills.length > 0 && (
+          {softskills.length > 0 && (
             <div className="my-8 mt-10">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4">
-                Soft Skills
+                {t(`project.softskills`)}
               </h3>
               {/* Display softskills as a list */}
               <div className="flex flex-wrap gap-2">
-                {project.softskills.map((softskill, index) => (
+                {softskills.map((softskill, index) => (
                   <span
                     key={index}
                     className="px-4 py-2 bg-blue-500 dark:bg-slate-900 text-white rounded-full text-md"

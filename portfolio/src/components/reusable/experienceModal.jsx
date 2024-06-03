@@ -7,9 +7,15 @@ import { useTranslation } from "react-i18next";
 const Modal = ({ experience, closeModal }) => {
   const { t } = useTranslation(["experience", "experiences"]);
 
-  const technologies = t(`experience.${experience.key}.technologies`, { returnObjects: true });
-  const softskills = t(`experience.${experience.key}.softskills`, { returnObjects: true });
-  const files = t(`experience.${experience.key}.files`, { returnObjects: true });
+  const technologies = t(`experience.${experience.key}.technologies`, {
+    returnObjects: true,
+  });
+  const softskills = t(`experience.${experience.key}.softskills`, {
+    returnObjects: true,
+  });
+  const files = t(`experience.${experience.key}.files`, {
+    returnObjects: true,
+  });
 
   return (
     <motion.div
@@ -63,19 +69,18 @@ const Modal = ({ experience, closeModal }) => {
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
                   {t("experience.files")}
                 </h3>
-                <div className="flex flex-wrap gap-4 mx-5">
-                {files.map((file, index) => (
-                    <a
-                      key={index}
-                      href={file}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg text-gray-800 dark:text-white hover:underline flex items-center"
-                      download
-                    >
-                      <FaDownload className="mr-2 text-vulcan-300" />
-                      <span>{file.split('/').pop()}</span>
-                    </a>
+                <div className="mx-5">
+                  {files.map((file, index) => (
+                    <div key={index} className="mb-2 pb-4">
+                      <a
+                        href={file}
+                        className="text-lg text-gray-800 dark:text-white hover:underline flex items-center"
+                        download
+                      >
+                        <FaDownload className="mr-2 text-2xl text-vulcan-300" />
+                        <span>{file.split("/").pop()}</span>
+                      </a>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -90,7 +95,10 @@ const Modal = ({ experience, closeModal }) => {
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
               {technologies.map((technology, index) => (
-                <span key={index} className="text-gray-600 dark:text-gray-300 text-3xl">
+                <span
+                  key={index}
+                  className="text-gray-600 dark:text-gray-300 text-3xl"
+                >
                   {getIconForTechnology(technology)}
                 </span>
               ))}

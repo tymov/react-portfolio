@@ -1,1 +1,10 @@
-{}
+{
+    "about": {
+        "title": "About Me",
+        "cv": "Download CV",
+        "file": "assets/files/Tymo_Verhaegen_CV_EN.pdf",
+        "about1": "Hi there! I'm Tymo Verhaegen, an application developer and design enthusiast based in Belgium.",
+        "about2": "With a background in application development and an interest in design, I bring a unique perspective to my projects. Whether it's creating intuitive user interfaces or implementing the best possible user experience, I'm always up for a challenge.",
+        "about3": "When I'm not coding, you can find me producing music, playing games, experimenting in the kitchen, or planning my next travel adventure."
+    }
+}

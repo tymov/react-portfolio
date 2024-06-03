@@ -13,7 +13,7 @@
       "description": "Mientras estuve en LHS, pasé la mayor parte de mi tiempo trabajando en una herramienta de reservas que estaban preparando para vender. Me centré en hacer la parte del front-end de la herramienta usando Django y Tailwind. Básicamente, hice que se viera bien y fuera fácil de usar. También ayudé con el back-end cuando fue necesario. Mi pasantía en LHS me enseñó mucho sobre la construcción de aplicaciones web, el manejo de solicitudes de clientes y la realización de tareas por mi cuenta. También me dio la oportunidad de trabajar en la comunicación profesional y me dio una idea de las diferencias entre proyectos universitarios y corporativos. Estoy contento de haber tenido la oportunidad de trabajar en LHS y estoy deseando mi próxima oportunidad.",
       "technologies": ["Django", "HTML", "CSS", "JavaScript", "TailwindCSS", "Git", "Trello", "Docker", "PostgreSQL", "Figma"],
       "softskills": ["Trabajo en equipo", "Comunicación", "Resolución de problemas", "Gestión del tiempo", "Atención al detalle"],
-      "files": ["../../assets/files/internship/Plan de aproximación - Tymo Verhaegen.pdf"],
+      "files": ["/assets/files/internship/Plan de aproximación - Tymo Verhaegen.pdf", "/assets/files/internship/Documento de realización - Tymo Verhaegen.pdf"],
       "comment": ""
     },
     "thomasMore": {

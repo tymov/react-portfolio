@@ -2,39 +2,42 @@ import { Icons } from "./icons";
 
 export const SKILLS = [
   {
-    key: 'React',
+    key: "React",
   },
   {
-    key: 'Angular',
+    key: "Angular",
   },
   {
-    key: 'Django',
+    key: "Django",
   },
   {
-    key: 'Laravel',
+    key: "Laravel",
   },
   {
-    key: 'MySQL',
+    key: "MySQL",
   },
   {
-    key: 'MongoDB',
+    key: "MongoDB",
   },
   {
-    key: 'Java',
+    key: "Java",
   },
   {
-    key: 'TailwindCSS',
+    key: "Docker",
   },
   {
-    key: 'Bootstrap',
+    key: "TailwindCSS",
   },
   {
-    key: 'Figma',
+    key: "Bootstrap",
   },
   {
-    key: 'UML',
+    key: "Figma",
   },
   {
-    key: 'SCRUM',
-  }
+    key: "UML",
+  },
+  {
+    key: "SCRUM",
+  },
 ];

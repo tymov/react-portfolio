@@ -1,1 +1,375 @@
-{}
+{
+    "project": {
+        "title": "Realisaties",
+        "details": "Details",
+        "technologiesUsed": "Gebruikte Technologieën",
+        "demo": "Demo",
+        "type": "Type",
+        "noImages": "Geen afbeeldingen beschikbaar",
+        "showMore": "Extra informatie weergeven",
+        "showLess": "Extra informatie verbergen",
+        "sourceCode": "Broncode",
+        "role": "Rol",
+        "softskills": "Soft Skills",
+        "learnMore": "Meer leren",
+        "readMore": "Lees Meer",
+        "readLess": "Lees minder",
+        "inProgress": "In uitvoering, binnenkort beschikbaar!",
+        "Portfolio": {
+            "title": "Portfolio",
+            "date": "2024",
+            "role": "Ontwikkelaar",
+            "description": "Mijn persoonlijke portfolio",
+            "groupSize": 1,
+            "githubLink": "",
+            "liveDemoLink": "https://tymo-portfolio.vercel.app",
+            "technologies": [
+                {
+                    "name": "React",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "Vercel",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "20"
+                },
+                {
+                    "name": "ChartJS",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "i18n",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Framer",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [],
+            "softskills": [],
+            "status": "Unfinished",
+            "type": "Persoonlijk Project"
+        },
+        "Bookingtool": {
+            "title": "Bookingstool",
+            "date": "Maart 2024 - Mei 2024",
+            "role": "Full-Stack Ontwikkelaar",
+            "description": "Voor mijn stage bij LHS by Spot, een klein ontwikkelingsbedrijf, hebben we een complex boekingsinstrument en modulair beheersysteem ontwikkeld met een breed scala aan functionaliteiten. Het centrale aspect van de webapplicatie is het boekingssysteem, waarmee klanten eenvoudig afspraken, reserveringen of boekingen kunnen maken op basis van beschikbaarheid. Het systeem bevat functies voor het beheren van bedrijfsbronnen zoals kamers, apparatuur en personeel, waardoor de beschikbaarheid kan worden bijgehouden en bronnen en personeel kunnen worden toegewezen. Integratie met een kalender is beschikbaar, zodat zowel klanten als medewerkers afspraken eenvoudig kunnen bekijken, wijzigen en bijhouden. Het systeem bevat ook functies voor het beheren van diensten en pakketten, zodat klanten de beste opties voor hun behoeften kunnen kiezen. Een veilig betalingssysteem is geïmplementeerd om online betalingen voor boekingen te vergemakkelijken, wat tijd bespaart en vooruitbetalingen mogelijk maakt. Het systeem onderhoudt een database met klantinformatie, inclusief persoonlijke gegevens, boekingsgeschiedenis en voorkeuren. Het biedt functionaliteit voor het beheren van aanbiedingen, promoties en kortingen die van toepassing zijn op klantboekingen. Klanten ontvangen automatische e-mailmeldingen wanneer ze een boeking maken of wanneer er wijzigingen in hun boekingen zijn. Medewerkers kunnen statistieken bekijken, zoals het aantal boekingen en gebruikers, en gedetailleerde geschiedenissen van alle klanten en hun boekingsrecords raadplegen. Het systeem voert ook geautomatiseerde taken en processen uit, zoals het optimaliseren van de kalender en boekingen. Dit project toont ons vermogen om een uitgebreide en gebruiksvriendelijke webapplicatie te ontwikkelen die is afgestemd op de complexe behoeften van een modern boekings- en resourcebeheersysteem. Ons teamwork en eerdere ervaring stelden ons in staat om een robuuste en efficiënte oplossing te leveren.",
+            "groupSize": 3,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Django",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "65"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "i18n",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Docker",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Figma",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [
+                "/assets/images/Stage/agenda.png",
+                "/assets/images/Stage/employees.png",
+                "/assets/images/Stage/login.png",
+                "/assets/images/Stage/packages.png",
+                "/assets/images/Stage/promotions.png",
+                "/assets/images/Stage/resources.png",
+                "/assets/images/Stage/services.png",
+                "/assets/images/Stage/stats.png",
+                "/assets/images/Stage/users.png"
+            ],
+            "softskills": [
+                "Teamwork",
+                "Communicatie",
+                "Probleemoplossing",
+                "Onafhankelijkheid"
+            ],
+            "status": "Finished",
+            "type": "Stage"
+        },
+        "Grocery Tracker": {
+            "title": "Grocery Tracker",
+            "date": "Februari 2023 - Heden",
+            "role": "Full-Stack Ontwikkelaar",
+            "description": "Het Grocery Tracker-project helpt gebruikers hun huishoudelijke boodschappen efficiënt te beheren. Het biedt een digitaal inventarissysteem waarmee gebruikers hun voorraadkast, koelkastinhoud en andere benodigdheden kunnen bijhouden. Door aankopen en consumptie bij te houden, kunnen gebruikers verspilling verminderen, maaltijden effectief plannen en boodschappenreizen vereenvoudigen.",
+            "groupSize": 1,
+            "githubLink": "https://github.com/tymov/grocery-tracker",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Django",
+                    "developmentTime": "100"
+                },
+                {
+                    "name": "Bootstrap",
+                    "developmentTime": "100"
+                },
+                {
+                    "name": "Python",
+                    "developmentTime": "100"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "100"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "100"
+                }
+            ],
+            "images": [
+                "/assets/images/Grocery Tracker/AddItem.png",
+                "/assets/images/Grocery Tracker/GroceryList.png",
+                "/assets/images/Grocery Tracker/Login.png",
+                "/assets/images/Grocery Tracker/MacroTracker.png",
+                "/assets/images/Grocery Tracker/Recipe.png",
+                "/assets/images/Grocery Tracker/RecipeList.png"
+            ],
+            "softskills": [],
+            "status": "Finished",
+            "type": "Persoonlijk Project"
+        },
+        "Industry 4.0": {
+            "title": "Industrie 4.0",
+            "date": "September 2023 - Februari 2023",
+            "role": "Full-Stack Ontwikkelaar",
+            "description": "Ik had het voorrecht om samen te werken met VITO (Vlaamse Instituut voor Technologisch Onderzoek) aan een transformatief multidisciplinair project tijdens mijn academische reis. In samenwerking met VITO omvatte ons project meerdere takken van IT, waaronder Cloud & Cybersecurity (CCS), Kunstmatige Intelligentie (AI) en Applicatieontwikkeling (APP).\n\nSamen met mijn groep, bestaande uit 3 APP-studenten, 2 CCS-studenten en een AI-student, streefden we ernaar een uitgebreide oplossing te ontwikkelen die milieuproblemen aanpakt met behulp van geavanceerde technologie. Ons primaire doel was om een webapplicatie en mobiele app te maken die in staat is om een invasieve onkruidsoort, genaamd geelmoesgras, te detecteren. Dit vereiste de naadloze integratie van expertise uit verschillende velden, waardoor een omgeving van innovatie en samenwerking ontstond. In ons groepsproject nam ik voornamelijk de verantwoordelijkheid voor front-end ontwikkeling op me, waarbij ik de creatie van gebruikersinterfaces aanstuurde. Ik hielp ook bij back-end taken wanneer dat nodig was. Deze hands-on ervaring gaf me inzicht in zowel front-end als back-end processen, waardoor mijn vaardigheden voor toekomstige softwareontwikkelingsprojecten werden verbeterd. Deelname aan dit project gaf me waardevolle inzichten en praktische ervaring, vooral op gebieden die ik eerder had verkend maar nog nooit op deze schaal. Het was een opmerkelijke leerervaring die niet alleen mijn academische reis verrijkte, maar me ook voorbereidde op de uitdagingen en kansen in mijn toekomstige carrière.",
+            "groupSize": 6,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Angular",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TypeScript",
+                    "developmentTime": "55"
+                },
+                {
+                    "name": "Ionic",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "Leaflet",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Java",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "Python",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "40"
+                }
+            ],
+            "images": [
+                "/assets/images/Project 4.0/Account dashboard.png",
+                "/assets/images/Project 4.0/Dashboard.png",
+                "/assets/images/Project 4.0/Afbeelding uploaden.png",
+                "/assets/images/Project 4.0/Veld create.png"
+            ],
+            "softskills": [
+                "Teamwork",
+                "Communicatie",
+                "Problem-solving",
+                "Time Management",
+                "Retrospectives",
+                "Standup Meetings"
+            ],
+            "status": "Finished",
+            "type": "Groepsproject"
+        },
+        "Angular Project": {
+            "title": "Angular Project",
+            "date": "september 2023 - december 2023",
+            "role": "Front-End Developer",
+            "description": "Tijdens mijn cursus in Angular begon ik aan een boeiend project om een applicatie te ontwikkelen die is ontworpen voor het plannen van meerdaagse reizen met gebruiksvriendelijkheid in gedachten. Het was een verrijkende ervaring die me in staat stelde om dieper in te gaan op de complexiteiten van Angular terwijl ik een praktische oplossing creëerde voor reisenthousiasten.\n\nDe applicatie bood een verscheidenheid aan reismogelijkheden, waaronder wandelvakanties, hotelverblijven, gemengde ervaringen en meer, die tegemoet kwamen aan diverse voorkeuren. Een van de hoogtepunten was het implementeren van een privacyfunctie waarbij reizen aanvankelijk privé werden ingesteld, zodat alleen de maker toegang had. Gebruikers hadden echter de flexibiliteit om hun reizen openbaar te maken, wat een samenwerkingsplatform bevorderde voor het delen van inspiratie en ideeën. Hoewel het project zijn uitdagingen had, met name als mijn eerste Angular-onderneming, omarmde ik de leercurve en ben ik trots op het resultaat. Het was een bewijs van mijn aanpassingsvermogen en vastberadenheid om obstakels te overwinnen bij het streven naar het leveren van impactvolle oplossingen.",
+            "groupSize": 4,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Angular",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "TypeScript",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "20"
+                },
+                {
+                    "name": "MongoDB",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "5"
+                }
+            ],
+            "images": [
+                "/assets/images/Angular/info.jpeg",
+                "/assets/images/Angular/landingpage.jpeg",
+                "/assets/images/Angular/recommendations.jpeg",
+                "/assets/images/Angular/trips.jpeg"
+            ],
+            "softskills": [
+                "Teamwork",
+                "Communication",
+                "Deadline Management"
+            ],
+            "status": "Finished",
+            "type": "College Project"
+        },
+        "Flutter Project": {
+            "title": "Flutter Project",
+            "date": "september 2023 - november 2023",
+            "role": "Developer",
+            "description": "Tijdens mijn Flutter-cursus heb ik samen met een medestudent een project gemaakt met de focus op Pokémon, waarbij we een uitgebreide database hebben ontwikkeld die Gen 1 Pokémon, bessen en items omvatte. We verbeterden de gebruikerservaring door Wikitude AR-functionaliteiten te integreren, waardoor gebruikers Pokémon in hun omgeving konden visualiseren.\n\nHet was een leuke reis in Flutter-ontwikkeling, ongeacht de tegenslagen die we hadden met Wikitude AR.",
+            "groupSize": 2,
+            "githubLink": "",
+            "liveDemoLink": "https://www.youtube.com/watch?v=NGJm7VPcysI",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Augmented Reality",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Dart",
+                    "developmentTime": "40"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                }
+            ],
+            "images": [
+                "/assets/images/Flutter/AR.png",
+                "/assets/images/Flutter/Index.png",
+                "/assets/images/Flutter/Pokedex.png",
+                "/assets/images/Flutter/PokeInfo.png"
+            ],
+            "softskills": [
+                "Teamwork",
+                "Communication",
+                "Problem-solving"
+            ],
+            "status": "Finished",
+            "type": "College Project"
+        },
+        "Laravel Project (PHP)": {
+            "title": "Laravel Project (PHP)",
+            "date": "februari 2023 - juni 2023",
+            "role": "Full-Stack Developer",
+            "description": "Als onderdeel van onze PHP-cursus hebben we een praktische webapplicatie ontwikkeld voor onze hogeschool om sollicitatietrainingen te stroomlijnen. Het project had tot doel het proces te vereenvoudigen voor zowel beheerders als studenten.\n\nOnze applicatie stelde hogeschoolbeheerders in staat om sollicitatietrainingen efficiënt te beheren, inclusief het plannen van sessies en het beheren van abonnementen. Voor studenten hebben we een intuïtief platform gemaakt waar ze gemakkelijk beschikbare trainingen konden bekijken en zich met slechts een paar klikken konden abonneren.\n\nOndanks interne uitdagingen heeft ons team volgehouden om een robuuste webapplicatie te leveren voor het beheren van sollicitatietrainingen binnen onze hogeschool. Terwijl we door deze hindernissen navigeerden, bleven we gefocust op het vervullen van de vereisten die waren vastgesteld door onze klant.",
+            "groupSize": 3,
+            "githubLink": "",
+            "liveDemoLink": "https://ddpc.projectphp-503.com/",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Jira",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "SCRUM",
+                    "developmentTime": "15"
+                }
+            ],
+            "images": [
+                "/assets/images/Laravel/index.jpeg",
+                "/assets/images/Laravel/manageAnnouncements.jpeg",
+                "/assets/images/Laravel/manageBookings.jpeg",
+                "/assets/images/Laravel/manageFiles.jpeg",
+                "/assets/images/Laravel/manageForms.jpeg",
+                "/assets/images/Laravel/manageRecruiters.jpeg",
+                "/assets/images/Laravel/manageTimeslots.jpeg",
+                "/assets/images/Laravel/manageUsers.jpeg",
+                "/assets/images/Laravel/seeBookings.jpeg"
+            ],
+            "softskills": [
+                "Teamwork",
+                "Communication",
+                "Problem-solving",
+                "Independence"
+            ],
+            "status": "Finished",
+            "type": "College Project"
+        }
+    }
+}

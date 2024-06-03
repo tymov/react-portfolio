@@ -1,1 +1,408 @@
-{}
+{
+    "project": {
+        "title": "Logros",
+        "details": "Detalles",
+        "technologiesUsed": "Tecnologías Utilizadas",
+        "softskills": "Habilidades Blandas",
+        "demo": "Demostración",
+        "type": "Tipo",
+        "noImages": "No hay imágenes disponibles",
+        "showMore": "Mostrar información adicional",
+        "showLess": "Ocultar información adicional",
+        "sourceCode": "Código fuente",
+        "role": "rol",
+        "learnMore": "Aprender más",
+        "readMore": "Leer Más",
+        "readLess": "Leer menos",
+        "inProgress": "En progreso, ¡próximamente!",
+        "Portfolio": {
+            "title": "Portafolio",
+            "date": "2024",
+            "role": "Desarrollador",
+            "description": "Mi portafolio personal",
+            "groupSize": 1,
+            "githubLink": "",
+            "liveDemoLink": "https://tymo-portfolio.vercel.app",
+            "technologies": [
+                {
+                    "name": "React",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "Vercel",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "20"
+                },
+                {
+                    "name": "ChartJS",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "i18n",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Framer",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [],
+            "softskills": [],
+            "status": "Unfinished",
+            "type": "Proyecto Personal"
+        },
+        "Bookingtool": {
+            "title": "Bookingstool",
+            "date": "Marzo 2024 - Mayo 2024",
+            "role": "Desarrollador Full-Stack",
+            "description": "Para mi pasantía en LHS by Spot, una pequeña empresa de desarrollo, desarrollamos una herramienta de reserva compleja y un sistema de gestión modular con una amplia gama de funcionalidades. El aspecto central de la aplicación web es el sistema de reservas, que permite a los clientes hacer citas, reservas o reservas fácilmente según la disponibilidad. El sistema incluye características para gestionar recursos empresariales como habitaciones, equipos y personal, lo que permite rastrear la disponibilidad y asignar recursos y personal. Está disponible la integración con un calendario, de modo que tanto los clientes como el personal puedan ver, modificar y rastrear fácilmente las citas. El sistema también incluye características para gestionar servicios y paquetes, permitiendo a los clientes elegir las mejores opciones para sus necesidades. Se implementó un sistema de pago seguro para facilitar los pagos en línea de las reservas, ahorrando tiempo y permitiendo pagos anticipados. El sistema mantiene una base de datos de información del cliente, incluidos datos personales, historial de reservas y preferencias. Ofrece funcionalidad para gestionar ofertas, promociones y descuentos aplicables a las reservas de los clientes. Los clientes reciben notificaciones automáticas por correo electrónico cuando hacen una reserva o cuando hay cambios en sus reservas. El personal puede ver estadísticas como el número de reservas y usuarios, y acceder a historias detalladas de todos los clientes y sus registros de reservas. El sistema también realiza tareas y procesos automatizados, como la optimización del calendario y las reservas. Este proyecto demuestra nuestra capacidad para desarrollar una aplicación web integral y fácil de usar que se adapte a las complejas necesidades de un sistema moderno de gestión de reservas y recursos. Nuestro trabajo en equipo y experiencia previa nos permitieron entregar una solución robusta y eficiente.",
+            "groupSize": 3,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Django",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "65"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "i18n",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Docker",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Figma",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [
+                "/assets/images/Stage/agenda.png",
+                "/assets/images/Stage/employees.png",
+                "/assets/images/Stage/login.png",
+                "/assets/images/Stage/packages.png",
+                "/assets/images/Stage/promotions.png",
+                "/assets/images/Stage/resources.png",
+                "/assets/images/Stage/services.png",
+                "/assets/images/Stage/stats.png",
+                "/assets/images/Stage/users.png"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Comunicación",
+                "Resolución de problemas",
+                "Independencia"
+            ],
+            "status": "Finished",
+            "type": "Pasantía"
+        },
+        "Grocery Tracker": {
+            "title": "Rastreador de Compras",
+            "date": "Febrero 2023 - Presente",
+            "role": "Desarrollador Full-Stack",
+            "description": "El proyecto Grocery Tracker ayuda a los usuarios a gestionar eficientemente sus compras domésticas. Ofrece un sistema de inventario digital que permite a los usuarios rastrear el contenido de su despensa, refrigerador y otras necesidades. Al rastrear las compras y el consumo, los usuarios pueden reducir el desperdicio, planificar comidas de manera efectiva y simplificar las listas de compras. El sistema ofrece notificaciones automáticas cuando los artículos se están agotando o caducando, asegurando que los usuarios siempre tengan acceso a productos frescos. La funcionalidad de la lista de compras permite a los usuarios crear y compartir listas fácilmente. La aplicación también ofrece recomendaciones de recetas basadas en los artículos disponibles, ayudando a los usuarios a aprovechar al máximo sus ingredientes actuales. El sistema incluye características para gestionar presupuestos y analizar gastos, permitiendo a los usuarios optimizar sus gastos en comestibles. Para mejorar la experiencia del usuario, la aplicación ofrece una interfaz de usuario intuitiva y amigable. Este proyecto es una prueba de mi capacidad para desarrollar aplicaciones prácticas que aborden problemas cotidianos y mejoren la eficiencia del usuario.",
+            "groupSize": 1,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "React",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "65"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "i18n",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "ChartJS",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [
+                "/assets/images/Industry 4.0/GoogleMaps.png",
+                "/assets/images/Industry 4.0/HomePage.png",
+                "/assets/images/Industry 4.0/Leaflet.png",
+                "/assets/images/Industry 4.0/Login.png",
+                "/assets/images/Industry 4.0/Markers.png"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Resolución de problemas",
+                "Independencia",
+                "Comunicación",
+                "Investigación"
+            ],
+            "status": "Finished",
+            "type": "Proyecto en Grupo"
+        },
+        "Industry 4.0": {
+            "title": "Industria 4.0",
+            "date": "septiembre 2023 - febrero 2023",
+            "role": "Desarrollador Full-Stack",
+            "description": "Tuve el privilegio de colaborar con VITO (Instituto Flamenco de Investigación Tecnológica), el Instituto Flamenco de Investigación Tecnológica, en un proyecto multidisciplinario transformador durante mi trayectoria académica. En asociación con VITO, nuestro proyecto abarcó múltiples ramas de la tecnología de la información, incluidos Cloud & Cybersecurity (CCS), Artificial Intelligence (AI), y Application Development (APP).\n\nJunto con mi grupo, compuesto por 3 estudiantes de APP, 2 estudiantes de CCS y un estudiante de AI, me embarqué en una misión para desarrollar una solución integral que abordara los desafíos ambientales a través de la tecnología avanzada.\n\nNuestro objetivo principal era crear una aplicación web y una aplicación móvil capaces de detectar una especie invasora de maleza conocida como ciperáceas amarillas. Este esfuerzo requería la integración perfecta de la experiencia de campos diversos, fomentando un ambiente de innovación y colaboración. En nuestro proyecto grupal, me ocupé principalmente de las responsabilidades de desarrollo front-end, impulsando la creación de interfaces de usuario. También contribuí en tareas de back-end cuando fue necesario. Esta experiencia práctica me permitió obtener una comprensión tanto de los procesos de front-end como de los de back-end, mejorando mis habilidades para proyectos futuros en desarrollo de software. Participar en este proyecto me proporcionó conocimientos invaluables y experiencia práctica, especialmente en áreas que había explorado anteriormente pero nunca a esta escala. No tengo la libertad de compartir mucho contenido sobre este proyecto, como una demostración o imágenes que contengan información privada, pero se me permite mostrar datos ficticios para dar una idea general del proyecto. Fue una oportunidad de aprendizaje notable que no solo enriqueció mi trayectoria académica, sino que también me preparó para los desafíos y oportunidades en mis futuros emprendimientos profesionales.",
+            "groupSize": 6,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Angular",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TypeScript",
+                    "developmentTime": "55"
+                },
+                {
+                    "name": "Ionic",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "Leaflet",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Java",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "Python",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Docker",
+                    "developmentTime": null
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "SCRUM",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Gitlab",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Figma",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Trello",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "AWS",
+                    "developmentTime": null
+                }
+            ],
+            "images": [
+                "/assets/images/Project 4.0/Account dashboard.png",
+                "/assets/images/Project 4.0/Dashboard.png",
+                "/assets/images/Project 4.0/Afbeelding uploaden.png",
+                "/assets/images/Project 4.0/Veld create.png"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Comunicación",
+                "Resolución de problemas",
+                "Gestión del tiempo",
+                "Retrospectivas",
+                "Reuniones de seguimiento"
+            ],
+            "status": "Finished",
+            "type": "Proyecto Universitario"
+        },
+        "Angular Project": {
+            "title": "Proyecto Angular",
+            "date": "septiembre 2023 - diciembre 2023",
+            "role": "Desarrollador Front-End",
+            "description": "Durante mi curso en Angular, me embarqué en un proyecto cautivador para desarrollar una aplicación diseñada para planificar viajes de varios días con facilidad y pensando en la facilidad de uso. Fue una experiencia enriquecedora que me permitió adentrarme en las complejidades de Angular mientras creaba una solución práctica para los entusiastas de los viajes.\n\nLa aplicación ofrecía una variedad de opciones de viaje, incluidas vacaciones de senderismo, estadías en hoteles, experiencias combinadas y más, que se adaptaban a diversas preferencias. Uno de los aspectos más destacados fue implementar una función de privacidad donde los viajes se establecían inicialmente como privados, asegurando el acceso exclusivo del creador. Sin embargo, los usuarios tenían la flexibilidad de hacer públicos sus viajes, fomentando una plataforma colaborativa para compartir inspiración e ideas. Aunque el proyecto tuvo sus desafíos, especialmente como mi primer proyecto en Angular, abracé la curva de aprendizaje y estoy orgulloso del resultado. Fue un testimonio de mi capacidad de adaptación y determinación para superar obstáculos en la búsqueda de ofrecer soluciones impactantes.",
+            "groupSize": 4,
+            "githubLink": "",
+            "liveDemoLink": "",
+            "technologies": [
+                {
+                    "name": "Angular",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "TypeScript",
+                    "developmentTime": "30"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "20"
+                },
+                {
+                    "name": "MongoDB",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "5"
+                }
+            ],
+            "images": [
+                "/assets/images/Angular/info.jpeg",
+                "/assets/images/Angular/landingpage.jpeg",
+                "/assets/images/Angular/recommendations.jpeg",
+                "/assets/images/Angular/trips.jpeg"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Comunicación",
+                "Gestión de plazos"
+            ],
+            "status": "Finished",
+            "type": "Proyecto Universitario"
+        },
+        "Flutter Project": {
+            "title": "Proyecto Flutter",
+            "date": "septiembre 2023 - noviembre 2023",
+            "role": "Desarrollador",
+            "description": "Durante mi curso de Flutter, creé un proyecto con un compañero de estudios centrado en Pokémon, desarrollando una base de datos integral que cubría Pokémon de la Generación 1, bayas y objetos. Mejoramos la experiencia del usuario integrando funcionalidades de Wikitude AR, que permitían a los usuarios visualizar Pokémon en su entorno.\n\nFue un viaje divertido en el desarrollo de Flutter, independientemente de los contratiempos que enfrentamos con Wikitude AR.",
+            "groupSize": 2,
+            "githubLink": "",
+            "liveDemoLink": "https://www.youtube.com/watch?v=NGJm7VPcysI",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Augmented Reality",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Dart",
+                    "developmentTime": "40"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                }
+            ],
+            "images": [
+                "/assets/images/Flutter/AR.png",
+                "/assets/images/Flutter/Index.png",
+                "/assets/images/Flutter/Pokedex.png",
+                "/assets/images/Flutter/PokeInfo.png"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Comunicación",
+                "Resolución de problemas"
+            ],
+            "status": "Finished",
+            "type": "Proyecto Universitario"
+        },
+        "Laravel Project (PHP)": {
+            "title": "Proyecto Laravel (PHP)",
+            "date": "febrero 2023 - junio 2023",
+            "role": "Desarrollador Full-Stack",
+            "description": "Como parte de nuestro curso de PHP, desarrollamos una aplicación web práctica para nuestra universidad para agilizar las capacitaciones en solicitud de empleo. El proyecto tenía como objetivo simplificar el proceso tanto para administradores como para estudiantes.\n\nNuestra aplicación permitía a los administradores de la universidad gestionar de manera eficiente las capacitaciones en solicitud de empleo, incluida la programación de sesiones y la gestión de suscripciones. Para los estudiantes, creamos una plataforma intuitiva donde podían ver fácilmente las capacitaciones disponibles y suscribirse con solo unos pocos clics.\n\nA pesar de enfrentar desafíos internos, nuestro equipo perseveró para entregar una sólida aplicación web para gestionar las capacitaciones en solicitud de empleo dentro de nuestra universidad. Mientras navegábamos por estos obstáculos, nos mantuvimos enfocados en cumplir con los requisitos establecidos por nuestro cliente.",
+            "groupSize": 3,
+            "githubLink": "",
+            "liveDemoLink": "https://ddpc.projectphp-503.com/",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "developmentTime": "70"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Jira",
+                    "developmentTime": "15"
+                },
+                {
+                    "name": "SCRUM",
+                    "developmentTime": "15"
+                }
+            ],
+            "images": [
+                "/assets/images/Laravel/index.jpeg",
+                "/assets/images/Laravel/manageAnnouncements.jpeg",
+                "/assets/images/Laravel/manageBookings.jpeg",
+                "/assets/images/Laravel/manageFiles.jpeg",
+                "/assets/images/Laravel/manageForms.jpeg",
+                "/assets/images/Laravel/manageRecruiters.jpeg",
+                "/assets/images/Laravel/manageTimeslots.jpeg",
+                "/assets/images/Laravel/manageUsers.jpeg",
+                "/assets/images/Laravel/seeBookings.jpeg"
+            ],
+            "softskills": [
+                "Trabajo en equipo",
+                "Comunicación",
+                "Resolución de problemas",
+                "Independencia"
+            ],
+            "status": "Finished",
+            "type": "Proyecto Universitario"
+        }
+    }
+}

@@ -9,7 +9,7 @@ import { Contact } from "./components/contact";
 
 function App() {
   return (
-    <div className="overflow-x-hidden text-gray-800 dark:text-white antialiased slec selection:bg-vulcan-900 selection:text-vulcan-300">
+    <div className="overflow-x-hidden text-gray-800 dark:text-white antialiased slec selection:bg-blue-200 selection:text-gray-800 dark:selection:bg-vulcan-900 dark:selection:text-vulcan-300">
       <div className="fixed top-0 -z-10 h-full min-h-screen w-full">
         <div className="relative h-full w-full bg-gray-50 dark:bg-slate-950">
           <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(52,109,252,.15),rgba(255,255,255,0))]"></div>
@@ -21,11 +21,10 @@ function App() {
         <Navbar />
         <Hero />
         {/* divider  */}
+        <Projects />
         <Experience />
         <Skills />
-        <Projects />
         <About />
-        <Contact />
       </div>
     </div>
   );

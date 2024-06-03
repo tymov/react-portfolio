@@ -22,7 +22,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="sticky top-0 z-50 flex justify-between items-center text-gray-800 dark:text-white py-4 px-3"
+      className="fixed top-0 left-0 w-full z-40 flex justify-between items-center bg-gray-50   dark:bg-slate-950 bg-md text-gray-800 dark:text-white py-4 px-3"
       role="navigation"
     >
       <div className="pl-8">
@@ -48,37 +48,45 @@ export const Navbar = () => {
             className="block p-4 text-lg"
             onClick={() => scrollToSection("home")}
           >
-            <span className="whitespace-nowrap">{t('navbar.home')}</span>
-          </a>
-          <a
-            href="#experience"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("experience")}
-          >
-            <span className="whitespace-nowrap">{t('navbar.experience')}</span>
+            <span className="whitespace-nowrap">{t("navbar.home")}</span>
           </a>
           <a
             href="#projects"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("projects")}
           >
-            <span className="whitespace-nowrap">{t('navbar.projects')}</span>
+            <span className="whitespace-nowrap">{t("navbar.projects")}</span>
+          </a>
+          <a
+            href="#experience"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("experience")}
+          >
+            <span className="whitespace-nowrap">{t("navbar.experience")}</span>
+          </a>
+          <a
+            href="#internship"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("internship")}
+          >
+            <span className="whitespace-nowrap">{t("navbar.internship")}</span>
+          </a>
+          <a
+            href="#skills"
+            className="block p-4 text-lg"
+            onClick={() => scrollToSection("skills")}
+          >
+            <span className="whitespace-nowrap">{t("navbar.skills")}</span>
           </a>
           <a
             href="#about"
             className="block p-4 text-lg"
             onClick={() => scrollToSection("about")}
           >
-            <span className="whitespace-nowrap">{t('navbar.about')}</span>
+            <span className="whitespace-nowrap">{t("navbar.about")}</span>
           </a>
-          <a
-            href="#contact"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("contact")}
-          >
-            <span className="whitespace-nowrap">{t('navbar.contact')}</span>
-          </a>
-          <LanguageSelector /> {/* Add the LanguageSelector to the mobile menu */}
+          <LanguageSelector />{" "}
+          {/* Add the LanguageSelector to the mobile menu */}
         </div>
       </div>
       <div className="md:hidden">
@@ -95,38 +103,45 @@ export const Navbar = () => {
           className="p-4 text-lg"
           onClick={() => scrollToSection("home")}
         >
-          <span className="whitespace-nowrap">{t('navbar.home')}</span>
-        </a>
-        <a
-          href="#experience"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("experience")}
-        >
-          <span className="whitespace-nowrap">{t('navbar.experience')}</span>
+          <span className="whitespace-nowrap">{t("navbar.home")}</span>
         </a>
         <a
           href="#projects"
           className="p-4 text-lg"
           onClick={() => scrollToSection("projects")}
         >
-          <span className="whitespace-nowrap">{t('navbar.projects')}</span>
+          <span className="whitespace-nowrap">{t("navbar.projects")}</span>
         </a>
-
+        <a
+          href="#experience"
+          className="p-4 text-lg"
+          onClick={() => scrollToSection("experience")}
+        >
+          <span className="whitespace-nowrap">{t("navbar.experience")}</span>
+        </a>
+        <a
+          href="#internship"
+          className="block p-4 text-lg"
+          onClick={() => scrollToSection("internship")}
+        >
+          <span className="whitespace-nowrap">{t("navbar.internship")}</span>
+        </a>
+        <a
+          href="#skills"
+          className="block p-4 text-lg"
+          onClick={() => scrollToSection("skills")}
+        >
+          <span className="whitespace-nowrap">{t("navbar.skills")}</span>
+        </a>
         <a
           href="#about"
           className="p-4 text-lg"
           onClick={() => scrollToSection("about")}
         >
-          <span className="whitespace-nowrap">{t('navbar.about')}</span>
+          <span className="whitespace-nowrap">{t("navbar.about")}</span>
         </a>
-        <a
-          href="#contact"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("contact")}
-        >
-          <span className="whitespace-nowrap">{t('navbar.contact')}</span>
-        </a>
-        <LanguageSelector /> {/* Add the LanguageSelector to the desktop menu */}
+        <LanguageSelector />{" "}
+        {/* Add the LanguageSelector to the desktop menu */}
       </div>
     </nav>
   );

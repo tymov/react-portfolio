@@ -1,1 +1,10 @@
-{}
+{
+    "about": {
+        "title": "Acerca de mí",
+        "cv": "Descargar CV",
+        "file": "assets/files/Tymo_Verhaegen_CV_ES.pdf",
+        "about1": "¡Hola! Soy Tymo Verhaegen, un desarrollador de aplicaciones y entusiasta del diseño con sede en Bélgica.",
+        "about2": "Con una formación en desarrollo de aplicaciones y un interés en el diseño, aporto una perspectiva única a mis proyectos. Ya sea creando interfaces de usuario intuitivas o implementando la mejor experiencia de usuario posible, siempre estoy listo para un desafío.",
+        "about3": "Cuando no estoy programando, puedes encontrarme produciendo música, jugando, experimentando en la cocina o planificando mi próxima aventura de viaje."
+    }
+}

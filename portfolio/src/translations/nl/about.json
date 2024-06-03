@@ -1,1 +1,10 @@
-{}
+{
+    "about": {
+        "title": "Over mij",
+        "cv": "Download CV",
+        "file": "assets/files/Tymo_Verhaegen_CV_NL.pdf",
+        "about1": "Hallo! Ik ben Tymo Verhaegen, een applicatieontwikkelaar en designliefhebber uit België.",
+        "about2": "Met een achtergrond in applicatieontwikkeling en een interesse in design breng ik een unieke kijk op mijn projecten. Of het nu gaat om het creëren van intuïtieve gebruikersinterfaces of het implementeren van de best mogelijke gebruikerservaring, ik ga altijd graag de uitdaging aan.",
+        "about3": "Als ik niet aan het coderen ben, vind je me muziek produceren, spelletjes spelen, experimenteren in de keuken of mijn volgende reisavontuur plannen."
+    }
+}
