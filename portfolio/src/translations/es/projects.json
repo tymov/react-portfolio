@@ -12,7 +12,7 @@
         "sourceCode": "Código fuente",
         "role": "rol",
         "learnMore": "Aprender más",
-        "readMore": "Leer Más",
+        "readMore": "Leer más",
         "readLess": "Leer menos",
         "inProgress": "En progreso, ¡próximamente!",
         "Portfolio": {
@@ -365,6 +365,10 @@
                 },
                 {
                     "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "SQL",
                     "developmentTime": "60"
                 },
                 {

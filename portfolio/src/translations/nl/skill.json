@@ -22,7 +22,12 @@
         "percentage": 45
       },
       "description": "React is een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces. Het wordt onderhouden door Facebook en een community van individuele ontwikkelaars en bedrijven.",
-      "relatedTechnologies": ["Redux", "Next.js", "Webpack", "Babel"],
+      "relatedTechnologies": [
+        "Redux",
+        "Next.js",
+        "Webpack",
+        "Babel"
+      ],
       "projects": [
         {
           "title": "Portfolio",
@@ -51,7 +56,11 @@
         "percentage": 60
       },
       "description": "Angular is een platform en framework voor het bouwen van single-page clientapplicaties met HTML en TypeScript.",
-      "relatedTechnologies": ["RxJS", "NgRx", "Angular Material"],
+      "relatedTechnologies": [
+        "RxJS",
+        "NgRx",
+        "Angular Material"
+      ],
       "projects": [
         {
           "title": "Industrie 4.0",
@@ -137,7 +146,9 @@
         "percentage": 55
       },
       "description": "Django is een hoogwaardig Python-webframework dat snelle ontwikkeling en een schoon, pragmatisch ontwerp aanmoedigt.",
-      "relatedTechnologies": ["Django REST framework"],
+      "relatedTechnologies": [
+        "Django REST framework"
+      ],
       "projects": [
         {
           "title": "Bookingstool",
@@ -196,7 +207,12 @@
       },
       "description": "MySQL is een open-source relationeel databasebeheersysteem.",
       "relatedTechnologies": [],
-      "projects": [],
+      "projects": [
+        {
+          "title": "Laravel Project",
+          "technology": "Laravel"
+        }
+      ],
       "certifications": [],
       "education": [
         {

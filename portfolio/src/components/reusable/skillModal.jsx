@@ -34,13 +34,13 @@ const Modal = ({ skill, closeModal }) => {
       >
         <div className="w-full lg:w-3/4 p-8 relative bg-white dark:bg-slate-700">
           <div>
-            <h3 className="mb-2 font-semibold text-3xl flex items-center">
+            <h3 className="mb-6 font-semibold text-3xl flex items-center">
               <span className="mr-2">{getIconForTechnology(skill.key)}</span>
               <span className="ml-2">{t(`${skill.key}`)}</span>
             </h3>
-            <p className="text-lg text-gray-800 dark:text-white my-5">
+            {/* <p className="text-lg text-gray-800 dark:text-white my-5">
               {t(`skill.${skill.key}.description`)}
-            </p>
+            </p> */}
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
               {t(`skill.level`)} {/* Access the 'name' property */}
             </h3>

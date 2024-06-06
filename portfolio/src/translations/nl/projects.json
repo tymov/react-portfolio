@@ -174,7 +174,7 @@
             "title": "Industrie 4.0",
             "date": "September 2023 - Februari 2023",
             "role": "Full-Stack Ontwikkelaar",
-            "description": "Ik had het voorrecht om samen te werken met VITO (Vlaamse Instituut voor Technologisch Onderzoek) aan een transformatief multidisciplinair project tijdens mijn academische reis. In samenwerking met VITO omvatte ons project meerdere takken van IT, waaronder Cloud & Cybersecurity (CCS), Kunstmatige Intelligentie (AI) en Applicatieontwikkeling (APP).\n\nSamen met mijn groep, bestaande uit 3 APP-studenten, 2 CCS-studenten en een AI-student, streefden we ernaar een uitgebreide oplossing te ontwikkelen die milieuproblemen aanpakt met behulp van geavanceerde technologie. Ons primaire doel was om een webapplicatie en mobiele app te maken die in staat is om een invasieve onkruidsoort, genaamd geelmoesgras, te detecteren. Dit vereiste de naadloze integratie van expertise uit verschillende velden, waardoor een omgeving van innovatie en samenwerking ontstond. In ons groepsproject nam ik voornamelijk de verantwoordelijkheid voor front-end ontwikkeling op me, waarbij ik de creatie van gebruikersinterfaces aanstuurde. Ik hielp ook bij back-end taken wanneer dat nodig was. Deze hands-on ervaring gaf me inzicht in zowel front-end als back-end processen, waardoor mijn vaardigheden voor toekomstige softwareontwikkelingsprojecten werden verbeterd. Deelname aan dit project gaf me waardevolle inzichten en praktische ervaring, vooral op gebieden die ik eerder had verkend maar nog nooit op deze schaal. Het was een opmerkelijke leerervaring die niet alleen mijn academische reis verrijkte, maar me ook voorbereidde op de uitdagingen en kansen in mijn toekomstige carrière.",
+            "description": "Ik had het voorrecht om samen te werken met VITO (Vlaamse Instituut voor Technologisch Onderzoek) aan een transformatief multidisciplinair project tijdens mijn academische reis. In samenwerking met VITO omvatte ons project meerdere takken van IT, waaronder Cloud & Cybersecurity (CCS), Artificiële Intelligentie  (AI) en Applicatieontwikkeling (APP).\n\nSamen met mijn groep, bestaande uit 3 APP-studenten, 2 CCS-studenten en een AI-student, streefden we ernaar een uitgebreide oplossing te ontwikkelen die milieuproblemen aanpakt met behulp van geavanceerde technologie. Ons primaire doel was om een webapplicatie en mobiele app te maken die in staat is om een invasieve onkruidsoort, genaamd geelmoesgras, te detecteren. Dit vereiste de naadloze integratie van expertise uit verschillende velden, waardoor een omgeving van innovatie en samenwerking ontstond. In ons groepsproject nam ik voornamelijk de verantwoordelijkheid voor front-end ontwikkeling op me, waarbij ik de creatie van gebruikersinterfaces aanstuurde. Ik hielp ook bij back-end taken wanneer dat nodig was. Deze hands-on ervaring gaf me inzicht in zowel front-end als back-end processen, waardoor mijn vaardigheden voor toekomstige softwareontwikkelingsprojecten werden verbeterd. Deelname aan dit project gaf me waardevolle inzichten en praktische ervaring, vooral op gebieden die ik eerder had verkend maar nog nooit op deze schaal. Het was een opmerkelijke leerervaring die niet alleen mijn academische reis verrijkte, maar me ook voorbereidde op de uitdagingen en kansen in mijn toekomstige carrière.",
             "groupSize": 6,
             "githubLink": "",
             "liveDemoLink": "",
@@ -208,8 +208,32 @@
                     "developmentTime": "10"
                 },
                 {
-                    "name": "Git",
-                    "developmentTime": "40"
+                    "name": "Docker",
+                    "developmentTime": null
+                },
+                {
+                    "name": "UML",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "SCRUM",
+                    "developmentTime": "10"
+                },
+                {
+                    "name": "Gitlab",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "Figma",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Trello",
+                    "developmentTime": "5"
+                },
+                {
+                    "name": "AWS",
+                    "developmentTime": null
                 }
             ],
             "images": [
@@ -332,6 +356,10 @@
                 },
                 {
                     "name": "TailwindCSS",
+                    "developmentTime": "60"
+                },
+                {
+                    "name": "SQL",
                     "developmentTime": "60"
                 },
                 {

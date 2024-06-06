@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "./../index.css"; // Import your CSS file
-import { IoMdDownload } from "react-icons/io";
+import { IoLogoLinkedin, IoMdDownload } from "react-icons/io";
 
 export const About = () => {
   const { t } = useTranslation("about");
@@ -59,7 +59,7 @@ export const About = () => {
                 href={t("about.file")} // Path to the downloadable file
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-800 text-white hover:bg-blue-900 transition-colors duration-300 mx-2 mr-5"
+                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300 mx-2 mr-5"
                 initial={{ opacity: 1 }}
                 animate={{
                   scale: 1.05,
@@ -70,6 +70,20 @@ export const About = () => {
               >
                 <IoMdDownload className="mr-2" /> {/* Icon with margin-right */}
                 {t("about.cv")}
+              </motion.a>
+
+              <motion.a
+                className="flex items-center rounded-md shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300 p-5"
+                initial={{ opacity: 1 }}
+                animate={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                href="https://www.linkedin.com/in/tymo-verhaegen/"
+              >
+                <IoLogoLinkedin className="scale-[1.75]" />{" "}
+                {/* Icon with margin-right */}
               </motion.a>
             </div>
           </div>

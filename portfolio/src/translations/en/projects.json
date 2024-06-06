@@ -359,6 +359,10 @@
                     "developmentTime": "60"
                 },
                 {
+                    "name": "SQL",
+                    "developmentTime": "60"
+                },
+                {
                     "name": "Git",
                     "developmentTime": "10"
                 },

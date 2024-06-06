@@ -34,7 +34,7 @@ export const Navbar = () => {
       <div
         className={`md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-0 right-0 w-56 bg-vulcan-900 h-full z-50 transition-transform duration-300 ease-in-out`}
+        } fixed top-0 right-0 w-56 bg-slate-925 h-full z-50 transition-transform duration-300 ease-in-out`}
       >
         <div className="flex flex-col h-full">
           <button onClick={toggleMenu} className="p-4 ml-auto">

@@ -7,7 +7,7 @@ const SkillProgressBar = ({ level }) => {
   };
 
   return (
-    <div className="flex items-center relative w-full my-3 bg-gray-200 dark:bg-gray-800 h-4" >      
+    <div className="flex items-center relative w-full md:max-w-[500px] lg:max-w-[1000px] my-3 bg-gray-200 dark:bg-gray-800 h-4">
       {/* Current percentage marker */}
       <div
         className="absolute top-0 left-0 bg-slate-800 h-4 w-1.5 overflow-hidden rounded-full "

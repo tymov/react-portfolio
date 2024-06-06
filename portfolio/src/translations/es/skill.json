@@ -21,7 +21,12 @@
         "percentage": 45
       },
       "description": "React es una biblioteca de JavaScript para construir interfaces de usuario. Es mantenida por Facebook y una comunidad de desarrolladores individuales y empresas.",
-      "relatedTechnologies": ["Redux", "Next.js", "Webpack", "Babel"],
+      "relatedTechnologies": [
+        "Redux",
+        "Next.js",
+        "Webpack",
+        "Babel"
+      ],
       "projects": [
         {
           "title": "Portafolio",
@@ -50,7 +55,11 @@
         "percentage": 60
       },
       "description": "Angular es una plataforma y framework para construir aplicaciones cliente de una sola página usando HTML y TypeScript.",
-      "relatedTechnologies": ["RxJS", "NgRx", "Angular Material"],
+      "relatedTechnologies": [
+        "RxJS",
+        "NgRx",
+        "Angular Material"
+      ],
       "projects": [
         {
           "title": "Industria 4.0",
@@ -136,7 +145,9 @@
         "percentage": 55
       },
       "description": "Django es un framework web de Python de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático.",
-      "relatedTechnologies": ["Django REST framework"],
+      "relatedTechnologies": [
+        "Django REST framework"
+      ],
       "projects": [
         {
           "title": "Bookingstool",
@@ -195,7 +206,12 @@
       },
       "description": "MySQL es un sistema de gestión de bases de datos relacional de código abierto.",
       "relatedTechnologies": [],
-      "projects": [],
+      "projects": [
+        {
+          "title": "Laravel Project",
+          "technology": "Laravel"
+        }
+      ],
       "certifications": [],
       "education": [
         {
