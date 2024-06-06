@@ -41,6 +41,7 @@ export const Experience = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 0 }}
         transition={{ duration: 0.99, delay: 0 }}
+        id={t(`experience.${EXPERIENCES[0].key}.key`)}
       >
         <h1 className="text-4xl font-bold uppercase header text-start mb-10">
           <span className="header text-4xl md:text-5xl">03</span>{" "}

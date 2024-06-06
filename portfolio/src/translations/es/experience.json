@@ -6,24 +6,65 @@
     "softskills": "Habilidades blandas",
     "files": "Archivos",
     "lhs": {
+      "key": "internship",
       "title": "Practicante de Desarrollo Web",
       "company": "LHS by Spot Group",
       "location": "Putte, Bélgica",
       "date": "Feb 2024 - May 2024",
       "description": "Mientras estuve en LHS, pasé la mayor parte de mi tiempo trabajando en una herramienta de reservas que estaban preparando para vender. Me centré en hacer la parte del front-end de la herramienta usando Django y Tailwind. Básicamente, hice que se viera bien y fuera fácil de usar. También ayudé con el back-end cuando fue necesario. Mi pasantía en LHS me enseñó mucho sobre la construcción de aplicaciones web, el manejo de solicitudes de clientes y la realización de tareas por mi cuenta. También me dio la oportunidad de trabajar en la comunicación profesional y me dio una idea de las diferencias entre proyectos universitarios y corporativos. Estoy contento de haber tenido la oportunidad de trabajar en LHS y estoy deseando mi próxima oportunidad.",
-      "technologies": ["Django", "HTML", "CSS", "JavaScript", "TailwindCSS", "Git", "Trello", "Docker", "PostgreSQL", "Figma"],
-      "softskills": ["Trabajo en equipo", "Comunicación", "Resolución de problemas", "Gestión del tiempo", "Atención al detalle"],
-      "files": ["/assets/files/internship/Plan de aproximación - Tymo Verhaegen.pdf", "/assets/files/internship/Documento de realización - Tymo Verhaegen.pdf"],
+      "technologies": [
+        "Django",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TailwindCSS",
+        "Git",
+        "Trello",
+        "Docker",
+        "PostgreSQL",
+        "Figma"
+      ],
+      "softskills": [
+        "Trabajo en equipo",
+        "Comunicación",
+        "Resolución de problemas",
+        "Gestión del tiempo",
+        "Atención al detalle"
+      ],
+      "files": [
+        "/assets/files/internship/Plan de aproximación - Tymo Verhaegen.pdf",
+        "/assets/files/internship/Documento de realización - Tymo Verhaegen.pdf",
+        "/assets/files/internship/Reflexión - Tymo Verhaegen.pdf"
+      ],
       "comment": ""
     },
     "thomasMore": {
+      "key": "education",
       "title": "Licenciatura en Ciencias Informáticas Aplicadas",
       "company": "Thomas More Universidad de Ciencias Aplicadas",
       "location": "Geel, Bélgica",
       "date": "Sep 2021 - Presente",
       "description": "Estudié Ciencias Informáticas Aplicadas en Thomas More Universidad de Ciencias Aplicadas. Durante mis estudios, aprendí mucho sobre desarrollo de software, bases de datos, redes y mucho más. También aprendí a trabajar en equipo y cómo lidiar con los plazos de los proyectos. Me lo pasé muy bien en Thomas More y estoy deseando mi próxima oportunidad.",
-      "technologies": ["HTML", "CSS", "React", "Angular", "Laravel", "TailwindCSS", "Flutter", "Java", "SQL", "Git", "Trello", "NPM"],
-      "softskills": ["Trabajo en equipo", "Comunicación", "Resolución de problemas", "Resolución de conflictos"],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "React",
+        "Angular",
+        "Laravel",
+        "TailwindCSS",
+        "Flutter",
+        "Java",
+        "SQL",
+        "Git",
+        "Trello",
+        "NPM"
+      ],
+      "softskills": [
+        "Trabajo en equipo",
+        "Comunicación",
+        "Resolución de problemas",
+        "Resolución de conflictos"
+      ],
       "files": [],
       "comment": "Dado que he pasado tres años estudiando y aprendiendo cosas nuevas aquí, he trabajado con muchas tecnologías. Pero estas son las que más he utilizado y que considero más importantes para mi futuro. En la sección 'Proyectos' puedes ver algunos de los proyectos en los que he trabajado durante mis estudios."
     }

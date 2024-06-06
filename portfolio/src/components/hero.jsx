@@ -35,9 +35,9 @@ export const Hero = () => {
               }}
             />
             <SecondaryButton
-              text={t("hero.contact")}
+              text={t("hero.experiences")}
               onClick={() => {
-                const contactSection = document.getElementById("contact");
+                const contactSection = document.getElementById("experience");
                 if (contactSection) {
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }
