@@ -112,7 +112,7 @@ const Modal = ({ skill, closeModal }) => {
                             className="flex items-center text-vulcan-300 hover:underline"
                           >
                             <FaEye className="mr-3" />
-                            <span className="text-white">
+                            <span className="text-blue-500 dark:text-white">
                               {t("skill.viewCertificate")}
                             </span>
                           </a>
@@ -170,7 +170,7 @@ const Modal = ({ skill, closeModal }) => {
                             className="flex items-center text-vulcan-300 hover:underline"
                           >
                             <FaEye className="mr-3" />
-                            <span className="text-white">
+                            <span className="text-blue-500 dark:text-white">
                               {t("skill.viewCourse")}
                             </span>
                           </a>

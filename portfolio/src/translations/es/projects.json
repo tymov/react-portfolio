@@ -1,6 +1,6 @@
 {
     "project": {
-        "title": "Logros",
+        "title": "Realizaciones",
         "details": "Detalles",
         "technologiesUsed": "Tecnologías Utilizadas",
         "softskills": "Habilidades Blandas",
@@ -59,7 +59,7 @@
             ],
             "images": [],
             "softskills": [],
-            "status": "Unfinished",
+            "status": "Finished",
             "type": "Proyecto Personal"
         },
         "Bookingtool": {

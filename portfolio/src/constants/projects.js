@@ -4,19 +4,18 @@ import { SiDjango, SiFlutter, SiLaravel } from "react-icons/si";
 import React from "react";
 
 export const PROJECTS = [
-  {
-    icon: <RiReactjsLine className="text-cyan-500" />,
-    key: "Portfolio",
-  },
-
+  // {
+  //   icon: <RiReactjsLine className="text-cyan-500" />,
+  //   key: "Portfolio",
+  // },
   {
     icon: <SiDjango className="text-green-500" />,
     key: "Bookingtool",
   },
-  {
-    icon: <SiDjango className="text-green-500" />,
-    key: "Grocery Tracker",
-  },
+  // {
+  //   icon: <SiDjango className="text-green-500" />,
+  //   key: "Grocery Tracker",
+  // },
   {
     icon: <RiAngularjsLine className="text-red-500" />,
     key: "Industry 4.0",

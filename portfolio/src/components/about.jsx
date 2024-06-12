@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "./../index.css"; // Import your CSS file
-import { IoLogoLinkedin, IoMdDownload } from "react-icons/io";
+import { IoLogoLinkedin, IoMdDownload, IoMdMail } from "react-icons/io";
 
 export const About = () => {
   const { t } = useTranslation("about");
   return (
     <div
       id="about"
-      className="text-white  h-screen flex justify-center items-center relative shape-top-left"
+      className="dark:text-white text-gray-800  h-screen flex justify-center items-center relative shape-top-left"
     >
       <div class="custom-shape-divider-top-1716754311">
         <svg
@@ -54,12 +54,12 @@ export const About = () => {
               <br />
             </motion.div>
 
-            <div className="flex mt-4">
+            <div className="flex gap-4 mt-4">
               <motion.a
                 href={t("about.file")} // Path to the downloadable file
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300 mx-2 mr-5"
+                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
                 initial={{ opacity: 1 }}
                 animate={{
                   scale: 1.05,
@@ -73,7 +73,7 @@ export const About = () => {
               </motion.a>
 
               <motion.a
-                className="flex items-center rounded-md shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300 p-5"
+                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
                 initial={{ opacity: 1 }}
                 animate={{
                   scale: 1.05,
@@ -83,6 +83,20 @@ export const About = () => {
                 href="https://www.linkedin.com/in/tymo-verhaegen/"
               >
                 <IoLogoLinkedin className="scale-[1.75]" />{" "}
+                {/* Icon with margin-right */}
+              </motion.a>
+
+              <motion.a
+                className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
+                initial={{ opacity: 1 }}
+                animate={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                href="mailto:tymoverhaegen@gmail.com"
+              >
+                <IoMdMail className="scale-[1.75]" />{" "}
                 {/* Icon with margin-right */}
               </motion.a>
             </div>
@@ -98,7 +112,7 @@ export const About = () => {
             <img
               src="/assets/about.jpg"
               alt="Tymo Verhaegen"
-              className="w-[600px] h-auto object-cover rounded-lg shadow-lg p-8" // Updated width to make the image larger
+              className="w-[600px] h-auto object-cover rounded-lg  p-8" // Updated width to make the image larger
             />
           </motion.div>
         </div>
