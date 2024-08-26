@@ -16,9 +16,10 @@
     "viewCertificate": "Ver certificado",
     "viewCourse": "Ver curso",
     "React": {
+      "title": "React",
       "level": {
         "name": "Competente",
-        "percentage": 45
+        "percentage": 3
       },
       "description": "React es una biblioteca de JavaScript para construir interfaces de usuario. Es mantenida por Facebook y una comunidad de desarrolladores individuales y empresas.",
       "relatedTechnologies": [
@@ -50,9 +51,10 @@
       ]
     },
     "Angular": {
+      "title": "Angular",
       "level": {
         "name": "Avanzado",
-        "percentage": 60
+        "percentage": 4
       },
       "description": "Angular es una plataforma y framework para construir aplicaciones cliente de una sola página usando HTML y TypeScript.",
       "relatedTechnologies": [
@@ -80,9 +82,10 @@
       "courses": []
     },
     "TailwindCSS": {
+      "title": "Tailwind CSS",
       "level": {
         "name": "Avanzado",
-        "percentage": 70
+        "percentage": 4
       },
       "description": "Tailwind CSS es un framework CSS orientado a utilidades para construir diseños personalizados rápidamente.",
       "relatedTechnologies": [],
@@ -118,9 +121,10 @@
       "courses": []
     },
     "Bootstrap": {
+      "title": "Bootstrap",
       "level": {
         "name": "Avanzado",
-        "percentage": 70
+        "percentage": 3
       },
       "description": "Bootstrap es un framework CSS gratuito y de código abierto dirigido al desarrollo front-end, responsive y móvil primero.",
       "relatedTechnologies": [],
@@ -140,9 +144,10 @@
       "courses": []
     },
     "Django": {
+      "title": "Django",
       "level": {
         "name": "Competente",
-        "percentage": 55
+        "percentage": 3
       },
       "description": "Django es un framework web de Python de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático.",
       "relatedTechnologies": [
@@ -178,9 +183,10 @@
       ]
     },
     "Laravel": {
+      "title": "Laravel",
       "level": {
         "name": "Competente",
-        "percentage": 50
+        "percentage": 3
       },
       "description": "Laravel es un framework web de PHP gratuito y de código abierto, creado por Taylor Otwell y destinado al desarrollo de aplicaciones web siguiendo el patrón arquitectónico modelo-vista-controlador.",
       "relatedTechnologies": [],
@@ -200,9 +206,10 @@
       "courses": []
     },
     "MySQL": {
+      "title": "MySQL",
       "level": {
         "name": "Competente",
-        "percentage": 55
+        "percentage": 3
       },
       "description": "MySQL es un sistema de gestión de bases de datos relacional de código abierto.",
       "relatedTechnologies": [],
@@ -224,7 +231,7 @@
     "MongoDB": {
       "level": {
         "name": "Intermedio",
-        "percentage": 35
+        "percentage": 3
       },
       "description": "MongoDB es un programa de base de datos orientado a documentos multiplataforma de código fuente disponible.",
       "relatedTechnologies": [],
@@ -244,9 +251,10 @@
       "courses": []
     },
     "Java": {
+      "title": "Java",
       "level": {
         "name": "Competente",
-        "percentage": 50
+        "percentage": 3
       },
       "description": "Java es un lenguaje de programación orientado a objetos y basado en clases que está diseñado para tener las menores dependencias de implementación posibles.",
       "relatedTechnologies": [],
@@ -266,9 +274,10 @@
       "courses": []
     },
     "Docker": {
+      "title": "Docker",
       "level": {
         "name": "Principiante",
-        "percentage": 20
+        "percentage": 2
       },
       "description": "Docker es un conjunto de productos de plataforma como servicio que utilizan virtualización a nivel de sistema operativo para entregar software en paquetes llamados contenedores.",
       "relatedTechnologies": [],
@@ -296,9 +305,10 @@
       ]
     },
     "Figma": {
+      "title": "Figma",
       "level": {
         "name": "Intermedio",
-        "percentage": 40
+        "percentage": 2
       },
       "description": "Figma es un editor de gráficos vectoriales y herramienta de prototipado que es principalmente basada en la web.",
       "relatedTechnologies": [],
@@ -332,9 +342,10 @@
       ]
     },
     "UML": {
+      "title": "UML",
       "level": {
         "name": "Intermedio",
-        "percentage": 40
+        "percentage": 3
       },
       "description": "UML es un lenguaje de modelado general estandarizado en el campo de la ingeniería de software.",
       "relatedTechnologies": [],
@@ -366,9 +377,10 @@
       "courses": []
     },
     "SCRUM": {
+      "title": "SCRUM",
       "level": {
         "name": "Competente",
-        "percentage": 55
+        "percentage": 3
       },
       "description": "Scrum es un marco dentro del cual las personas pueden abordar problemas complejos y adaptativos, mientras entregan productiva y creativamente productos de alto valor.",
       "relatedTechnologies": [],

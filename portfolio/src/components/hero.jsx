@@ -1,63 +1,84 @@
-import { useState, useEffect } from "react";
-import { PrimaryButton } from "./buttons/priButton";
-import SecondaryButton from "./buttons/secButton";
-import { useTranslation } from "react-i18next";
+import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { IoMdDownload } from "react-icons/io";
 
-export const Hero = () => {
+const Hero = () => {
   const { t } = useTranslation("hero");
 
   return (
-    <section className="dark:bg-gray-slate dark:text-white relative  h-screen flex justify-center items-center">
-      <div className="container flex flex-col justify-center p-6 mx-auto  lg:flex-row lg:justify-between">
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-          className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-3xl lg:text-left"
-        >
-          <h1 className="text-4xl lg:block hidden font-bold uppercase header text-start mb-10">
-            <span className="header text-4xl md:text-5xl">01</span>{" "}
-            <span className="header text-4xl md:text-5xl mx-5">
-              {t("hero.title")}
-            </span>
-          </h1>
+    <motion.div
+      className="relative py-12 h-screen overflow-hidden flex justify-center items-center text-white bg-gradient-to-r from-[#1364dd]  to-[#0095ff]"
+      id="hero"
+    >
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-hero-pattern opacity-50"></div>
 
-          <p className="mt-6 mb-8 text-lg sm:mb-12">{t("hero.subtitle")}</p>
-          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <PrimaryButton
-              text={t("hero.projects")}
-              onClick={() => {
-                const projectsSection = document.getElementById("projects");
-                if (projectsSection) {
-                  projectsSection.scrollIntoView({ behavior: "smooth" });
-                }
+      <div className="container mx-auto px-4 flex flex-col md:flex-row relative z-10">
+        {/* Main container */}
+        <motion.div
+          className="w-full md:w-1/2 flex flex-col justify-center items-start"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          {/* Content section */}
+          <h1 className="text-7xl font-bold drop-shadow-lg">
+            {t("hero.title")}
+          </h1>
+          <h3 className="text-2xl leading-relaxed my-10 drop-shadow-lg">
+            {t("hero.subtitle")}
+          </h3>
+          <motion.div className="flex md:flex-row flex-wrap justify-start">
+            {/* Added flex-wrap for buttons on small screens */}
+          </motion.div>
+          <div className="flex mt-4 font-semibold">
+            <motion.a
+              href="#" // Path to the downloadable file
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center rounded-md py-4 px-5 shadow-lg hover:scale-110 hover:shadow-xl hover:bg-[#1364dd] text-white bg-[#0095ff] transition-colors duration-300 mx-2 mr-5"
+              initial={{ opacity: 1 }}
+              animate={{
+                scale: 1.05,
+                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
               }}
-            />
-            <SecondaryButton
-              text={t("hero.experiences")}
-              onClick={() => {
-                const contactSection = document.getElementById("experience");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                }
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              download // Adding the download attribute to make it a download link
+            >
+              <IoMdDownload className="mr-2" /> {/* Icon with margin-right */}
+              {t("hero.cv")}
+            </motion.a>
+            <motion.a
+              href="#projects"
+              className="bg-white text-gray-700 rounded-md py-4 px-8 shadow-lg hover:scale-110 hover:shadow-xl hover:bg-[#0095ff] hover:text-white transition-colors duration-300 mx-2"
+              initial={{ opacity: 1 }}
+              animate={{
+                scale: 1.05,
+                shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
               }}
-            />
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              {t("hero.projects")}
+            </motion.a>
           </div>
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-          className="hidden lg:flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+          className="w-full md:w-1/2 hidden md:flex items-center justify-center"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
+          {/* Image section (visible on medium and larger screens) */}
           <img
             src="/Tymo-removebg-preview.png"
-            alt=""
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+            alt="Tymo Verhaegen"
+            className="w-96 h-auto object-cover rounded-lg "
           />
         </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };
+
+export default Hero;

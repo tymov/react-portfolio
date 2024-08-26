@@ -17,11 +17,12 @@
     "viewCertificate": "Bekijk certificaat",
     "viewCourse": "Bekijk cursus",
     "React": {
+      "title": "React",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 45
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "React is een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces. Het wordt onderhouden door Facebook en een community van individuele ontwikkelaars en bedrijven.",
+      "description": "React es una biblioteca de JavaScript para construir interfaces de usuario. Es mantenida por Facebook y una comunidad de desarrolladores individuales y empresas.",
       "relatedTechnologies": [
         "Redux",
         "Next.js",
@@ -30,32 +31,33 @@
       ],
       "projects": [
         {
-          "title": "Portfolio",
+          "title": "Portafolio",
           "technology": "React"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": [
         {
-          "title": "De Ultieme React Cursus 2024: React, Redux & Meer",
+          "title": "El curso definitivo de React 2024: React, Redux y más",
           "organization": "Udemy",
           "url": "https://www.udemy.com/course/the-ultimate-react-course/",
-          "status": "Onvolledig"
+          "status": "Incompleto"
         }
       ]
     },
     "Angular": {
+      "title": "Angular",
       "level": {
-        "name": "Gevorderd",
-        "percentage": 60
+        "name": "Avanzado",
+        "percentage": 4
       },
-      "description": "Angular is een platform en framework voor het bouwen van single-page clientapplicaties met HTML en TypeScript.",
+      "description": "Angular es una plataforma y framework para construir aplicaciones cliente de una sola página usando HTML y TypeScript.",
       "relatedTechnologies": [
         "RxJS",
         "NgRx",
@@ -63,33 +65,34 @@
       ],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         },
         {
-          "title": "Angular Project",
+          "title": "Proyecto Angular",
           "technology": "Angular"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "TailwindCSS": {
+      "title": "Tailwind CSS",
       "level": {
-        "name": "Gevorderd",
-        "percentage": 70
+        "name": "Avanzado",
+        "percentage": 4
       },
-      "description": "Tailwind CSS is een utility-first CSS framework voor het snel bouwen van aangepaste ontwerpen.",
+      "description": "Tailwind CSS es un framework CSS orientado a utilidades para construir diseños personalizados rápidamente.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Portfolio",
+          "title": "Portafolio",
           "technology": "React"
         },
         {
@@ -97,55 +100,57 @@
           "technology": "Django"
         },
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         },
         {
-          "title": "Angular Project",
+          "title": "Proyecto Angular",
           "technology": "Angular"
         },
         {
-          "title": "Laravel Project",
+          "title": "Proyecto Laravel",
           "technology": "Laravel"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "Bootstrap": {
+      "title": "Bootstrap",
       "level": {
-        "name": "Gevorderd",
-        "percentage": 70
+        "name": "Avanzado",
+        "percentage": 3
       },
-      "description": "Bootstrap is een gratis en open-source CSS-framework gericht op responsieve, mobile-first front-end webontwikkeling.",
+      "description": "Bootstrap es un framework CSS gratuito y de código abierto dirigido al desarrollo front-end, responsive y móvil primero.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Grocery Tracker",
+          "title": "Rastreador de comestibles",
           "technology": "Django"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "Django": {
+      "title": "Django",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 55
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "Django is een hoogwaardig Python-webframework dat snelle ontwikkeling en een schoon, pragmatisch ontwerp aanmoedigt.",
+      "description": "Django es un framework web de Python de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático.",
       "relatedTechnologies": [
         "Django REST framework"
       ],
@@ -155,15 +160,15 @@
           "technology": "Django"
         },
         {
-          "title": "Grocery Tracker",
+          "title": "Rastreador de comestibles",
           "technology": "Django"
         }
       ],
       "certifications": [
         {
-          "title": "Django Masterclass",
+          "title": "Masterclass de Django",
           "credential": "UC-484e53c7-1250-4ec8-a897-334649c95001",
-          "date": "Februari 2024",
+          "date": "Febrero 2024",
           "organization": "Udemy",
           "url": "https://www.udemy.com/certificate/UC-484e53c7-1250-4ec8-a897-334649c95001/"
         }
@@ -171,41 +176,43 @@
       "education": [],
       "courses": [
         {
-          "title": "Django Masterclass: Bouw 9 Echte Wereld Django Projecten",
+          "title": "Masterclass de Django: Construye 9 Proyectos Django del Mundo Real",
           "organization": "Udemy",
           "url": "https://www.udemy.com/course/django-course/",
-          "status": "Voltooid"
+          "status": "Completo"
         }
       ]
     },
     "Laravel": {
+      "title": "Laravel",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 50
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "Laravel is een gratis, open-source PHP-webframework, gemaakt door Taylor Otwell en bedoeld voor de ontwikkeling van webapplicaties volgens het model-view-controller architecturale patroon.",
+      "description": "Laravel es un framework web de PHP gratuito y de código abierto, creado por Taylor Otwell y destinado al desarrollo de aplicaciones web siguiendo el patrón arquitectónico modelo-vista-controlador.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Laravel Project",
+          "title": "Proyecto Laravel",
           "technology": "Laravel"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "MySQL": {
+      "title": "MySQL",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 55
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "MySQL is een open-source relationeel databasebeheersysteem.",
+      "description": "MySQL es un sistema de gestión de bases de datos relacional de código abierto.",
       "relatedTechnologies": [],
       "projects": [
         {
@@ -216,7 +223,7 @@
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
@@ -224,65 +231,67 @@
     },
     "MongoDB": {
       "level": {
-        "name": "Tussenliggend",
-        "percentage": 35
+        "name": "Intermedio",
+        "percentage": 3
       },
-      "description": "MongoDB is een cross-platform document-georiënteerd databaseprogramma met bron beschikbaarheid.",
+      "description": "MongoDB es un programa de base de datos orientado a documentos multiplataforma de código fuente disponible.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Angular Project",
+          "title": "Proyecto Angular",
           "technology": "Angular"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "Java": {
+      "title": "Java",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 50
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "Java is een op klassen gebaseerd, object-georiënteerde programmeertaal die is ontworpen om zo weinig mogelijk implementatieafhankelijkheden te hebben.",
+      "description": "Java es un lenguaje de programación orientado a objetos y basado en clases que está diseñado para tener las menores dependencias de implementación posibles.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "Docker": {
+      "title": "Docker",
       "level": {
-        "name": "Beginner",
-        "percentage": 20
+        "name": "Principiante",
+        "percentage": 2
       },
-      "description": "Docker is een open-source platform voor het bouwen, delen en draaien van applicaties.",
+      "description": "Docker es un conjunto de productos de plataforma como servicio que utilizan virtualización a nivel de sistema operativo para entregar software en paquetes llamados contenedores.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
@@ -291,21 +300,22 @@
           "title": "Docker Mastery: The Complete Toolset From a Docker Captain",
           "organization": "Udemy",
           "url": "https://www.udemy.com/course/docker-mastery/",
-          "date": "Lopend",
+          "date": "En Progreso",
           "credential": ""
         }
       ]
     },
     "Figma": {
+      "title": "Figma",
       "level": {
-        "name": "Tussenliggend",
-        "percentage": 40
+        "name": "Intermedio",
+        "percentage": 2
       },
-      "description": "Figma is een vector grafisch bewerkingsprogramma en prototyping tool die voornamelijk webgebaseerd is.",
+      "description": "Figma es un editor de gráficos vectoriales y herramienta de prototipado que es principalmente basada en la web.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         },
         {
@@ -315,9 +325,9 @@
       ],
       "certifications": [
         {
-          "title": "Complete Web & Mobile Designer: UI/UX, Figma, +meer",
+          "title": "Diseñador Web y Móvil Completo: UI/UX, Figma, +más",
           "credential": "",
-          "date": "Lopend",
+          "date": "En Progreso",
           "organization": "Udemy",
           "url": "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery"
         }
@@ -325,23 +335,24 @@
       "education": [],
       "courses": [
         {
-          "title": "Complete Web & Mobile Designer: UI/UX, Figma, +meer",
+          "title": "Diseñador Web y Móvil Completo: UI/UX, Figma, +más",
           "organization": "Udemy",
           "url": "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/",
-          "status": "Onvolledig"
+          "status": "Incompleto"
         }
       ]
     },
     "UML": {
+      "title": "UML",
       "level": {
-        "name": "Tussenliggend",
-        "percentage": 40
+        "name": "Intermedio",
+        "percentage": 3
       },
-      "description": "UML is een gestandaardiseerde algemene modelleertaal op het gebied van software-engineering.",
+      "description": "UML es un lenguaje de modelado general estandarizado en el campo de la ingeniería de software.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         },
         {
@@ -349,33 +360,34 @@
           "technology": "Django"
         },
         {
-          "title": "Angular Project",
+          "title": "Proyecto Angular",
           "technology": "Angular"
         },
         {
-          "title": "Laravel Project",
+          "title": "Proyecto Laravel",
           "technology": "Laravel"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],
       "courses": []
     },
     "SCRUM": {
+      "title": "SCRUM",
       "level": {
-        "name": "Bekwaam",
-        "percentage": 55
+        "name": "Competente",
+        "percentage": 3
       },
-      "description": "Scrum is een raamwerk waarin mensen complexe adaptieve problemen kunnen aanpakken, terwijl ze productief en creatief hoogwaardige producten leveren.",
+      "description": "Scrum es un marco dentro del cual las personas pueden abordar problemas complejos y adaptativos, mientras entregan productiva y creativamente productos de alto valor.",
       "relatedTechnologies": [],
       "projects": [
         {
-          "title": "Industrie 4.0",
+          "title": "Industria 4.0",
           "technology": "Angular"
         },
         {
@@ -383,14 +395,14 @@
           "technology": "Django"
         },
         {
-          "title": "Laravel Project",
+          "title": "Proyecto Laravel",
           "technology": "Laravel"
         }
       ],
       "certifications": [],
       "education": [
         {
-          "title": "Bachelor in Toegepaste Informatica",
+          "title": "Licenciatura en Ciencias de la Computación Aplicada",
           "organization": "Thomas More University of Applied Sciences"
         }
       ],

@@ -16,9 +16,7 @@ export const SKILLS = [
   {
     key: "MySQL",
   },
-  {
-    key: "MongoDB",
-  },
+
   {
     key: "Java",
   },

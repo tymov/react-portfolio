@@ -108,7 +108,7 @@ export default function Graph({ project }) {
 
   return (
     <div className="text-center mb-6">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 md:my-4">
+      <h3 className="text-xl font-semibold text-gray-800  mb-2 md:my-4">
         Time Spent Working with Technologies Overview
       </h3>
       <h5 className="text-sm text-gray-500 dark:text-gray-400">

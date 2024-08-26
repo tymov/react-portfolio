@@ -80,30 +80,30 @@ const Modal = ({ project, closeModal }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-40 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-50 text-gray-800 dark:text-white px-6 overflow-y-auto"
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.3, delay: 0.1 }}
     >
       <motion.div
-        className="bg-white rounded-lg dark:bg-slate-800 overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
+        className="bg-white rounded-lg  overflow-hidden shadow-xl w-full h-full lg:h-full relative flex flex-col lg:flex-row"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.1, delay: 0 }}
         style={{ maxHeight: "90vh" }}
       >
         <div
-          className="w-full md:w-4/4 lg:w-4/12 p-8 z-40 dark:bg-slate-700"
+          className="w-full md:w-4/4 lg:w-4/12 p-8 z-40 bg-white"
           id="description"
         >
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-between">
+          <h2 className="text-3xl font-bold text-gray-800  mb-4 flex items-center justify-between">
             <span>{t(`project.${project.key}.title`)}</span>
-            <span className="flex items-center text-xl text-blue-600 dark:text-white">
+            <span className="flex items-center text-xl text-blue-600 ">
               <TiGroup className="mr-2" />
               <span className="">{t(`project.${project.key}.groupSize`)}</span>
             </span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg mb-3 capitalize">
+          <p className="text-blue-500  text-lg mb-3 capitalize">
             {t(`project.${project.key}.date`)}
           </p>
           <div
@@ -115,7 +115,7 @@ const Modal = ({ project, closeModal }) => {
             }}
           >
             <div style={{ direction: "ltr" }}>
-              <p className="text-gray-800 dark:text-white text-lg lg:mt-3 ml-3 ">
+              <p className="text-gray-800 text-lg lg:mt-3 ml-3 ">
                 {getDescription()}
               </p>
               {description.length > 150 && (
@@ -135,7 +135,7 @@ const Modal = ({ project, closeModal }) => {
         <div
           className={`w-full ${
             showExtraInfo ? "lg:w-11/12 z-40" : "lg:w-12/12 z-40"
-          } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-gray-100 dark:bg-slate-900`}
+          } lg:w-12/12 hidden p-8 relative lg:flex justify-center items-center bg-gray-100 `}
         >
           {/* Check if there are images */}
           {images.length > 0 ? (
@@ -161,7 +161,7 @@ const Modal = ({ project, closeModal }) => {
                       transition={{ duration: 0.65 }}
                     />
                     {/* Display the number of images */}
-                    <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md  dark:text-gray-200">
+                    <p className="absolute top-0 right-0 mt-2 mr-2 text-gray-600 bg-gray-100  px-2 py-1 rounded-md">
                       {`${currentImageIndex + 1}/${images.length}`}
                     </p>
                     {/* Arrows */}
@@ -169,13 +169,13 @@ const Modal = ({ project, closeModal }) => {
                       <>
                         <button
                           onClick={prevImage}
-                          className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                          className="absolute mx-2 left-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200  rounded-full p-2 text-gray-600  hover:text-gray-800  transition-colors"
                         >
                           <FaChevronLeft className="text-3xl" />
                         </button>
                         <button
                           onClick={nextImage}
-                          className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 dark:bg-slate-800 rounded-full p-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors"
+                          className="absolute mx-2 right-0 top-1/2 transform -translate-y-1/2 z-50 bg-gray-200 rounded-full p-2 text-gray-600  hover:text-gray-800  transition-colors"
                         >
                           <FaChevronRight className="text-3xl" />
                         </button>
@@ -191,7 +191,7 @@ const Modal = ({ project, closeModal }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.2, delay: 0 }}
-                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-blue-500 hover:bg-blue-600 dark:!bg-slate-900 dark:hover:bg-slate-800  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="flex absolute bottom-0 right-0 p-4 m-4 select-none bg-blue-500 hover:bg-blue-600  gap-2 rounded-lg py-3 px-4 font-sans text-xs font-bold uppercase text-white transition-all disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
                 {showExtraInfo ? (
                   <div className="flex items-center z-[60]">
@@ -261,7 +261,7 @@ const Modal = ({ project, closeModal }) => {
         <motion.div
           className={`${
             showExtraInfo ? "z-50" : "lg:hidden"
-          } w-full lg:w-1/4 p-8  bg-white dark:!bg-slate-800 hidden lg:block`}
+          } w-full lg:w-1/4 p-8  bg-white hidden lg:block`}
           style={{
             overflowY: "auto", // Enable vertical scrolling
             scrollbarWidth: "thin",
@@ -272,14 +272,14 @@ const Modal = ({ project, closeModal }) => {
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.225, delay: 0 }}
         >
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 md:my-6">
+          <h3 className="text-xl font-semibold text-gray-800  mb-4 md:my-6">
             {t(`project.technologiesUsed`)}
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-2">
             {technologies.map((technology, index) => (
               <span
                 key={index}
-                className="text-gray-600 dark:text-gray-300 text-3xl"
+                className="text-gray-600  text-3xl"
                 title={technology.name}
               >
                 {getIconForTechnology(technology.name)}
@@ -288,14 +288,14 @@ const Modal = ({ project, closeModal }) => {
           </div>
           {t(`project.${project.key}.liveDemoLink`) && (
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {t(`project.demo`)}
               </h3>
               <a
                 href={t(`project.${project.key}.liveDemoLink`)}
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+                className="text-gray-600  hover:text-gray-800  transition-colors"
               >
                 <span className="text-red-500 text-3xl">
                   <FaYoutube />
@@ -305,26 +305,26 @@ const Modal = ({ project, closeModal }) => {
           )}
 
           <div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
+            <h3 className="text-xl font-semibold text-gray-800  mt-6">
               {t(`project.type`)}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
+            <p className="text-gray-600 text-lg my-4">
               {t(`project.${project.key}.type`)}
             </p>
           </div>
 
           {t(`project.${project.key}.githubLink`) && (
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-gray-800  mb-2">
                 {t(`project.sourceCode`)}
               </h3>
               <a
                 href={t(`project.${project.key}.githubLink`)}
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+                className="text-gray-600  hover:text-gray-800 transition-colors"
               >
-                <span className="text-gray-800 dark:text-red-500 text-3xl">
+                <span className="text-gray-800  text-3xl">
                   <SiGit />
                 </span>
               </a>
@@ -332,17 +332,17 @@ const Modal = ({ project, closeModal }) => {
           )}
 
           <div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-6">
+            <h3 className="text-xl font-semibold text-gray-800 mt-6">
               {t(`project.role`)}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-lg my-4">
+            <p className="text-gray-600  text-lg my-4">
               {t(`project.${project.key}.role`)}
             </p>
           </div>
 
           {softskills.length > 0 && (
             <div className="my-8 mt-10">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white my-4">
+              <h3 className="text-xl font-semibold text-gray-800  my-4">
                 {t(`project.softskills`)}
               </h3>
               {/* Display softskills as a list */}
@@ -350,7 +350,7 @@ const Modal = ({ project, closeModal }) => {
                 {softskills.map((softskill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-blue-500 dark:bg-slate-900 text-white rounded-full text-md"
+                    className="px-4 py-2 bg-blue-500  text-white rounded-full text-md"
                   >
                     {softskill}
                   </span>
@@ -365,7 +365,7 @@ const Modal = ({ project, closeModal }) => {
           aria-label="Close modal"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-300 transition-colors rounded-full hover:text-gray-800 dark:hover:text-white z-[60]"
+          className="absolute top-4 right-4 text-2xl text-gray-600  transition-colors rounded-full hover:text-gray-800  z-[60]"
         >
           <FaTimes />
         </motion.button>

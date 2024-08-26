@@ -1,148 +1,79 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import {
+  AiFillHome,
+  AiOutlineInfoCircle,
+  AiOutlineProject,
+  AiOutlineIdcard,
+} from "react-icons/ai"; // Import needed icons
+import { TbTimelineEvent } from "react-icons/tb";
+import { GrDocumentPdf } from "react-icons/gr";
+import { FaBarsProgress, FaBars } from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
+
+import { LanguageSelector } from "./reusable/languageSelector";
 import { useTranslation } from "react-i18next";
-import { LanguageSelector } from "./reusable/languageSelector"; // Import the LanguageSelector component
+import { EXPERIENCES } from "../constants/experiences";
 
-export const Navbar = () => {
-  const { t } = useTranslation("navbar");
-
-  const [isOpen, setIsOpen] = useState(false);
+const Navigation = () => {
+  const { t } = useTranslation("navbar"); // Specify the "hero" namespace
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav
-      className="fixed top-0 left-0 w-full z-40 flex justify-between items-center bg-gray-50   dark:bg-slate-950 bg-md text-gray-800 dark:text-white py-4 px-3"
-      role="navigation"
-    >
-      <div className="pl-8">
-        <a href="#" className="text-2xl font-bold">
-          Tymo Verhaegen
-        </a>
-      </div>
-
-      <div
-        className={`md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-0 right-0 w-56 bg-slate-925 h-full z-50 transition-transform duration-300 ease-in-out`}
-      >
-        <div className="flex flex-col h-full">
-          <button onClick={toggleMenu} className="p-4 ml-auto">
-            <FontAwesomeIcon
-              icon={faTimes}
-              className="h-6 w-6 fill-current text-lg"
-            />
-          </button>
-          <a
-            href="#"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("home")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.home")}</span>
-          </a>
-          <a
-            href="#projects"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("projects")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.projects")}</span>
-          </a>
-          <a
-            href="#experience"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("experience")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.experience")}</span>
-          </a>
-          <a
-            href="#internship"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("internship")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.internship")}</span>
-          </a>
-          <a
-            href="#skills"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("skills")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.skills")}</span>
-          </a>
-          <a
-            href="#about"
-            className="block p-4 text-lg"
-            onClick={() => scrollToSection("about")}
-          >
-            <span className="whitespace-nowrap">{t("navbar.about")}</span>
-          </a>
-          <LanguageSelector />{" "}
-          {/* Add the LanguageSelector to the mobile menu */}
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center shadow-md bg-gradient-to-r from-[#1364dd]  to-[#0095ff] py-5 px-10 capitalize">
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <div className="text-white text-2xl md:hidden" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
-      <div className="md:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none">
-          <FontAwesomeIcon
-            icon={isOpen ? faTimes : faBars}
-            className="h-6 w-6 fill-current text-white"
-          />
-        </button>
-      </div>
-      <div className="hidden md:flex space-x-4 text-lg items-center">
-        <a
-          href="#"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("home")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.home")}</span>
-        </a>
-        <a
-          href="#projects"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("projects")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.projects")}</span>
-        </a>
-        <a
-          href="#experience"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("experience")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.experience")}</span>
-        </a>
-        <a
-          href="#internship"
-          className="block p-4 text-lg"
-          onClick={() => scrollToSection("internship")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.internship")}</span>
-        </a>
-        <a
-          href="#skills"
-          className="block p-4 text-lg"
-          onClick={() => scrollToSection("skills")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.skills")}</span>
-        </a>
-        <a
-          href="#about"
-          className="p-4 text-lg"
-          onClick={() => scrollToSection("about")}
-        >
-          <span className="whitespace-nowrap">{t("navbar.about")}</span>
-        </a>
-        <LanguageSelector />{" "}
-        {/* Add the LanguageSelector to the desktop menu */}
+
+      <ul
+        className={`flex-col md:flex-row md:flex md:items-center text-lg space-y-5 md:space-y-0 md:space-x-16 ${
+          menuOpen ? "flex" : "hidden"
+        }`}
+      >
+        <li>
+          <a href="#" className="text-white flex items-center">
+            <AiFillHome className="mr-2" />
+            {t("navbar.home")}
+          </a>
+        </li>
+        <li>
+          <a href="#projects" className="text-white flex items-center">
+            <AiOutlineProject className="mr-2" />
+            {t("navbar.projects")}
+          </a>
+        </li>
+        <li>
+          <a href="#experiences" className="text-white flex items-center">
+            <TbTimelineEvent className="mr-2" />
+            {t("navbar.experience")}
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills" className="text-white flex items-center">
+            <FaBarsProgress className="mr-2" />
+            {t("navbar.skills")}
+          </a>
+        </li>
+        <li>
+          <a href="#about" className="text-white flex items-center">
+            <AiOutlineInfoCircle className="mr-2" />
+            {t("navbar.about")}
+          </a>
+        </li>
+      </ul>
+
+      <div className="hidden md:flex items-center">
+        <LanguageSelector />
       </div>
     </nav>
   );
 };
+
+export default Navigation;
