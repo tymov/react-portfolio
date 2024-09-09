@@ -10,39 +10,37 @@ const About = () => {
   return (
     <div
       id="about"
-      className="text-white bg-gradient-to-r from-[#1364dd] to-[#0095ff] h-screen flex justify-center items-center relative shape-top-left"
+      className="text-white bg-gradient-to-r from-[#1364dd] to-[#0095ff] h-screen flex justify-center items-center relative"
     >
-      <div className="custom-shape-divider-top-1716673344">
+      {/* SVG Shape */}
+      <div className="custom-shape-divider-top-1725897316 absolute top-0 left-0 w-full z-10">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#1364dd" />
-              <stop offset="100%" stopColor="#0095ff" />
-            </linearGradient>
-          </defs>
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            fill="url(#gradient)"
+            fill="#fff"
+            className="shape-fill"
           ></path>
         </svg>
       </div>
 
-      <div className="container mx-auto px-4">
+      {/* Main content */}
+      <div className="container mx-auto px-4 relative z-20">
+        {" "}
+        {/* Added z-20 to place it above the SVG */}
         <div className="flex flex-col md:flex-row items-center">
           {/* Replace with your actual image */}
-
           <div className="md:w-1/2">
             <h2 className="text-4xl font-bold mb-4">{t("about.title")}</h2>
-            <p className="">{t("about.about1")}</p>
+            <p className="text-lg">{t("about.about1")}</p>
             <br />
-            <p className="0">{t("about.about2")}</p>
+            <p className="text-lg">{t("about.about2")}</p>
             <br />
-            <p className="">{t("about.about3")}</p>
+            <p className="text-lg">{t("about.about3")}</p>
             <br />
 
             <div className="flex mt-4 font-semibold">
@@ -75,7 +73,7 @@ const About = () => {
             <img
               src="assets/about.jpg"
               alt="Tymo Verhaegen"
-              className="w-[500px] h-auto object-cover rounded-lg shadow-lg" // Updated width to make the image larger
+              className="w-[450px] h-auto object-cover rounded-lg shadow-lg" // Updated width to make the image larger
             />
           </motion.div>
         </div>

@@ -71,9 +71,9 @@ const Hero = () => {
         >
           {/* Image section (visible on medium and larger screens) */}
           <img
-            src="/Tymo-removebg-preview.png"
+            src="/new picture.png"
             alt="Tymo Verhaegen"
-            className="w-96 h-auto object-cover rounded-lg "
+            className="w-[500px] h-auto object-cover rounded-lg "
           />
         </motion.div>
       </div>

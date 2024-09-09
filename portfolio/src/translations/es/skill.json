@@ -406,6 +406,13 @@
         }
       ],
       "courses": []
+    },
+    "Django Masterclass": {
+      "organization": "Udemy",
+      "title": "Django Masterclass",
+      "issued_date": "Feb 2024",
+      "url": "https://www.udemy.com/certificate/UC-484e53c7-1250-4ec8-a897-334649c95001/",
+      "image": "/assets/udemy.png"
     }
   }
 }

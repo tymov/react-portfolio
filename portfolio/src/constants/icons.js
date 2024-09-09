@@ -1,4 +1,8 @@
-import { RiReactjsLine, RiAngularjsLine, RiDonutChartFill } from "react-icons/ri";
+import {
+  RiReactjsLine,
+  RiAngularjsLine,
+  RiDonutChartFill,
+} from "react-icons/ri";
 import {
   SiDjango,
   SiMysql,
@@ -22,6 +26,7 @@ import {
   SiLeaflet,
   SiAmazonaws,
   SiI18Next,
+  SiUdemy,
 } from "react-icons/si";
 import { FaJava, FaNodeJs, FaNpm } from "react-icons/fa";
 import { PiGitlabLogoLight } from "react-icons/pi";
@@ -67,6 +72,7 @@ export const getIconForTechnology = (technology) => {
     AWS: "text-yellow-500",
     ChartJS: "text-[#FFB1C1]",
     i18n: "text-cyan-500",
+    Udemy: "text-violet-500",
   };
 
   const colorClass = iconColors[technology];
@@ -154,9 +160,13 @@ export const getIconForTechnology = (technology) => {
     case "AWS":
       return <SiAmazonaws className={`${colorClass} ${commonIconClasses}`} />;
     case "ChartJS":
-      return <RiDonutChartFill className={`${colorClass} ${commonIconClasses}`} />;
-    case "i18n": 
+      return (
+        <RiDonutChartFill className={`${colorClass} ${commonIconClasses}`} />
+      );
+    case "i18n":
       return <SiI18Next className={`${colorClass} ${commonIconClasses}`} />;
+    case "Django Masterclass":
+      return <SiUdemy className={`${colorClass} ${commonIconClasses}`} />;
     default:
       return null;
   }

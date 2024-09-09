@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { getIconForTechnology } from "../constants/icons";
-import { SKILLS } from "../constants/skills";
+import { SKILLS, CERTIFICATES } from "../constants/skills";
 
 const Skills = () => {
   const { t } = useTranslation(["skill", "skills"]);
@@ -50,7 +50,7 @@ const Skills = () => {
         </svg>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto px-4 py-8 pb-80">
+      <div className="max-w-screen-2xl mx-auto px-4 py-8 pb-32">
         <h2 className="text-4xl font-bold mb-12">{t("skill.title")}</h2>
         <div className="flex flex-wrap justify-start gap-6">
           {SKILLS.map((skill, index) => (
@@ -71,29 +71,31 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* <h2 className="text-4xl font-bold mb-12 mt-24">{t("certificates")}</h2> */}
+        <h2 className="text-4xl font-bold mb-12 mt-24">
+          {t("skill.certifications")}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-          {/* {CERTIFICATES.map((cert, index) => (
+          {CERTIFICATES.map((cert, index) => (
             <a
               key={index}
-              href={t(`${cert.key}.url`)}
+              href={t(`skill.${cert.key}.url`)}
               className="bg-white rounded-lg shadow-md p-6 cursor-pointer flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <div className="flex items-center space-x-4">
                 {getIconForTechnology(cert.key)}
                 <div>
                   <h3 className="text-xl font-semibold mb-1">
-                    {t(`${cert.key}.title`)}
+                    {t(`skill.${cert.key}.title`)}
                   </h3>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span>{t(`${cert.key}.organization`)}</span>
+                    <span>{t(`skill.${cert.key}.organization`)}</span>
                     <span className="text-gray-500">|</span>
-                    <span>{t(`${cert.key}.issued_date`)}</span>
+                    <span>{t(`skill.${cert.key}.issued_date`)}</span>
                   </div>
                 </div>
               </div>
             </a>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>

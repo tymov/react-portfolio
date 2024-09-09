@@ -39,3 +39,9 @@ export const SKILLS = [
     key: "SCRUM",
   },
 ];
+
+export const CERTIFICATES = [
+  {
+    key: "Django Masterclass",
+  },
+];
