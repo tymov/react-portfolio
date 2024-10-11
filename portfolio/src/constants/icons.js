@@ -166,6 +166,7 @@ export const getIconForTechnology = (technology) => {
     case "i18n":
       return <SiI18Next className={`${colorClass} ${commonIconClasses}`} />;
     case "Django Masterclass":
+    case "The Ultimate React Course 2024":
       return <SiUdemy className={`${colorClass} ${commonIconClasses}`} />;
     default:
       return null;

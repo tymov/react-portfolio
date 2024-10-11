@@ -44,4 +44,7 @@ export const CERTIFICATES = [
   {
     key: "Django Masterclass",
   },
+  {
+    key: "The Ultimate React Course 2024",
+  },
 ];

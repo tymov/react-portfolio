@@ -413,6 +413,13 @@
       "issued_date": "Feb 2024",
       "url": "https://www.udemy.com/certificate/UC-484e53c7-1250-4ec8-a897-334649c95001/",
       "image": "/assets/udemy.png"
+    },
+    "The Ultimate React Course 2024": {
+      "organization": "Udemy",
+      "title": "The Ultimate React Course 2024",
+      "issued_date": "Sep 2024",
+      "url": "https://www.udemy.com/certificate/UC-eda184f6-11b7-4189-8ff6-84ea8767bba4/",
+      "image": "/assets/udemy.png"
     }
   }
 }

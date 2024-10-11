@@ -12,10 +12,10 @@ export const PROJECTS = [
     icon: <SiDjango className="text-green-500" />,
     key: "Bookingtool",
   },
-  // {
-  //   icon: <SiDjango className="text-green-500" />,
-  //   key: "Grocery Tracker",
-  // },
+  {
+    icon: <SiDjango className="text-green-500" />,
+    key: "Grocery Tracker",
+  },
   {
     icon: <RiAngularjsLine className="text-red-500" />,
     key: "Industry 4.0",
