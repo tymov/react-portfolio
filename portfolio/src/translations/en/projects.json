@@ -15,6 +15,53 @@
         "readMore": "Read More",
         "readLess": "Read Less",
         "inProgress": "In Progress, check back soon!",
+        "Needledrop": {
+            "title": "Needledrop",
+            "date": "2025",
+            "role": "Full-Stack Developer",
+            "description": "Reimagining Discogs: A comprehensive redesign of the iconic music database and marketplace platform. This ambitious project features a modernized user interface, enhanced search capabilities, and a streamlined marketplace experience for vinyl collectors and music enthusiasts. Currently in active development, this revitalization aims to preserve Discogs' extensive catalog while introducing intuitive navigation, personalized recommendations, and improved seller-buyer interactions. The project demonstrates my ability to evolve established platforms while respecting their core functionality and user base.",
+            "groupSize": 1,
+            "githubLink": "",
+            "liveDemoLink": "https://needledrop.netlify.app",
+            "technologies": [
+                {
+                    "name": "React",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "developmentTime": "75"
+                },
+                {
+                    "name": "JavaScript",
+                    "developmentTime": "20"
+                },
+                {
+                    "name": "Firebase",
+                    "developmentTime": "50"
+                },
+                {
+                    "name": "Git",
+                    "developmentTime": "20"
+                }
+            ],
+            "images": [
+                "/assets/images/Needledrop/needledrop.jpg",
+                "/assets/images/Needledrop/favorites.jpg",
+                "/assets/images/Needledrop/lists.jpg",
+                "/assets/images/Needledrop/list.jpg",
+                "/assets/images/Needledrop/collection.jpg",
+                "/assets/images/Needledrop/community.jpg",
+                "/assets/images/Needledrop/friends.jpg",
+                "/assets/images/Needledrop/profile.jpg",
+                "/assets/images/Needledrop/album.jpg",
+                "/assets/images/Needledrop/settings.jpg",
+                "/assets/images/Needledrop/settings2.jpg"
+            ],
+            "softskills": [],
+            "status": "In development",
+            "type": "Personal Project"
+        },
         "Portfolio": {
             "title": "Portfolio",
             "date": "2024",

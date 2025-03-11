@@ -27,6 +27,7 @@ import {
   SiAmazonaws,
   SiI18Next,
   SiUdemy,
+  SiFirebase,
 } from "react-icons/si";
 import { FaJava, FaNodeJs, FaNpm } from "react-icons/fa";
 import { PiGitlabLogoLight } from "react-icons/pi";
@@ -72,6 +73,7 @@ export const getIconForTechnology = (technology) => {
     AWS: "text-yellow-500",
     ChartJS: "text-[#FFB1C1]",
     i18n: "text-cyan-500",
+    Firebase: "text-orange-400",
     Udemy: "text-violet-500",
   };
 
@@ -165,6 +167,9 @@ export const getIconForTechnology = (technology) => {
       );
     case "i18n":
       return <SiI18Next className={`${colorClass} ${commonIconClasses}`} />;
+    case "Firebase":
+      return <SiFirebase className={`${colorClass} ${commonIconClasses}`} />;
+
     case "Django Masterclass":
     case "The Ultimate React Course 2024":
       return <SiUdemy className={`${colorClass} ${commonIconClasses}`} />;
