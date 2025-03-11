@@ -46,17 +46,17 @@
                 }
             ],
             "images": [
-                "/assets/images/Needledrop/needledrop.jpg",
-                "/assets/images/Needledrop/favorites.jpg",
-                "/assets/images/Needledrop/lists.jpg",
-                "/assets/images/Needledrop/list.jpg",
-                "/assets/images/Needledrop/collection.jpg",
-                "/assets/images/Needledrop/community.jpg",
-                "/assets/images/Needledrop/friends.jpg",
-                "/assets/images/Needledrop/profile.jpg",
-                "/assets/images/Needledrop/album.jpg",
-                "/assets/images/Needledrop/settings.jpg",
-                "/assets/images/Needledrop/settings2.jpg"
+                "/assets/images/Needledrop/needledrop.jpeg",
+                "/assets/images/Needledrop/favorites.jpeg",
+                "/assets/images/Needledrop/lists.jpeg",
+                "/assets/images/Needledrop/list.jpeg",
+                "/assets/images/Needledrop/collection.jpeg",
+                "/assets/images/Needledrop/community.jpeg",
+                "/assets/images/Needledrop/friends.jpeg",
+                "/assets/images/Needledrop/profile.jpeg",
+                "/assets/images/Needledrop/album.jpeg",
+                "/assets/images/Needledrop/settings.jpeg",
+                "/assets/images/Needledrop/settings2.jpeg"
             ],
             "softskills": [],
             "status": "En Progreso",
